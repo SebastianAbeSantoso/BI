@@ -1,0 +1,46 @@
+@startuml
+skinparam linetype ortho
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam packageStyle rectangle
+skinparam ArrowColor #343A40
+skinparam NoteBackgroundColor #FFF8E1
+skinparam NoteBorderColor #8D6E63
+
+top to bottom direction
+
+package "Extract (File System & REST API)" as EXT #F8F9FA {
+    database "Internal CSVs\nprojects.csv\nproject_title_map.csv" as INT_SRC #E9ECEF
+    file "Platform Exports\nsteam_sales_report.csv\nitch_payouts.csv\nvgen_export.json\nfiverr_earnings.csv\npaypal_activity.csv" as EXT_FILES #E9ECEF
+    component "Frankfurter ECB API\nfx_rates.csv (474 days)" as FX_API #E9ECEF
+    database "Staging Area (stg)\n8 raw_* tables\n(transient, includes PII)" as STG_DB #DDE2E6
+}
+
+package "Transform (Python ETL)" as TRF #F8F9FA {
+    rectangle "1. Strip 5 PII Columns\n(emails, usernames, payer names)" as T1 #FFFFFF
+    rectangle "2. Deduplicate Exact Rows\n(15 Fiverr re-exports removed)" as T2 #FFFFFF
+    rectangle "3. Normalize Dates & Numbers\n(MM/DD/YYYY, DD/MM/YYYY, comma decimals)" as T3 #FFFFFF
+    rectangle "4. Title-to-Project Mapping\n(21 substring rules)" as T4 #FFFFFF
+    database "stg.etl_rejects\n(11 unmatched rows)" as REJ #FCE4EC
+    rectangle "5. Explode Atomic Events & Signs\n(SALE/TIP/FEE_REVERSAL > 0;\nPLATFORM_FEE/PROCESSING_FEE/REFUND < 0)" as T5 #FFFFFF
+    rectangle "6. Spot FX Lookup + Fallback\n(1,717 weekend/holiday lookups)" as T6 #FFFFFF
+}
+
+package "Load (DuckDB Full Refresh)" as LOD #F8F9FA {
+    database "edw Schema\n5 dim_* tables -> fact_revenue_event\n(5,911 rows, PK/FK/UNIQUE/CHECK)" as EDW_DB #E8F5E9
+    component "Views Layer\nedw.v_fact_enriched\n4 mart.v_* views" as MART_DB #E3F2FD
+}
+
+INT_SRC --> STG_DB
+EXT_FILES --> STG_DB
+FX_API --> STG_DB
+STG_DB --> T1
+T1 --> T2
+T2 --> T3
+T3 --> T4
+T4 --> REJ : unmatched title
+T4 --> T5 : matched project_code
+T5 --> T6
+T6 --> EDW_DB : dims first, then fact
+EDW_DB --> MART_DB
+@enduml

@@ -1,0 +1,47 @@
+@startuml
+skinparam linetype ortho
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam ArrowColor #343A40
+top to bottom direction
+
+package "Data Sources" as SOURCES #F8F9FA {
+    package "Internal Sources" as INT #FFFFFF {
+        file "projects.csv" as P_CSV
+        file "project_title_map.csv" as M_CSV
+    }
+    package "External Sources" as EXT #FFFFFF {
+        file "Steam, itch.io, VGen,\nFiverr, PayPal Exports" as PLAT_FILES
+        interface "Frankfurter ECB API" as FX_API
+    }
+}
+
+package "Staging Layer (stg)" as STG #F8F9FA {
+    database "stg.raw_* & stg.etl_rejects" as STG_T #E9ECEF
+}
+
+package "ETL Process (src/etl.py)" as ETL #F8F9FA {
+    component "Extract -> Transform -> Load\n(PII Strip, Dedup, Mapping, FX Fallback)" as ETL_COMP #FFFFFF
+}
+
+package "Data Warehouse (Kimball Star Schema)" as EDW #F8F9FA {
+    database "edw.dim_* (5 tables)\nedw.fact_revenue_event (5,911 rows)" as EDW_DB #E8F5E9
+}
+
+package "OLAP Views & Front End" as OLAP #F8F9FA {
+    database "mart.v_revenue_monthly\nmart.v_project_performance\nmart.v_fee_refund_leakage\nmart.v_fx_exposure" as MART_V #E3F2FD
+    component "Streamlit Query Interface\n(Tab 1 Query Builder, Tab 2 Presets, Tab 3 Validation)" as UI #FFFFFF
+}
+
+actor "Studio Stakeholders\n(Studio Lead, Finance, Production, Commission)" as USR
+
+P_CSV --> STG_T
+M_CSV --> STG_T
+PLAT_FILES --> STG_T
+FX_API --> STG_T
+STG_T --> ETL_COMP
+ETL_COMP --> EDW_DB
+EDW_DB --> MART_V
+MART_V --> UI
+UI --> USR
+@enduml

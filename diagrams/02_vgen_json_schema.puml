@@ -1,0 +1,35 @@
+@startjson
+#highlight "tips"
+#highlight "refunds"
+{
+  "order_id": "VGN-5018",
+  "created_at": "2025-07-12T11:20:00Z",
+  "service_kind": "COMMISSION",
+  "title": "Anime Key Visual Illustration #18",
+  "client_username": "[dropped_in_staging]",
+  "currency": "USD",
+  "gross_amount": 180.00,
+  "vgen_fee": 9.00,
+  "payment_proc_fee": 5.52,
+  "tips": [
+    {
+      "tip_id": "VGN-5018-T1",
+      "paid_at": "2025-07-14T14:15:00Z",
+      "amount": 15.00
+    },
+    {
+      "tip_id": "VGN-5018-T2",
+      "paid_at": "2025-07-16T14:15:00Z",
+      "amount": 10.00
+    }
+  ],
+  "refunds": [
+    {
+      "refund_id": "VGN-5018-R1",
+      "refunded_at": "2025-07-19T09:30:00Z",
+      "amount": 90.00,
+      "vgen_fee_returned": 4.50
+    }
+  ]
+}
+@endjson

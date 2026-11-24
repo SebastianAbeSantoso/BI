@@ -1,0 +1,30 @@
+@startuml
+skinparam linetype ortho
+skinparam shadowing false
+skinparam backgroundColor #FFFFFF
+skinparam ArrowColor #343A40
+left to right direction
+
+package "Raw Source Records (stg)" as SRC #F8F9FA {
+    rectangle "Steam CSV\nSTM-100001\n01/04/2025, USD 9.99\nfee: -3.00" as S_STM #FFFFFF
+    rectangle "VGen JSON\nVGN-5018 (2 tips)\nUSD 180.00, fee: 9.00\nproc: 5.52, tips: 15+10" as S_VGN #FFFFFF
+    rectangle "PayPal CSV\nPP-9012 (refunded)\n14/03/2025, 120,00 USD\nproc: -5,58, refund: -120,00" as S_PP #FFFFFF
+}
+
+package "Transform Tunnel (etl.py)" as TRN #F8F9FA {
+    rectangle "Parse Dates & Decimals\nDrop PII Columns\nMap Titles to project_code\nAssign parent_transaction_code\nLookup FX (Weekend Fallback)" as PROC #E9ECEF
+}
+
+package "Atomic Fact Rows (edw.fact_revenue_event)" as DST #F8F9FA {
+    rectangle "STM-STM-100001-SALE (+9.99)\nSTM-STM-100001-PFEE (-3.00)" as F_STM #E8F5E9
+    rectangle "VGN-5018-SALE (+180.00)\nVGN-5018-PFEE (-9.00)\nVGN-5018-PRCFEE (-5.52)\nVGN-5018-TIP1 (+15.00)\nVGN-5018-TIP2 (+10.00)" as F_VGN #E8F5E9
+    rectangle "PP-9012-SALE (+120.00)\nPP-9012-PRCFEE (-5.58)\nPP-9012-REF (-120.00)\n(0.00 fee reversal)" as F_PP #E8F5E9
+}
+
+S_STM --> PROC
+S_VGN --> PROC
+S_PP --> PROC
+PROC --> F_STM
+PROC --> F_VGN
+PROC --> F_PP
+@enduml

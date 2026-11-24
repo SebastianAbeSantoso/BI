@@ -138,35 +138,16 @@ bi-dw-uts/
 - `mart.v_fee_refund_leakage`: gross, platform fees, processing fees, refunds, reversals, net, and leakage % per platform and stream.
 - `mart.v_fx_exposure`: monthly original-currency totals, net IDR, rate min/avg/max, and currency shares.
 
-## 6. Wednesday 25 Nov: Report and presentation prep
+## 6. Wednesday 25 Nov: Report and presentation prep (Done)
 
-### Phase 6: Diagrams and screenshots (06:30 to 08:00)
-Write PlantUML sources in `diagrams/` and render to PNG:
-1. Overall DW architecture (`stg` -> `edw` -> `mart` -> Streamlit), replacing template `image4`.
-2. ETL pipeline flow with quarantine branch, replacing `image1`.
-3. Data tunnel flow tracing one sale from each source to fact rows.
-4. JSON structure diagram for `vgen_export.json`, replacing `image2`.
-5. Logical storage layout inside single DuckDB file, replacing `image7`.
-6. Reuse existing approved star schema (`image5`).
+### Phase 6: Diagrams and screenshots (Done)
+Rendered 5 PlantUML diagrams (`01_etl_flow`, `02_vgen_json_schema`, `03_data_tunnel`, `04_dw_architecture`, `05_storage_design`) plus `06_star_schema_edw.png`, and captured 6 live Streamlit screenshots plus `07_cli_etl_validate.png` into `report/screenshots/`.
 
-Capture screenshots of all three Streamlit tabs, the SQL expander, all four presets, the validation table, and an ETL terminal run into `report/screenshots/`.
+### Phase 7: Complete report copy (Done)
+Drafted `report/sections_id.md` and generated `report/UTS_BI_Sebastian_Wasaka_DW.docx` from a clean copy of `BI-Design-Template.docx` (original untouched), resolving all placeholders, typos, example images, governance matrix, budget, query results, findings, and V1 to V14 validation summary.
 
-### Phase 7: Complete report copy (12:30 to 19:00)
-Copy `BI-Design-Template.docx` to `report/UTS_BI_Sebastian_Wasaka_DW.docx` and edit only the copy. Draft Indonesian text in `report/sections_id.md` first, delete all `<...>` placeholders and Bang Ham example images (`image1` to `image4`, `image6`, `image7`), and work through each fix:
-
-- Title page: delete line 2 warning text ("THIS IS NOT FOR ACTUAL DATA WAREHOUSE DESIGN DOCUMENT...").
-- Validation & Revision History: update Sebastian's date and add version `1.1`.
-- Introduction & Definitions: remove Stripe mentions; clarify `parent_transaction_code` is not `<<DD>>`; delete the stray `"Implementation. Springer-Verlag..."` line; add OLAP, Data Mart, Staging Area, `FEE_REVERSAL`, Owner/Steward/Custodian/Provider, and Full Refresh terms.
-- Limitations: update Limitation #4 to single-file DuckDB (`stg`/`edw`/`mart`), add synthetic-transaction disclosure (with real ECB FX), and note single-user local deployment without authentication.
-- Background: reword `"pipa ETL terotomatisasi"` to semi-automated file-based ETL so it agrees with Limitation #1.
-- Purpose & Project Scope: remove stray surrogate-key sentence; state revenue-only scope and insert architecture diagram.
-- Business Problems & Solution: table mapping each problem to impact, DW solution, and expected outcome tied to the four questions.
-- Stakeholders & Data Owners: replace generic template table with the governance matrix in Section 8 plus PII policy note.
-- Budget Plans: replace the Rp 4.7 to 10.85B corporate table with a realistic indie open-source budget (Rp 0 software licensing, existing local hardware, optional modest VPS estimate, part-time engineering hours).
-- Tools, Sources, ETL Design, Architecture, Schema Notes (`original_amount` -> `amount_orig`), Storage Design, plus new Sections 7 to 10 (OLAP Implementation, Query Implementation, Business Findings from `report/findings_raw.md`, Conclusion and future work).
-
-### Phase 8: Presentation prep (19:00 to 21:00)
-Draft `report/qa_prep.md` with 1 to 2 sentence answers for likely Business and Technical reviewer questions (grain choice, `parent_transaction_code`, refund cap vs multi-tips, DuckDB vs PostgreSQL, weekend FX fallback, unmatched title quarantine, idempotency, currency-safe sums, why SCD Type 2 is deferred) and do one timed 15 to 20 minute walkthrough. Hard stop at the end of 25 Nov so 26 to 29 Nov stay free for Gimersia.
+### Phase 8: Presentation prep (Done)
+Prepared `report/demo_script.md` (15 to 20 minute live walkthrough) and `report/qa_prep.md` (7 Business and 10 Technical reviewer Q&A answers). Ready for lecturer-assigned presentation slot.
 
 ## 7. After presenting
 

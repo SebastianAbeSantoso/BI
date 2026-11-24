@@ -165,8 +165,30 @@ Output of `.\.venv\Scripts\python.exe src\validate.py` (`12 PASS, 2 INFO, 0 FAIL
 
 Headless verification using `streamlit.testing.v1.AppTest` passed with 0 exceptions and 0 deprecation warnings.
 
-## 7. Next steps for 25 Nov (Phases 6 to 8)
+## 7. Report, diagrams, screenshots, and presentation prep (Phases 6 to 8)
 
-1. Phase 6: create the PlantUML diagrams in `diagrams/` (overall architecture, ETL flow, data tunnel, VGen JSON structure, storage layout) and capture screenshots of the running app into `report/screenshots/`.
-2. Phase 7: copy `BI-Design-Template.docx` to `report/UTS_BI_Sebastian_Wasaka_DW.docx` (leave the original untouched), delete the template warning on line 2, remove Stripe mentions, fix the `parent_transaction_code` `<<DD>>` and `original_amount` typos, replace Bang Ham's example images and corporate budget table, and paste the Wasaka Interactive sections and numbers from `report/findings_raw.md`.
-3. Phase 8: write `report/qa_prep.md` and run one timed walkthrough of the app before presentation.
+Phases 6 through 8 are now complete and verified:
+
+1. **Diagrams (`diagrams/` via `src/render_diagrams.py`):**
+   - `01_etl_flow.puml` / `.png`: full Extract, Transform, and Load flow including PII stripping, Fiverr deduplication, title mapping, `stg.etl_rejects` quarantine, signed atomic event explosion, and weekend FX fallback.
+   - `02_vgen_json_schema.puml` / `.png`: nested `vgen_export.json` object schema showing `tips[]` and `refunds[]` arrays.
+   - `03_data_tunnel.puml` / `.png`: end-to-end trace of concrete Steam, VGen, and PayPal orders from raw landing tables into atomic `fact_revenue_event` rows.
+   - `04_dw_architecture.puml` / `.png`: Kimball architecture flow (`Data Sources -> stg -> ETL -> edw -> mart -> Streamlit -> Studio Stakeholders`).
+   - `05_storage_design.puml` / `.png`: single-file `data/warehouse.duckdb` logical layout across `stg`, `edw`, and `mart`.
+   - `06_star_schema_edw.png`: extracted approved Star Schema diagram from the template.
+2. **Application & CLI Screenshots (`report/screenshots/` via `src/capture_screenshots.py`):**
+   - `01_tab1_query_builder.png` through `06_tab3_validation.png`: real headless Microsoft Edge captures of the running Streamlit app in light theme, including the expanded SQL box, all four business-question tabs, and the live validation/quarantine tab.
+   - `07_cli_etl_validate.png`: rendered terminal output from running `src/etl.py` and `src/validate.py`.
+3. **Word Report (`report/UTS_BI_Sebastian_Wasaka_DW.docx` via `src/build_report_docx.py` & `report/sections_id.md`):**
+   - Built on a copy of `d:\Downloads\random\BI-Design-Template.docx` while keeping the original file byte-for-byte untouched.
+   - Removed the template warning banner, Stripe references, stray copy-paste lines, Bang Ham example diagrams/tables, and the `original_amount` and `parent_transaction_code <<DD>>` typos.
+   - Added complete Indonesian sections 1 through 10 with the 10-row Data Governance matrix, realistic open-source budget, embedded diagrams and screenshots, exact warehouse figures, and the V1 to V14 validation table.
+4. **Presentation Prep (`report/demo_script.md` & `report/qa_prep.md`):**
+   - Step-by-step 15 to 20 minute demo flow and concise answers for 7 Business Reviewer questions and 10 Technical DW Reviewer questions.
+
+## 8. Remaining post-presentation steps
+
+1. Record the in-person classroom presentation and peer-review Q&A session.
+2. Collect the two peer-review assessments (exact format TBA).
+3. Write `Kesimpulan setelah peer-review` reflecting on the reviewers' questions and feedback.
+4. Upload all four deliverables to e-learning (exact cutoff TBA) and mark the Notion task Done.
