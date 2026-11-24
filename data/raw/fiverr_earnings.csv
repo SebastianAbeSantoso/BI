@@ -1,0 +1,251 @@
+clearing_date,fiverr_order_id,row_kind,order_title,buyer_username,currency,gross_amount,fiverr_commission,parent_order_id
+2025-01-02,FO-7001,ORDER,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7001,USD,98.69,-19.74,
+2025-01-09,FO-7001-REF,CANCELLATION_FULL,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7001,USD,-98.69,19.74,FO-7001
+2025-01-07,FO-7002,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7002,USD,116.43,-23.29,
+2025-01-12,FO-7002-TIP1,TIP,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7002,USD,20.00,-4.00,FO-7002
+2025-01-08,FO-7003,ORDER,HLSL/GDShader Stylized Water [Tier Standard],fiverr_user_7003,USD,116.04,-23.21,
+2025-01-09,FO-7004,ORDER,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7004,USD,109.99,-22.00,
+2025-01-18,FO-7005,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7005,SGD,231.22,-46.24,
+2025-01-19,FO-7006,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7006,USD,252.47,-50.49,
+2025-01-20,FO-7007,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7007,USD,122.44,-24.49,
+2025-01-23,FO-7008,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7008,USD,207.01,-41.40,
+2025-01-27,FO-7008-TIP1,TIP,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7008,USD,10.00,-2.00,FO-7008
+2025-02-01,FO-7008-REF,CANCELLATION_FULL,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7008,USD,-207.01,41.40,FO-7008
+2025-01-25,FO-7009,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7009,EUR,83.07,-16.61,
+2025-02-07,FO-7010,ORDER,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7010,GBP,121.20,-24.24,
+2025-02-08,FO-7011,ORDER,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7011,USD,100.71,-20.14,
+2025-02-10,FO-7012,ORDER,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7012,USD,94.97,-18.99,
+2025-02-13,FO-7012-TIP1,TIP,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7012,USD,20.00,-4.00,FO-7012
+2025-02-11,FO-7013,ORDER,Game Splash Art Illustration [Tier Pro],fiverr_user_7013,USD,254.41,-50.88,
+2025-02-13,FO-7014,ORDER,OC Portrait Render High-Res [Tier Standard],fiverr_user_7014,USD,240.81,-48.16,
+2025-02-15,FO-7014-TIP1,TIP,OC Portrait Render High-Res [Tier Standard],fiverr_user_7014,USD,10.00,-2.00,FO-7014
+2025-02-15,FO-7015,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7015,USD,107.44,-21.49,
+2025-02-19,FO-7016,ORDER,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7016,USD,182.35,-36.47,
+2025-02-24,FO-7017,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7017,SGD,211.56,-42.31,
+2025-02-26,FO-7018,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7018,USD,134.50,-26.90,
+2025-03-02,FO-7018-REF,CANCELLATION_FULL,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7018,USD,-134.50,26.90,FO-7018
+2025-02-27,FO-7019,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7019,EUR,59.91,-11.98,
+2025-03-03,FO-7019-TIP1,TIP,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7019,EUR,27.60,-5.52,FO-7019
+2025-02-27,FO-7019-TIP2,TIP,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7019,EUR,9.20,-1.84,FO-7019
+2025-02-28,FO-7020,ORDER,Fullbody Character Illustration + BG [Tier Pro],fiverr_user_7020,GBP,190.82,-38.16,
+2025-03-04,FO-7021,ORDER,Godot Mechanic & State Controller [Tier Standard],fiverr_user_7021,USD,294.64,-58.93,
+2025-03-12,FO-7022,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7022,USD,157.51,-31.50,
+2025-03-18,FO-7023,ORDER,RPG HUD Icon & Frame Pack [Tier Pro],fiverr_user_7023,USD,156.64,-31.33,
+2025-04-02,FO-7024,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Basic],fiverr_user_7024,USD,160.87,-32.17,
+2025-04-06,FO-7025,ORDER,Custom Shader Toon Outline Setup [Tier Pro],fiverr_user_7025,USD,173.99,-34.80,
+2025-04-16,FO-7026,ORDER,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7026,EUR,166.76,-33.35,
+2025-04-17,FO-7026-TIP1,TIP,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7026,EUR,18.40,-3.68,FO-7026
+2025-04-16,FO-7026-TIP2,TIP,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7026,EUR,27.60,-5.52,FO-7026
+2025-04-22,FO-7027,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7027,USD,195.98,-39.20,
+2025-04-30,FO-7028,ORDER,Custom Shader Toon Outline Setup [Tier Basic],fiverr_user_7028,USD,105.79,-21.16,
+2025-05-01,FO-7028-TIP1,TIP,Custom Shader Toon Outline Setup [Tier Basic],fiverr_user_7028,USD,20.00,-4.00,FO-7028
+2025-05-01,FO-7029,ORDER,Godot Mechanic & State Controller [Tier Standard],fiverr_user_7029,USD,132.06,-26.41,
+2025-05-03,FO-7030,ORDER,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7030,USD,116.56,-23.31,
+2025-05-08,FO-7031,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7031,SGD,133.79,-26.76,
+2025-05-13,FO-7032,ORDER,Anime Key Visual Illustration [Tier Standard],fiverr_user_7032,USD,192.36,-38.47,
+2025-05-14,FO-7033,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Pro],fiverr_user_7033,USD,150.80,-30.16,
+2025-05-15,FO-7034,ORDER,Custom Shader Toon Outline Setup [Tier Standard],fiverr_user_7034,USD,183.93,-36.79,
+2025-05-22,FO-7035,ORDER,RPG HUD Icon & Frame Pack [Tier Standard],fiverr_user_7035,SGD,91.91,-18.38,
+2025-05-23,FO-7036,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7036,USD,308.96,-61.79,
+2025-06-04,FO-7037,ORDER,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7037,USD,159.74,-31.95,
+2025-06-09,FO-7037-TIP1,TIP,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7037,USD,10.00,-2.00,FO-7037
+2025-06-09,FO-7037-TIP2,TIP,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7037,USD,30.00,-6.00,FO-7037
+2025-06-05,FO-7038,ORDER,RPG HUD Icon & Frame Pack [Tier Pro],fiverr_user_7038,USD,166.18,-33.24,
+2025-06-07,FO-7039,ORDER,HLSL/GDShader Stylized Water [Tier Standard],fiverr_user_7039,USD,279.10,-55.82,
+2025-06-08,FO-7039-TIP1,TIP,HLSL/GDShader Stylized Water [Tier Standard],fiverr_user_7039,USD,30.00,-6.00,FO-7039
+2025-06-10,FO-7040,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7040,EUR,135.23,-27.05,
+2025-06-14,FO-7041,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7041,USD,170.88,-34.18,
+2025-06-15,FO-7041-TIP1,TIP,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7041,USD,10.00,-2.00,FO-7041
+2025-06-16,FO-7042,ORDER,OC Portrait Render High-Res [Tier Standard],fiverr_user_7042,USD,239.52,-47.90,
+2025-06-17,FO-7042-TIP1,TIP,OC Portrait Render High-Res [Tier Standard],fiverr_user_7042,USD,20.00,-4.00,FO-7042
+2025-06-18,FO-7043,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7043,USD,241.62,-48.32,
+2025-06-20,FO-7044,ORDER,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7044,USD,155.42,-31.08,
+2025-06-23,FO-7044-TIP1,TIP,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7044,USD,20.00,-4.00,FO-7044
+2025-06-21,FO-7045,ORDER,OC Portrait Render High-Res [Tier Pro],fiverr_user_7045,USD,176.67,-35.33,
+2025-06-25,FO-7046,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7046,GBP,174.86,-34.97,
+2025-06-27,FO-7047,ORDER,SynthV Vocal Ending Song Arrangement [Tier Pro],fiverr_user_7047,SGD,283.58,-56.72,
+2025-07-01,FO-7048,ORDER,Isometric Tileset Commission 64x64 [Tier Pro],fiverr_user_7048,USD,170.83,-34.17,
+2025-07-07,FO-7049,ORDER,Custom Shader Toon Outline Setup [Tier Pro],fiverr_user_7049,USD,163.86,-32.77,
+2025-07-10,FO-7049-TIP1,TIP,Custom Shader Toon Outline Setup [Tier Pro],fiverr_user_7049,USD,30.00,-6.00,FO-7049
+2025-07-10,FO-7050,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7050,USD,185.14,-37.03,
+2025-07-14,FO-7051,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7051,SGD,121.30,-24.26,
+2025-07-15,FO-7052,ORDER,OC Portrait Render High-Res [Tier Standard],fiverr_user_7052,USD,102.96,-20.59,
+2025-07-19,FO-7053,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7053,USD,156.19,-31.24,
+2025-07-20,FO-7054,ORDER,SynthV Vocal Ending Song Arrangement [Tier Pro],fiverr_user_7054,USD,107.36,-21.47,
+2025-07-21,FO-7055,ORDER,Custom Shader Toon Outline Setup [Tier Basic],fiverr_user_7055,USD,263.05,-52.61,
+2025-07-29,FO-7056,ORDER,OC Portrait Render High-Res [Tier Pro],fiverr_user_7056,USD,240.66,-48.13,
+2025-08-09,FO-7056-REF,CANCELLATION_FULL,OC Portrait Render High-Res [Tier Pro],fiverr_user_7056,USD,-240.66,48.13,FO-7056
+2025-07-31,FO-7057,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Basic],fiverr_user_7057,USD,131.18,-26.24,
+2025-08-02,FO-7058,ORDER,SynthV Vocal Ending Song Arrangement [Tier Basic],fiverr_user_7058,USD,222.86,-44.57,
+2025-08-03,FO-7059,ORDER,Looping Indie Game BGM Track [Tier Basic],fiverr_user_7059,USD,199.31,-39.86,
+2025-08-08,FO-7060,ORDER,HLSL/GDShader Stylized Water [Tier Standard],fiverr_user_7060,GBP,79.43,-15.89,
+2025-08-13,FO-7060-TIP1,TIP,HLSL/GDShader Stylized Water [Tier Standard],fiverr_user_7060,GBP,15.80,-3.16,FO-7060
+2025-08-09,FO-7061,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7061,GBP,60.25,-12.05,
+2025-08-10,FO-7062,ORDER,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7062,USD,116.25,-23.25,
+2025-08-14,FO-7062-TIP1,TIP,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7062,USD,20.00,-4.00,FO-7062
+2025-08-11,FO-7063,ORDER,OC Portrait Render High-Res [Tier Basic],fiverr_user_7063,EUR,85.06,-17.01,
+2025-08-12,FO-7064,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7064,USD,90.37,-18.07,
+2025-08-15,FO-7065,ORDER,Godot Mechanic & State Controller [Tier Standard],fiverr_user_7065,USD,113.71,-22.74,
+2025-08-18,FO-7066,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7066,USD,259.54,-51.91,
+2025-08-22,FO-7067,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7067,USD,88.36,-17.67,
+2025-08-23,FO-7068,ORDER,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7068,USD,147.68,-29.54,
+2025-08-23,FO-7068-TIP1,TIP,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7068,USD,10.00,-2.00,FO-7068
+2025-08-28,FO-7068-TIP2,TIP,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7068,USD,20.00,-4.00,FO-7068
+2025-08-24,FO-7069,ORDER,OC Portrait Render High-Res [Tier Pro],fiverr_user_7069,USD,178.14,-35.63,
+2025-08-28,FO-7069-TIP1,TIP,OC Portrait Render High-Res [Tier Pro],fiverr_user_7069,USD,30.00,-6.00,FO-7069
+2025-08-27,FO-7069-TIP2,TIP,OC Portrait Render High-Res [Tier Pro],fiverr_user_7069,USD,30.00,-6.00,FO-7069
+2025-08-28,FO-7070,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7070,USD,61.42,-12.28,
+2025-08-30,FO-7071,ORDER,Godot Mechanic & State Controller [Tier Standard],fiverr_user_7071,USD,112.83,-22.57,
+2025-09-02,FO-7072,ORDER,Fullbody Character Illustration + BG [Tier Pro],fiverr_user_7072,USD,176.67,-35.33,
+2025-09-05,FO-7073,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Pro],fiverr_user_7073,USD,191.02,-38.20,
+2025-09-06,FO-7074,ORDER,RPG HUD Icon & Frame Pack [Tier Standard],fiverr_user_7074,USD,106.59,-21.32,
+2025-09-15,FO-7074-REF,CANCELLATION_FULL,RPG HUD Icon & Frame Pack [Tier Standard],fiverr_user_7074,USD,-106.59,21.32,FO-7074
+2025-09-11,FO-7075,ORDER,Isometric Tileset Commission 64x64 [Tier Pro],fiverr_user_7075,USD,92.15,-18.43,
+2025-09-14,FO-7076,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7076,USD,203.68,-40.74,
+2025-09-17,FO-7076-TIP1,TIP,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7076,USD,20.00,-4.00,FO-7076
+2025-09-20,FO-7077,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7077,USD,233.03,-46.61,
+2025-09-27,FO-7078,ORDER,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7078,USD,98.12,-19.62,
+2025-10-02,FO-7078-TIP1,TIP,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7078,USD,30.00,-6.00,FO-7078
+2025-10-02,FO-7078-TIP2,TIP,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7078,USD,30.00,-6.00,FO-7078
+2025-10-04,FO-7078-REF,CANCELLATION_FULL,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7078,USD,-98.12,19.62,FO-7078
+2025-09-29,FO-7079,ORDER,Game Splash Art Illustration [Tier Pro],fiverr_user_7079,USD,193.29,-38.66,
+2025-10-01,FO-7080,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7080,USD,104.37,-20.87,
+2025-10-05,FO-7081,ORDER,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7081,USD,222.75,-44.55,
+2025-10-09,FO-7082,ORDER,RPG HUD Icon & Frame Pack [Tier Pro],fiverr_user_7082,USD,142.76,-28.55,
+2025-10-18,FO-7083,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7083,GBP,109.72,-21.94,
+2025-11-01,FO-7084,ORDER,Looping Indie Game BGM Track [Tier Basic],fiverr_user_7084,GBP,169.42,-33.88,
+2025-11-02,FO-7085,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7085,USD,197.17,-39.43,
+2025-11-06,FO-7086,ORDER,Fullbody Character Illustration + BG [Tier Pro],fiverr_user_7086,USD,241.71,-48.34,
+2025-11-09,FO-7087,ORDER,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7087,USD,244.09,-48.82,
+2025-11-14,FO-7088,ORDER,OC Portrait Render High-Res [Tier Basic],fiverr_user_7088,USD,119.31,-23.86,
+2025-11-19,FO-7088-TIP1,TIP,OC Portrait Render High-Res [Tier Basic],fiverr_user_7088,USD,30.00,-6.00,FO-7088
+2025-11-19,FO-7089,ORDER,Game Splash Art Illustration [Tier Standard],fiverr_user_7089,EUR,210.59,-42.12,
+2025-11-27,FO-7089-REF,CANCELLATION_FULL,Game Splash Art Illustration [Tier Standard],fiverr_user_7089,EUR,-210.59,42.12,FO-7089
+2025-11-22,FO-7090,ORDER,Game Splash Art Illustration [Tier Standard],fiverr_user_7090,USD,194.63,-38.93,
+2025-11-24,FO-7091,ORDER,Custom Shader Toon Outline Setup [Tier Pro],fiverr_user_7091,USD,261.46,-52.29,
+2025-11-25,FO-7092,ORDER,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7092,USD,161.20,-32.24,
+2025-11-28,FO-7093,ORDER,Isometric Tileset Commission 64x64 [Tier Pro],fiverr_user_7093,USD,114.10,-22.82,
+2025-11-29,FO-7093-TIP1,TIP,Isometric Tileset Commission 64x64 [Tier Pro],fiverr_user_7093,USD,30.00,-6.00,FO-7093
+2025-11-29,FO-7094,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7094,USD,92.60,-18.52,
+2025-12-13,FO-7094-REF,CANCELLATION_FULL,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7094,USD,-92.60,18.52,FO-7094
+2025-12-01,FO-7095,ORDER,Game Splash Art Illustration [Tier Standard],fiverr_user_7095,USD,151.04,-30.21,
+2025-12-02,FO-7096,ORDER,Game Splash Art Illustration [Tier Pro],fiverr_user_7096,USD,164.29,-32.86,
+2025-12-10,FO-7097,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7097,USD,128.52,-25.70,
+2025-12-13,FO-7097-TIP1,TIP,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7097,USD,20.00,-4.00,FO-7097
+2025-12-11,FO-7098,ORDER,RPG HUD Icon & Frame Pack [Tier Basic],fiverr_user_7098,GBP,138.86,-27.77,
+2025-12-25,FO-7099,ORDER,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7099,USD,101.14,-20.23,
+2025-12-25,FO-7099-TIP1,TIP,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7099,USD,30.00,-6.00,FO-7099
+2025-12-31,FO-7100,ORDER,Anime Key Visual Illustration [Tier Standard],fiverr_user_7100,USD,137.26,-27.45,
+2026-01-01,FO-7101,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7101,USD,111.70,-22.34,
+2026-01-03,FO-7102,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7102,USD,141.41,-28.28,
+2026-01-12,FO-7103,ORDER,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7103,USD,100.68,-20.14,
+2026-01-15,FO-7103-TIP1,TIP,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7103,USD,10.00,-2.00,FO-7103
+2026-01-13,FO-7104,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7104,USD,181.88,-36.38,
+2026-01-14,FO-7105,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7105,EUR,152.27,-30.45,
+2026-01-14,FO-7105-TIP1,TIP,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7105,EUR,9.20,-1.84,FO-7105
+2026-01-17,FO-7106,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7106,USD,162.85,-32.57,
+2026-01-19,FO-7107,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7107,USD,151.47,-30.29,
+2026-01-23,FO-7108,ORDER,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7108,USD,103.80,-20.76,
+2026-02-03,FO-7108-REF,CANCELLATION_PARTIAL,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7108,USD,-51.90,10.38,FO-7108
+2026-01-29,FO-7109,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7109,USD,138.92,-27.78,
+2026-02-06,FO-7110,ORDER,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7110,USD,102.47,-20.49,
+2026-02-18,FO-7111,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7111,USD,172.28,-34.46,
+2026-02-19,FO-7112,ORDER,Fullbody Character Illustration + BG [Tier Basic],fiverr_user_7112,USD,229.70,-45.94,
+2026-02-21,FO-7113,ORDER,Custom Shader Toon Outline Setup [Tier Standard],fiverr_user_7113,GBP,216.00,-43.20,
+2026-02-28,FO-7114,ORDER,SynthV Vocal Ending Song Arrangement [Tier Pro],fiverr_user_7114,USD,138.10,-27.62,
+2026-03-12,FO-7114-REF,CANCELLATION_FULL,SynthV Vocal Ending Song Arrangement [Tier Pro],fiverr_user_7114,USD,-138.10,27.62,FO-7114
+2026-03-02,FO-7115,ORDER,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7115,USD,186.96,-37.39,
+2026-03-07,FO-7115-TIP1,TIP,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7115,USD,10.00,-2.00,FO-7115
+2026-03-07,FO-7115-TIP2,TIP,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7115,USD,30.00,-6.00,FO-7115
+2026-03-09,FO-7116,ORDER,SynthV Vocal Ending Song Arrangement [Tier Basic],fiverr_user_7116,USD,214.98,-43.00,
+2026-03-12,FO-7116-TIP1,TIP,SynthV Vocal Ending Song Arrangement [Tier Basic],fiverr_user_7116,USD,30.00,-6.00,FO-7116
+2026-03-13,FO-7116-TIP2,TIP,SynthV Vocal Ending Song Arrangement [Tier Basic],fiverr_user_7116,USD,30.00,-6.00,FO-7116
+2026-03-14,FO-7117,ORDER,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7117,EUR,219.49,-43.90,
+2026-03-19,FO-7117-TIP1,TIP,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7117,EUR,18.40,-3.68,FO-7117
+2026-03-15,FO-7117-TIP2,TIP,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7117,EUR,18.40,-3.68,FO-7117
+2026-03-20,FO-7118,ORDER,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7118,USD,250.53,-50.11,
+2026-03-24,FO-7119,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7119,USD,96.62,-19.32,
+2026-03-28,FO-7120,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7120,USD,205.64,-41.13,
+2026-03-30,FO-7121,ORDER,Custom Shader Toon Outline Setup [Tier Standard],fiverr_user_7121,USD,155.46,-31.09,
+2026-04-18,FO-7122,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7122,USD,63.66,-12.73,
+2026-04-25,FO-7123,ORDER,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7123,USD,83.55,-16.71,
+2026-04-29,FO-7124,ORDER,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7124,GBP,125.35,-25.07,
+2026-05-03,FO-7125,ORDER,OC Portrait Render High-Res [Tier Basic],fiverr_user_7125,USD,181.01,-36.20,
+2026-05-07,FO-7126,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7126,GBP,121.65,-24.33,
+2026-05-12,FO-7127,ORDER,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7127,USD,93.61,-18.72,
+2026-05-13,FO-7127-TIP1,TIP,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7127,USD,20.00,-4.00,FO-7127
+2026-05-16,FO-7128,ORDER,RPG HUD Icon & Frame Pack [Tier Basic],fiverr_user_7128,SGD,219.73,-43.95,
+2026-05-19,FO-7128-TIP1,TIP,RPG HUD Icon & Frame Pack [Tier Basic],fiverr_user_7128,SGD,13.40,-2.68,FO-7128
+2026-05-18,FO-7128-TIP2,TIP,RPG HUD Icon & Frame Pack [Tier Basic],fiverr_user_7128,SGD,40.20,-8.04,FO-7128
+2026-05-23,FO-7129,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7129,GBP,63.67,-12.73,
+2026-05-28,FO-7130,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Basic],fiverr_user_7130,USD,168.13,-33.63,
+2026-05-29,FO-7131,ORDER,Fullbody Character Illustration + BG [Tier Pro],fiverr_user_7131,EUR,125.06,-25.01,
+2026-05-30,FO-7132,ORDER,RPG HUD Icon & Frame Pack [Tier Standard],fiverr_user_7132,USD,73.92,-14.78,
+2026-06-04,FO-7133,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7133,USD,132.41,-26.48,
+2026-06-08,FO-7133-TIP1,TIP,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7133,USD,30.00,-6.00,FO-7133
+2026-06-16,FO-7134,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7134,USD,209.73,-41.95,
+2026-06-17,FO-7135,ORDER,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7135,USD,144.32,-28.86,
+2026-06-19,FO-7136,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Basic],fiverr_user_7136,GBP,185.16,-37.03,
+2026-06-22,FO-7136-TIP1,TIP,Dynamic Boss Theme Chiptune/Orchestral [Tier Basic],fiverr_user_7136,GBP,7.90,-1.58,FO-7136
+2026-06-27,FO-7137,ORDER,OC Portrait Render High-Res [Tier Basic],fiverr_user_7137,USD,183.85,-36.77,
+2026-06-28,FO-7137-TIP1,TIP,OC Portrait Render High-Res [Tier Basic],fiverr_user_7137,USD,30.00,-6.00,FO-7137
+2026-06-30,FO-7138,ORDER,Custom Shader Toon Outline Setup [Tier Pro],fiverr_user_7138,EUR,209.85,-41.97,
+2026-07-06,FO-7139,ORDER,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7139,USD,87.68,-17.54,
+2026-07-13,FO-7140,ORDER,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7140,USD,119.61,-23.92,
+2026-07-21,FO-7140-REF,CANCELLATION_FULL,Retro Pixel Sprite Animation Sheet [Tier Pro],fiverr_user_7140,USD,-119.61,23.92,FO-7140
+2026-07-19,FO-7141,ORDER,Isometric Tileset Commission 64x64 [Tier Basic],fiverr_user_7141,USD,133.41,-26.68,
+2026-07-22,FO-7142,ORDER,Isometric Tileset Commission 64x64 [Tier Pro],fiverr_user_7142,USD,95.87,-19.17,
+2026-07-23,FO-7143,ORDER,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7143,SGD,296.98,-59.40,
+2026-07-26,FO-7144,ORDER,Looping Indie Game BGM Track [Tier Basic],fiverr_user_7144,USD,138.61,-27.72,
+2026-08-06,FO-7145,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7145,USD,177.62,-35.52,
+2026-08-17,FO-7146,ORDER,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7146,USD,201.53,-40.31,
+2026-08-20,FO-7146-TIP1,TIP,Looping Indie Game BGM Track [Tier Standard],fiverr_user_7146,USD,30.00,-6.00,FO-7146
+2026-08-19,FO-7147,ORDER,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7147,USD,239.53,-47.91,
+2026-08-24,FO-7147-REF,CANCELLATION_FULL,HLSL/GDShader Stylized Water [Tier Basic],fiverr_user_7147,USD,-239.53,47.91,FO-7147
+2026-08-20,FO-7148,ORDER,Fullbody Character Illustration + BG [Tier Basic],fiverr_user_7148,USD,125.55,-25.11,
+2026-08-21,FO-7149,ORDER,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7149,USD,259.56,-51.91,
+2026-08-22,FO-7150,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7150,USD,172.42,-34.48,
+2026-08-27,FO-7151,ORDER,SynthV Vocal Ending Song Arrangement [Tier Standard],fiverr_user_7151,USD,213.26,-42.65,
+2026-09-02,FO-7152,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7152,EUR,152.37,-30.47,
+2026-09-05,FO-7153,ORDER,Game Splash Art Illustration [Tier Pro],fiverr_user_7153,USD,140.24,-28.05,
+2026-09-12,FO-7154,ORDER,RPG HUD Icon & Frame Pack [Tier Pro],fiverr_user_7154,USD,161.13,-32.23,
+2026-09-14,FO-7155,ORDER,SynthV Vocal Ending Song Arrangement [Tier Pro],fiverr_user_7155,USD,183.23,-36.65,
+2026-09-16,FO-7156,ORDER,Custom Shader Toon Outline Setup [Tier Pro],fiverr_user_7156,USD,127.10,-25.42,
+2026-09-18,FO-7157,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7157,USD,153.65,-30.73,
+2026-09-19,FO-7158,ORDER,Anime Key Visual Illustration [Tier Basic],fiverr_user_7158,USD,230.92,-46.18,
+2026-09-22,FO-7159,ORDER,OC Portrait Render High-Res [Tier Pro],fiverr_user_7159,USD,249.40,-49.88,
+2026-09-25,FO-7160,ORDER,Fullbody Character Illustration + BG [Tier Pro],fiverr_user_7160,USD,147.37,-29.47,
+2026-09-29,FO-7161,ORDER,Fullbody Character Illustration + BG [Tier Basic],fiverr_user_7161,USD,188.73,-37.75,
+2026-09-29,FO-7161-TIP1,TIP,Fullbody Character Illustration + BG [Tier Basic],fiverr_user_7161,USD,30.00,-6.00,FO-7161
+2026-10-02,FO-7161-TIP2,TIP,Fullbody Character Illustration + BG [Tier Basic],fiverr_user_7161,USD,20.00,-4.00,FO-7161
+2026-10-01,FO-7162,ORDER,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7162,USD,107.68,-21.54,
+2026-10-05,FO-7163,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7163,USD,94.21,-18.84,
+2026-10-09,FO-7163-TIP1,TIP,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7163,USD,20.00,-4.00,FO-7163
+2026-10-09,FO-7163-TIP2,TIP,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7163,USD,10.00,-2.00,FO-7163
+2026-10-07,FO-7164,ORDER,Anime Key Visual Illustration [Tier Basic],fiverr_user_7164,SGD,312.54,-62.51,
+2026-10-11,FO-7165,ORDER,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7165,USD,174.99,-35.00,
+2026-10-15,FO-7165-TIP1,TIP,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7165,USD,20.00,-4.00,FO-7165
+2026-10-12,FO-7166,ORDER,Dynamic Boss Theme Chiptune/Orchestral [Tier Pro],fiverr_user_7166,USD,178.78,-35.76,
+2026-10-12,FO-7166-TIP1,TIP,Dynamic Boss Theme Chiptune/Orchestral [Tier Pro],fiverr_user_7166,USD,30.00,-6.00,FO-7166
+2026-10-16,FO-7167,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7167,USD,61.39,-12.28,
+2026-10-19,FO-7168,ORDER,SynthV Vocal Ending Song Arrangement [Tier Basic],fiverr_user_7168,EUR,205.01,-41.00,
+2026-10-22,FO-7168-TIP1,TIP,SynthV Vocal Ending Song Arrangement [Tier Basic],fiverr_user_7168,EUR,18.40,-3.68,FO-7168
+2025-08-18,FO-UNM-1,ORDER,Translate English Steam Page to Indonesian,fiverr_unm_1,USD,75.00,-15.00,
+2025-09-18,FO-UNM-2,ORDER,Youtube Gaming Montage Video Editing,fiverr_unm_2,USD,75.00,-15.00,
+2025-10-18,FO-UNM-3,ORDER,Discord Bot Moderation Script Hosting,fiverr_unm_3,USD,75.00,-15.00,
+2025-11-18,FO-UNM-4,ORDER,Podcast Audio Noise Cleanup & Mastering,fiverr_unm_4,USD,75.00,-15.00,
+2025-06-08,FO-7039-TIP1,TIP,HLSL/GDShader Stylized Water [Tier Standard],fiverr_user_7039,USD,30.00,-6.00,FO-7039
+2025-03-12,FO-7022,ORDER,Retro Pixel Sprite Animation Sheet [Tier Basic],fiverr_user_7022,USD,157.51,-31.50,
+2025-01-09,FO-7001-REF,CANCELLATION_FULL,Isometric Tileset Commission 64x64 [Tier Standard],fiverr_user_7001,USD,-98.69,19.74,FO-7001
+2025-01-25,FO-7009,ORDER,Retro Pixel Sprite Animation Sheet [Tier Standard],fiverr_user_7009,EUR,83.07,-16.61,
+2025-03-18,FO-7023,ORDER,RPG HUD Icon & Frame Pack [Tier Pro],fiverr_user_7023,USD,156.64,-31.33,
+2025-01-07,FO-7002,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7002,USD,116.43,-23.29,
+2025-06-18,FO-7043,ORDER,Godot Mechanic & State Controller [Tier Pro],fiverr_user_7043,USD,241.62,-48.32,
+2025-06-15,FO-7041-TIP1,TIP,Dynamic Boss Theme Chiptune/Orchestral [Tier Standard],fiverr_user_7041,USD,10.00,-2.00,FO-7041
+2025-06-09,FO-7037-TIP1,TIP,Fullbody Character Illustration + BG [Tier Standard],fiverr_user_7037,USD,10.00,-2.00,FO-7037
+2025-05-03,FO-7030,ORDER,HLSL/GDShader Stylized Water [Tier Pro],fiverr_user_7030,USD,116.56,-23.31,
+2025-05-08,FO-7031,ORDER,Looping Indie Game BGM Track [Tier Pro],fiverr_user_7031,SGD,133.79,-26.76,
+2025-02-01,FO-7008-REF,CANCELLATION_FULL,Godot Mechanic & State Controller [Tier Basic],fiverr_user_7008,USD,-207.01,41.40,FO-7008
+2025-02-13,FO-7014,ORDER,OC Portrait Render High-Res [Tier Standard],fiverr_user_7014,USD,240.81,-48.16,
+2025-06-16,FO-7042,ORDER,OC Portrait Render High-Res [Tier Standard],fiverr_user_7042,USD,239.52,-47.90,
+2025-05-13,FO-7032,ORDER,Anime Key Visual Illustration [Tier Standard],fiverr_user_7032,USD,192.36,-38.47,

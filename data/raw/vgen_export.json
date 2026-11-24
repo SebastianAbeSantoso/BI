@@ -1,0 +1,3767 @@
+[
+  {
+    "order_id": "VGN-5001",
+    "created_at": "2025-01-09T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #54",
+    "client_username": "@vgen_client_5001",
+    "currency": "USD",
+    "gross_amount": 137.75,
+    "vgen_fee": 6.89,
+    "payment_proc_fee": 4.29,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5002",
+    "created_at": "2025-01-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #55",
+    "client_username": "@vgen_client_5002",
+    "currency": "USD",
+    "gross_amount": 130.11,
+    "vgen_fee": 6.51,
+    "payment_proc_fee": 4.07,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5003",
+    "created_at": "2025-01-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #56",
+    "client_username": "@vgen_client_5003",
+    "currency": "GBP",
+    "gross_amount": 127.79,
+    "vgen_fee": 6.39,
+    "payment_proc_fee": 3.95,
+    "tips": [
+      {
+        "tip_id": "VGN-5003-T1",
+        "paid_at": "2025-01-20T14:15:00Z",
+        "amount": 7.9
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5004",
+    "created_at": "2025-01-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #57",
+    "client_username": "@vgen_client_5004",
+    "currency": "USD",
+    "gross_amount": 177.63,
+    "vgen_fee": 8.88,
+    "payment_proc_fee": 5.45,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5005",
+    "created_at": "2025-01-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #58",
+    "client_username": "@vgen_client_5005",
+    "currency": "USD",
+    "gross_amount": 88.75,
+    "vgen_fee": 4.44,
+    "payment_proc_fee": 2.87,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5006",
+    "created_at": "2025-01-18T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #59",
+    "client_username": "@vgen_client_5006",
+    "currency": "USD",
+    "gross_amount": 242.07,
+    "vgen_fee": 12.1,
+    "payment_proc_fee": 7.32,
+    "tips": [
+      {
+        "tip_id": "VGN-5006-T1",
+        "paid_at": "2025-01-21T14:15:00Z",
+        "amount": 10.0
+      },
+      {
+        "tip_id": "VGN-5006-T2",
+        "paid_at": "2025-01-21T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5007",
+    "created_at": "2025-01-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #60",
+    "client_username": "@vgen_client_5007",
+    "currency": "EUR",
+    "gross_amount": 201.65,
+    "vgen_fee": 10.08,
+    "payment_proc_fee": 6.13,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5008",
+    "created_at": "2025-01-23T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5008",
+    "currency": "JPY",
+    "gross_amount": 2128.0,
+    "vgen_fee": 106.4,
+    "payment_proc_fee": 107.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5009",
+    "created_at": "2025-01-27T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #62",
+    "client_username": "@vgen_client_5009",
+    "currency": "USD",
+    "gross_amount": 150.09,
+    "vgen_fee": 7.5,
+    "payment_proc_fee": 4.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5010",
+    "created_at": "2025-01-28T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5010",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5011",
+    "created_at": "2025-01-30T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #64",
+    "client_username": "@vgen_client_5011",
+    "currency": "SGD",
+    "gross_amount": 223.91,
+    "vgen_fee": 11.2,
+    "payment_proc_fee": 6.89,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5012",
+    "created_at": "2025-01-31T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5012",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5013",
+    "created_at": "2025-01-31T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5013",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5014",
+    "created_at": "2025-02-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #67",
+    "client_username": "@vgen_client_5014",
+    "currency": "EUR",
+    "gross_amount": 77.12,
+    "vgen_fee": 3.86,
+    "payment_proc_fee": 2.52,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5015",
+    "created_at": "2025-02-05T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5015",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5016",
+    "created_at": "2025-02-06T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #69",
+    "client_username": "@vgen_client_5016",
+    "currency": "USD",
+    "gross_amount": 105.68,
+    "vgen_fee": 5.28,
+    "payment_proc_fee": 3.36,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5017",
+    "created_at": "2025-02-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #70",
+    "client_username": "@vgen_client_5017",
+    "currency": "USD",
+    "gross_amount": 88.5,
+    "vgen_fee": 4.42,
+    "payment_proc_fee": 2.87,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5018",
+    "created_at": "2025-02-13T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #71",
+    "client_username": "@vgen_client_5018",
+    "currency": "USD",
+    "gross_amount": 149.9,
+    "vgen_fee": 7.5,
+    "payment_proc_fee": 4.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5019",
+    "created_at": "2025-02-23T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #72",
+    "client_username": "@vgen_client_5019",
+    "currency": "USD",
+    "gross_amount": 219.56,
+    "vgen_fee": 10.98,
+    "payment_proc_fee": 6.67,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5020",
+    "created_at": "2025-02-25T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #73",
+    "client_username": "@vgen_client_5020",
+    "currency": "USD",
+    "gross_amount": 84.32,
+    "vgen_fee": 4.22,
+    "payment_proc_fee": 2.75,
+    "tips": [
+      {
+        "tip_id": "VGN-5020-T1",
+        "paid_at": "2025-03-03T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5021",
+    "created_at": "2025-03-03T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5021",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5022",
+    "created_at": "2025-03-04T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #75",
+    "client_username": "@vgen_client_5022",
+    "currency": "USD",
+    "gross_amount": 183.69,
+    "vgen_fee": 9.18,
+    "payment_proc_fee": 5.63,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5023",
+    "created_at": "2025-03-06T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5023",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5024",
+    "created_at": "2025-03-09T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #77",
+    "client_username": "@vgen_client_5024",
+    "currency": "USD",
+    "gross_amount": 199.09,
+    "vgen_fee": 9.95,
+    "payment_proc_fee": 6.07,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5025",
+    "created_at": "2025-03-15T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5025",
+    "currency": "JPY",
+    "gross_amount": 3192.0,
+    "vgen_fee": 159.6,
+    "payment_proc_fee": 138.57,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5026",
+    "created_at": "2025-03-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #79",
+    "client_username": "@vgen_client_5026",
+    "currency": "USD",
+    "gross_amount": 161.62,
+    "vgen_fee": 8.08,
+    "payment_proc_fee": 4.99,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5027",
+    "created_at": "2025-03-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #80",
+    "client_username": "@vgen_client_5027",
+    "currency": "JPY",
+    "gross_amount": 17162.0,
+    "vgen_fee": 858.1,
+    "payment_proc_fee": 543.7,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5028",
+    "created_at": "2025-03-22T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #81",
+    "client_username": "@vgen_client_5028",
+    "currency": "USD",
+    "gross_amount": 136.22,
+    "vgen_fee": 6.81,
+    "payment_proc_fee": 4.25,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5029",
+    "created_at": "2025-03-22T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #82",
+    "client_username": "@vgen_client_5029",
+    "currency": "JPY",
+    "gross_amount": 19271.0,
+    "vgen_fee": 963.55,
+    "payment_proc_fee": 604.86,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5030",
+    "created_at": "2025-03-31T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5030",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5031",
+    "created_at": "2025-04-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #84",
+    "client_username": "@vgen_client_5031",
+    "currency": "EUR",
+    "gross_amount": 84.7,
+    "vgen_fee": 4.24,
+    "payment_proc_fee": 2.74,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5032",
+    "created_at": "2025-04-04T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5032",
+    "currency": "SGD",
+    "gross_amount": 24.12,
+    "vgen_fee": 1.21,
+    "payment_proc_fee": 1.1,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5033",
+    "created_at": "2025-04-05T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #86",
+    "client_username": "@vgen_client_5033",
+    "currency": "USD",
+    "gross_amount": 169.75,
+    "vgen_fee": 8.49,
+    "payment_proc_fee": 5.22,
+    "tips": [
+      {
+        "tip_id": "VGN-5033-T1",
+        "paid_at": "2025-04-09T14:15:00Z",
+        "amount": 15.0
+      },
+      {
+        "tip_id": "VGN-5033-T2",
+        "paid_at": "2025-04-11T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5034",
+    "created_at": "2025-04-07T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #87",
+    "client_username": "@vgen_client_5034",
+    "currency": "USD",
+    "gross_amount": 87.31,
+    "vgen_fee": 4.37,
+    "payment_proc_fee": 2.83,
+    "tips": [
+      {
+        "tip_id": "VGN-5034-T1",
+        "paid_at": "2025-04-08T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5035",
+    "created_at": "2025-04-08T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #88",
+    "client_username": "@vgen_client_5035",
+    "currency": "GBP",
+    "gross_amount": 155.64,
+    "vgen_fee": 7.78,
+    "payment_proc_fee": 4.75,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5036",
+    "created_at": "2025-04-09T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5036",
+    "currency": "SGD",
+    "gross_amount": 24.12,
+    "vgen_fee": 1.21,
+    "payment_proc_fee": 1.1,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5037",
+    "created_at": "2025-04-13T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #90",
+    "client_username": "@vgen_client_5037",
+    "currency": "JPY",
+    "gross_amount": 15490.0,
+    "vgen_fee": 774.5,
+    "payment_proc_fee": 495.21,
+    "tips": [
+      {
+        "tip_id": "VGN-5037-T1",
+        "paid_at": "2025-04-14T14:15:00Z",
+        "amount": 2280.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5038",
+    "created_at": "2025-04-15T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5038",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5039",
+    "created_at": "2025-04-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "OC Portrait Render High-Res #92",
+    "client_username": "@vgen_client_5039",
+    "currency": "USD",
+    "gross_amount": 226.33,
+    "vgen_fee": 11.32,
+    "payment_proc_fee": 6.86,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5040",
+    "created_at": "2025-04-18T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5040",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5041",
+    "created_at": "2025-04-19T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #94",
+    "client_username": "@vgen_client_5041",
+    "currency": "SGD",
+    "gross_amount": 127.18,
+    "vgen_fee": 6.36,
+    "payment_proc_fee": 4.09,
+    "tips": [
+      {
+        "tip_id": "VGN-5041-T1",
+        "paid_at": "2025-04-23T14:15:00Z",
+        "amount": 20.1
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5042",
+    "created_at": "2025-04-20T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #95",
+    "client_username": "@vgen_client_5042",
+    "currency": "GBP",
+    "gross_amount": 90.19,
+    "vgen_fee": 4.51,
+    "payment_proc_fee": 2.86,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5043",
+    "created_at": "2025-04-25T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #96",
+    "client_username": "@vgen_client_5043",
+    "currency": "USD",
+    "gross_amount": 66.48,
+    "vgen_fee": 3.32,
+    "payment_proc_fee": 2.23,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5044",
+    "created_at": "2025-04-29T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5044",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5045",
+    "created_at": "2025-05-16T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #1",
+    "client_username": "@vgen_client_5045",
+    "currency": "USD",
+    "gross_amount": 164.26,
+    "vgen_fee": 8.21,
+    "payment_proc_fee": 5.06,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5046",
+    "created_at": "2025-05-19T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #2",
+    "client_username": "@vgen_client_5046",
+    "currency": "SGD",
+    "gross_amount": 282.04,
+    "vgen_fee": 14.1,
+    "payment_proc_fee": 8.58,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5047",
+    "created_at": "2025-05-20T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5047",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5048",
+    "created_at": "2025-05-22T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5048",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5049",
+    "created_at": "2025-05-23T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #5",
+    "client_username": "@vgen_client_5049",
+    "currency": "SGD",
+    "gross_amount": 151.37,
+    "vgen_fee": 7.57,
+    "payment_proc_fee": 4.79,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5050",
+    "created_at": "2025-05-24T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #6",
+    "client_username": "@vgen_client_5050",
+    "currency": "JPY",
+    "gross_amount": 30353.0,
+    "vgen_fee": 1517.65,
+    "payment_proc_fee": 926.24,
+    "tips": [
+      {
+        "tip_id": "VGN-5050-T1",
+        "paid_at": "2025-05-30T14:15:00Z",
+        "amount": 2280.0
+      },
+      {
+        "tip_id": "VGN-5050-T2",
+        "paid_at": "2025-05-28T14:15:00Z",
+        "amount": 1520.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5051",
+    "created_at": "2025-05-25T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5051",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5052",
+    "created_at": "2025-05-30T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5052",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5053",
+    "created_at": "2025-05-30T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5053",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5054",
+    "created_at": "2025-05-31T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #10",
+    "client_username": "@vgen_client_5054",
+    "currency": "USD",
+    "gross_amount": 130.76,
+    "vgen_fee": 6.54,
+    "payment_proc_fee": 4.09,
+    "tips": [
+      {
+        "tip_id": "VGN-5054-T1",
+        "paid_at": "2025-06-04T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5055",
+    "created_at": "2025-06-01T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5055",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5056",
+    "created_at": "2025-06-02T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5056",
+    "currency": "SGD",
+    "gross_amount": 44.22,
+    "vgen_fee": 2.21,
+    "payment_proc_fee": 1.68,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5057",
+    "created_at": "2025-06-03T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #13",
+    "client_username": "@vgen_client_5057",
+    "currency": "SGD",
+    "gross_amount": 162.93,
+    "vgen_fee": 8.15,
+    "payment_proc_fee": 5.12,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5058",
+    "created_at": "2025-06-05T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #14",
+    "client_username": "@vgen_client_5058",
+    "currency": "USD",
+    "gross_amount": 177.94,
+    "vgen_fee": 8.9,
+    "payment_proc_fee": 5.46,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5059",
+    "created_at": "2025-06-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #15",
+    "client_username": "@vgen_client_5059",
+    "currency": "USD",
+    "gross_amount": 175.04,
+    "vgen_fee": 8.75,
+    "payment_proc_fee": 5.38,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5060",
+    "created_at": "2025-06-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #16",
+    "client_username": "@vgen_client_5060",
+    "currency": "USD",
+    "gross_amount": 165.44,
+    "vgen_fee": 8.27,
+    "payment_proc_fee": 5.1,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5061",
+    "created_at": "2025-06-15T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5061",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5062",
+    "created_at": "2025-06-17T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5062",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5063",
+    "created_at": "2025-06-20T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #19",
+    "client_username": "@vgen_client_5063",
+    "currency": "USD",
+    "gross_amount": 235.89,
+    "vgen_fee": 11.79,
+    "payment_proc_fee": 7.14,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5064",
+    "created_at": "2025-06-21T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5064",
+    "currency": "SGD",
+    "gross_amount": 28.14,
+    "vgen_fee": 1.41,
+    "payment_proc_fee": 1.22,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5065",
+    "created_at": "2025-06-24T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5065",
+    "currency": "EUR",
+    "gross_amount": 16.56,
+    "vgen_fee": 0.83,
+    "payment_proc_fee": 0.76,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5066",
+    "created_at": "2025-06-25T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5066",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5067",
+    "created_at": "2025-06-26T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #23",
+    "client_username": "@vgen_client_5067",
+    "currency": "SGD",
+    "gross_amount": 248.56,
+    "vgen_fee": 12.43,
+    "payment_proc_fee": 7.61,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5068",
+    "created_at": "2025-07-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "OC Portrait Render High-Res #24",
+    "client_username": "@vgen_client_5068",
+    "currency": "EUR",
+    "gross_amount": 85.67,
+    "vgen_fee": 4.28,
+    "payment_proc_fee": 2.76,
+    "tips": [
+      {
+        "tip_id": "VGN-5068-T1",
+        "paid_at": "2025-07-06T14:15:00Z",
+        "amount": 23.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5069",
+    "created_at": "2025-07-02T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5069",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5070",
+    "created_at": "2025-07-04T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #26",
+    "client_username": "@vgen_client_5070",
+    "currency": "USD",
+    "gross_amount": 277.05,
+    "vgen_fee": 13.85,
+    "payment_proc_fee": 8.33,
+    "tips": [
+      {
+        "tip_id": "VGN-5070-T1",
+        "paid_at": "2025-07-09T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5071",
+    "created_at": "2025-07-05T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #27",
+    "client_username": "@vgen_client_5071",
+    "currency": "USD",
+    "gross_amount": 112.78,
+    "vgen_fee": 5.64,
+    "payment_proc_fee": 3.57,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5072",
+    "created_at": "2025-07-09T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5072",
+    "currency": "SGD",
+    "gross_amount": 29.48,
+    "vgen_fee": 1.47,
+    "payment_proc_fee": 1.25,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5072-R1",
+        "refunded_at": "2025-07-21T09:30:00Z",
+        "amount": 29.48,
+        "vgen_fee_returned": 1.47
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5073",
+    "created_at": "2025-07-09T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #29",
+    "client_username": "@vgen_client_5073",
+    "currency": "EUR",
+    "gross_amount": 134.41,
+    "vgen_fee": 6.72,
+    "payment_proc_fee": 4.18,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5073-R1",
+        "refunded_at": "2025-07-13T09:30:00Z",
+        "amount": 134.41,
+        "vgen_fee_returned": 6.72
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5074",
+    "created_at": "2025-07-11T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5074",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5075",
+    "created_at": "2025-07-13T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #31",
+    "client_username": "@vgen_client_5075",
+    "currency": "USD",
+    "gross_amount": 210.5,
+    "vgen_fee": 10.53,
+    "payment_proc_fee": 6.4,
+    "tips": [
+      {
+        "tip_id": "VGN-5075-T1",
+        "paid_at": "2025-07-16T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": [
+      {
+        "refund_id": "VGN-5075-R1",
+        "refunded_at": "2025-07-16T09:30:00Z",
+        "amount": 210.5,
+        "vgen_fee_returned": 10.53
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5076",
+    "created_at": "2025-07-14T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5076",
+    "currency": "SGD",
+    "gross_amount": 29.48,
+    "vgen_fee": 1.47,
+    "payment_proc_fee": 1.25,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5077",
+    "created_at": "2025-07-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #33",
+    "client_username": "@vgen_client_5077",
+    "currency": "USD",
+    "gross_amount": 147.62,
+    "vgen_fee": 7.38,
+    "payment_proc_fee": 4.58,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5078",
+    "created_at": "2025-07-17T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5078",
+    "currency": "GBP",
+    "gross_amount": 21.33,
+    "vgen_fee": 1.07,
+    "payment_proc_fee": 0.86,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5078-R1",
+        "refunded_at": "2025-07-21T09:30:00Z",
+        "amount": 21.33,
+        "vgen_fee_returned": 1.07
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5079",
+    "created_at": "2025-07-21T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5079",
+    "currency": "EUR",
+    "gross_amount": 16.56,
+    "vgen_fee": 0.83,
+    "payment_proc_fee": 0.76,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5080",
+    "created_at": "2025-07-22T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #36",
+    "client_username": "@vgen_client_5080",
+    "currency": "USD",
+    "gross_amount": 114.79,
+    "vgen_fee": 5.74,
+    "payment_proc_fee": 3.63,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5081",
+    "created_at": "2025-07-22T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5081",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5082",
+    "created_at": "2025-07-25T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #38",
+    "client_username": "@vgen_client_5082",
+    "currency": "USD",
+    "gross_amount": 158.35,
+    "vgen_fee": 7.92,
+    "payment_proc_fee": 4.89,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5083",
+    "created_at": "2025-07-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #39",
+    "client_username": "@vgen_client_5083",
+    "currency": "GBP",
+    "gross_amount": 185.44,
+    "vgen_fee": 9.27,
+    "payment_proc_fee": 5.62,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5084",
+    "created_at": "2025-07-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #40",
+    "client_username": "@vgen_client_5084",
+    "currency": "USD",
+    "gross_amount": 95.74,
+    "vgen_fee": 4.79,
+    "payment_proc_fee": 3.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5085",
+    "created_at": "2025-08-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #41",
+    "client_username": "@vgen_client_5085",
+    "currency": "USD",
+    "gross_amount": 70.99,
+    "vgen_fee": 3.55,
+    "payment_proc_fee": 2.36,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5085-R1",
+        "refunded_at": "2025-08-11T09:30:00Z",
+        "amount": 70.99,
+        "vgen_fee_returned": 3.55
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5086",
+    "created_at": "2025-08-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #42",
+    "client_username": "@vgen_client_5086",
+    "currency": "GBP",
+    "gross_amount": 107.75,
+    "vgen_fee": 5.39,
+    "payment_proc_fee": 3.36,
+    "tips": [
+      {
+        "tip_id": "VGN-5086-T1",
+        "paid_at": "2025-08-03T14:15:00Z",
+        "amount": 19.75
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5087",
+    "created_at": "2025-08-11T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5087",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5088",
+    "created_at": "2025-08-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #44",
+    "client_username": "@vgen_client_5088",
+    "currency": "USD",
+    "gross_amount": 294.55,
+    "vgen_fee": 14.73,
+    "payment_proc_fee": 8.84,
+    "tips": [
+      {
+        "tip_id": "VGN-5088-T1",
+        "paid_at": "2025-08-13T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5089",
+    "created_at": "2025-08-16T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5089",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5090",
+    "created_at": "2025-08-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #46",
+    "client_username": "@vgen_client_5090",
+    "currency": "USD",
+    "gross_amount": 238.1,
+    "vgen_fee": 11.91,
+    "payment_proc_fee": 7.2,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5091",
+    "created_at": "2025-08-27T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #47",
+    "client_username": "@vgen_client_5091",
+    "currency": "USD",
+    "gross_amount": 110.06,
+    "vgen_fee": 5.5,
+    "payment_proc_fee": 3.49,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5092",
+    "created_at": "2025-08-28T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #48",
+    "client_username": "@vgen_client_5092",
+    "currency": "USD",
+    "gross_amount": 207.15,
+    "vgen_fee": 10.36,
+    "payment_proc_fee": 6.31,
+    "tips": [
+      {
+        "tip_id": "VGN-5092-T1",
+        "paid_at": "2025-08-30T14:15:00Z",
+        "amount": 25.0
+      },
+      {
+        "tip_id": "VGN-5092-T2",
+        "paid_at": "2025-08-30T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5093",
+    "created_at": "2025-08-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #49",
+    "client_username": "@vgen_client_5093",
+    "currency": "USD",
+    "gross_amount": 141.92,
+    "vgen_fee": 7.1,
+    "payment_proc_fee": 4.42,
+    "tips": [
+      {
+        "tip_id": "VGN-5093-T1",
+        "paid_at": "2025-08-29T14:15:00Z",
+        "amount": 25.0
+      },
+      {
+        "tip_id": "VGN-5093-T2",
+        "paid_at": "2025-09-01T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5094",
+    "created_at": "2025-09-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #50",
+    "client_username": "@vgen_client_5094",
+    "currency": "USD",
+    "gross_amount": 66.4,
+    "vgen_fee": 3.32,
+    "payment_proc_fee": 2.23,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5095",
+    "created_at": "2025-09-04T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #51",
+    "client_username": "@vgen_client_5095",
+    "currency": "SGD",
+    "gross_amount": 243.34,
+    "vgen_fee": 12.17,
+    "payment_proc_fee": 7.46,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5096",
+    "created_at": "2025-09-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #52",
+    "client_username": "@vgen_client_5096",
+    "currency": "USD",
+    "gross_amount": 137.72,
+    "vgen_fee": 6.89,
+    "payment_proc_fee": 4.29,
+    "tips": [
+      {
+        "tip_id": "VGN-5096-T1",
+        "paid_at": "2025-09-14T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5097",
+    "created_at": "2025-09-12T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5097",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5097-R1",
+        "refunded_at": "2025-09-26T09:30:00Z",
+        "amount": 33.0,
+        "vgen_fee_returned": 1.65
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5098",
+    "created_at": "2025-09-15T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5098",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5099",
+    "created_at": "2025-09-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #55",
+    "client_username": "@vgen_client_5099",
+    "currency": "USD",
+    "gross_amount": 97.13,
+    "vgen_fee": 4.86,
+    "payment_proc_fee": 3.12,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5100",
+    "created_at": "2025-09-16T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5100",
+    "currency": "JPY",
+    "gross_amount": 2736.0,
+    "vgen_fee": 136.8,
+    "payment_proc_fee": 125.34,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5100-R1",
+        "refunded_at": "2025-09-26T09:30:00Z",
+        "amount": 2736.0,
+        "vgen_fee_returned": 136.8
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5101",
+    "created_at": "2025-09-30T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #57",
+    "client_username": "@vgen_client_5101",
+    "currency": "USD",
+    "gross_amount": 214.97,
+    "vgen_fee": 10.75,
+    "payment_proc_fee": 6.53,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5101-R1",
+        "refunded_at": "2025-10-07T09:30:00Z",
+        "amount": 214.97,
+        "vgen_fee_returned": 10.75
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5102",
+    "created_at": "2025-10-01T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5102",
+    "currency": "SGD",
+    "gross_amount": 16.08,
+    "vgen_fee": 0.8,
+    "payment_proc_fee": 0.87,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5103",
+    "created_at": "2025-10-06T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5103",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5104",
+    "created_at": "2025-10-06T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #60",
+    "client_username": "@vgen_client_5104",
+    "currency": "USD",
+    "gross_amount": 110.89,
+    "vgen_fee": 5.54,
+    "payment_proc_fee": 3.52,
+    "tips": [
+      {
+        "tip_id": "VGN-5104-T1",
+        "paid_at": "2025-10-09T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5105",
+    "created_at": "2025-10-10T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #61",
+    "client_username": "@vgen_client_5105",
+    "currency": "USD",
+    "gross_amount": 155.29,
+    "vgen_fee": 7.76,
+    "payment_proc_fee": 4.8,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5106",
+    "created_at": "2025-10-11T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5106",
+    "currency": "EUR",
+    "gross_amount": 30.36,
+    "vgen_fee": 1.52,
+    "payment_proc_fee": 1.16,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5107",
+    "created_at": "2025-10-12T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5107",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5108",
+    "created_at": "2025-10-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #64",
+    "client_username": "@vgen_client_5108",
+    "currency": "USD",
+    "gross_amount": 190.62,
+    "vgen_fee": 9.53,
+    "payment_proc_fee": 5.83,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5109",
+    "created_at": "2025-10-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #65",
+    "client_username": "@vgen_client_5109",
+    "currency": "EUR",
+    "gross_amount": 110.68,
+    "vgen_fee": 5.53,
+    "payment_proc_fee": 3.49,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5110",
+    "created_at": "2025-10-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #66",
+    "client_username": "@vgen_client_5110",
+    "currency": "JPY",
+    "gross_amount": 23347.0,
+    "vgen_fee": 1167.35,
+    "payment_proc_fee": 723.06,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5110-R1",
+        "refunded_at": "2025-10-21T09:30:00Z",
+        "amount": 11673.5,
+        "vgen_fee_returned": 583.67
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5111",
+    "created_at": "2025-10-22T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "OC Portrait Render High-Res #67",
+    "client_username": "@vgen_client_5111",
+    "currency": "USD",
+    "gross_amount": 119.81,
+    "vgen_fee": 5.99,
+    "payment_proc_fee": 3.77,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5112",
+    "created_at": "2025-10-24T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #68",
+    "client_username": "@vgen_client_5112",
+    "currency": "USD",
+    "gross_amount": 135.63,
+    "vgen_fee": 6.78,
+    "payment_proc_fee": 4.23,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5113",
+    "created_at": "2025-10-25T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5113",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5114",
+    "created_at": "2025-10-29T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5114",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5115",
+    "created_at": "2025-10-30T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #71",
+    "client_username": "@vgen_client_5115",
+    "currency": "USD",
+    "gross_amount": 196.93,
+    "vgen_fee": 9.85,
+    "payment_proc_fee": 6.01,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5116",
+    "created_at": "2025-10-30T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #72",
+    "client_username": "@vgen_client_5116",
+    "currency": "EUR",
+    "gross_amount": 155.6,
+    "vgen_fee": 7.78,
+    "payment_proc_fee": 4.79,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5117",
+    "created_at": "2025-11-05T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5117",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5118",
+    "created_at": "2025-11-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #74",
+    "client_username": "@vgen_client_5118",
+    "currency": "USD",
+    "gross_amount": 229.0,
+    "vgen_fee": 11.45,
+    "payment_proc_fee": 6.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5119",
+    "created_at": "2025-11-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #75",
+    "client_username": "@vgen_client_5119",
+    "currency": "USD",
+    "gross_amount": 186.45,
+    "vgen_fee": 9.32,
+    "payment_proc_fee": 5.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5120",
+    "created_at": "2025-11-12T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5120",
+    "currency": "SGD",
+    "gross_amount": 44.22,
+    "vgen_fee": 2.21,
+    "payment_proc_fee": 1.68,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5121",
+    "created_at": "2025-11-13T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5121",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5122",
+    "created_at": "2025-11-16T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5122",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5123",
+    "created_at": "2025-11-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #79",
+    "client_username": "@vgen_client_5123",
+    "currency": "GBP",
+    "gross_amount": 160.83,
+    "vgen_fee": 8.04,
+    "payment_proc_fee": 4.9,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5123-R1",
+        "refunded_at": "2025-11-21T09:30:00Z",
+        "amount": 64.33,
+        "vgen_fee_returned": 3.22
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5124",
+    "created_at": "2025-11-18T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5124",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5125",
+    "created_at": "2025-11-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #81",
+    "client_username": "@vgen_client_5125",
+    "currency": "USD",
+    "gross_amount": 159.72,
+    "vgen_fee": 7.99,
+    "payment_proc_fee": 4.93,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5126",
+    "created_at": "2025-11-22T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5126",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5127",
+    "created_at": "2025-11-29T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5127",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5128",
+    "created_at": "2025-12-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #84",
+    "client_username": "@vgen_client_5128",
+    "currency": "USD",
+    "gross_amount": 122.94,
+    "vgen_fee": 6.15,
+    "payment_proc_fee": 3.87,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5129",
+    "created_at": "2025-12-03T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #85",
+    "client_username": "@vgen_client_5129",
+    "currency": "USD",
+    "gross_amount": 136.36,
+    "vgen_fee": 6.82,
+    "payment_proc_fee": 4.25,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5130",
+    "created_at": "2025-12-03T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #86",
+    "client_username": "@vgen_client_5130",
+    "currency": "USD",
+    "gross_amount": 259.32,
+    "vgen_fee": 12.97,
+    "payment_proc_fee": 7.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5131",
+    "created_at": "2025-12-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Anime Key Visual Illustration #87",
+    "client_username": "@vgen_client_5131",
+    "currency": "GBP",
+    "gross_amount": 128.83,
+    "vgen_fee": 6.44,
+    "payment_proc_fee": 3.98,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5132",
+    "created_at": "2025-12-12T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #88",
+    "client_username": "@vgen_client_5132",
+    "currency": "SGD",
+    "gross_amount": 332.84,
+    "vgen_fee": 16.64,
+    "payment_proc_fee": 10.05,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5133",
+    "created_at": "2025-12-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #89",
+    "client_username": "@vgen_client_5133",
+    "currency": "JPY",
+    "gross_amount": 29324.0,
+    "vgen_fee": 1466.2,
+    "payment_proc_fee": 896.4,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5134",
+    "created_at": "2025-12-16T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5134",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5135",
+    "created_at": "2025-12-17T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5135",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5136",
+    "created_at": "2025-12-18T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5136",
+    "currency": "JPY",
+    "gross_amount": 2128.0,
+    "vgen_fee": 106.4,
+    "payment_proc_fee": 107.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5137",
+    "created_at": "2025-12-26T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #93",
+    "client_username": "@vgen_client_5137",
+    "currency": "EUR",
+    "gross_amount": 135.18,
+    "vgen_fee": 6.76,
+    "payment_proc_fee": 4.2,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5138",
+    "created_at": "2025-12-31T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #94",
+    "client_username": "@vgen_client_5138",
+    "currency": "USD",
+    "gross_amount": 95.36,
+    "vgen_fee": 4.77,
+    "payment_proc_fee": 3.07,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5139",
+    "created_at": "2026-01-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #95",
+    "client_username": "@vgen_client_5139",
+    "currency": "USD",
+    "gross_amount": 155.54,
+    "vgen_fee": 7.78,
+    "payment_proc_fee": 4.81,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5140",
+    "created_at": "2026-01-03T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #96",
+    "client_username": "@vgen_client_5140",
+    "currency": "JPY",
+    "gross_amount": 16165.0,
+    "vgen_fee": 808.25,
+    "payment_proc_fee": 514.79,
+    "tips": [
+      {
+        "tip_id": "VGN-5140-T1",
+        "paid_at": "2026-01-09T14:15:00Z",
+        "amount": 3800.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5141",
+    "created_at": "2026-01-05T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5141",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5142",
+    "created_at": "2026-01-06T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #1",
+    "client_username": "@vgen_client_5142",
+    "currency": "USD",
+    "gross_amount": 167.62,
+    "vgen_fee": 8.38,
+    "payment_proc_fee": 5.16,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5143",
+    "created_at": "2026-01-07T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #2",
+    "client_username": "@vgen_client_5143",
+    "currency": "USD",
+    "gross_amount": 217.57,
+    "vgen_fee": 10.88,
+    "payment_proc_fee": 6.61,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5144",
+    "created_at": "2026-01-11T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #3",
+    "client_username": "@vgen_client_5144",
+    "currency": "EUR",
+    "gross_amount": 143.66,
+    "vgen_fee": 7.18,
+    "payment_proc_fee": 4.45,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5145",
+    "created_at": "2026-01-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "OC Portrait Render High-Res #4",
+    "client_username": "@vgen_client_5145",
+    "currency": "USD",
+    "gross_amount": 87.12,
+    "vgen_fee": 4.36,
+    "payment_proc_fee": 2.83,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5146",
+    "created_at": "2026-01-18T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5146",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5147",
+    "created_at": "2026-01-18T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5147",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5148",
+    "created_at": "2026-01-21T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5148",
+    "currency": "SGD",
+    "gross_amount": 28.14,
+    "vgen_fee": 1.41,
+    "payment_proc_fee": 1.22,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5149",
+    "created_at": "2026-01-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #8",
+    "client_username": "@vgen_client_5149",
+    "currency": "USD",
+    "gross_amount": 179.83,
+    "vgen_fee": 8.99,
+    "payment_proc_fee": 5.52,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5150",
+    "created_at": "2026-01-29T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5150",
+    "currency": "EUR",
+    "gross_amount": 24.84,
+    "vgen_fee": 1.24,
+    "payment_proc_fee": 1.0,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5151",
+    "created_at": "2026-01-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #10",
+    "client_username": "@vgen_client_5151",
+    "currency": "USD",
+    "gross_amount": 166.71,
+    "vgen_fee": 8.34,
+    "payment_proc_fee": 5.13,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5151-R1",
+        "refunded_at": "2026-02-04T09:30:00Z",
+        "amount": 83.36,
+        "vgen_fee_returned": 4.17
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5152",
+    "created_at": "2026-02-02T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5152",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5153",
+    "created_at": "2026-02-09T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5153",
+    "currency": "SGD",
+    "gross_amount": 44.22,
+    "vgen_fee": 2.21,
+    "payment_proc_fee": 1.68,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5154",
+    "created_at": "2026-02-12T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #13",
+    "client_username": "@vgen_client_5154",
+    "currency": "EUR",
+    "gross_amount": 120.31,
+    "vgen_fee": 6.02,
+    "payment_proc_fee": 3.77,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5155",
+    "created_at": "2026-02-13T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5155",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5156",
+    "created_at": "2026-02-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #15",
+    "client_username": "@vgen_client_5156",
+    "currency": "USD",
+    "gross_amount": 163.9,
+    "vgen_fee": 8.2,
+    "payment_proc_fee": 5.05,
+    "tips": [
+      {
+        "tip_id": "VGN-5156-T1",
+        "paid_at": "2026-02-17T14:15:00Z",
+        "amount": 10.0
+      },
+      {
+        "tip_id": "VGN-5156-T2",
+        "paid_at": "2026-02-16T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5157",
+    "created_at": "2026-02-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #16",
+    "client_username": "@vgen_client_5157",
+    "currency": "USD",
+    "gross_amount": 234.37,
+    "vgen_fee": 11.72,
+    "payment_proc_fee": 7.1,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5158",
+    "created_at": "2026-02-18T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #17",
+    "client_username": "@vgen_client_5158",
+    "currency": "USD",
+    "gross_amount": 193.31,
+    "vgen_fee": 9.67,
+    "payment_proc_fee": 5.91,
+    "tips": [
+      {
+        "tip_id": "VGN-5158-T1",
+        "paid_at": "2026-02-18T14:15:00Z",
+        "amount": 15.0
+      },
+      {
+        "tip_id": "VGN-5158-T2",
+        "paid_at": "2026-02-25T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5159",
+    "created_at": "2026-02-20T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5159",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5160",
+    "created_at": "2026-02-20T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #19",
+    "client_username": "@vgen_client_5160",
+    "currency": "EUR",
+    "gross_amount": 127.79,
+    "vgen_fee": 6.39,
+    "payment_proc_fee": 3.99,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5161",
+    "created_at": "2026-02-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #20",
+    "client_username": "@vgen_client_5161",
+    "currency": "USD",
+    "gross_amount": 85.75,
+    "vgen_fee": 4.29,
+    "payment_proc_fee": 2.79,
+    "tips": [
+      {
+        "tip_id": "VGN-5161-T1",
+        "paid_at": "2026-02-28T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5162",
+    "created_at": "2026-02-26T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5162",
+    "currency": "SGD",
+    "gross_amount": 44.22,
+    "vgen_fee": 2.21,
+    "payment_proc_fee": 1.68,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5163",
+    "created_at": "2026-03-01T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5163",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5164",
+    "created_at": "2026-03-02T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5164",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5165",
+    "created_at": "2026-03-07T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "RPG HUD Icon & Frame Pack #24",
+    "client_username": "@vgen_client_5165",
+    "currency": "USD",
+    "gross_amount": 66.33,
+    "vgen_fee": 3.32,
+    "payment_proc_fee": 2.22,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5166",
+    "created_at": "2026-03-10T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5166",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5167",
+    "created_at": "2026-03-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #26",
+    "client_username": "@vgen_client_5167",
+    "currency": "USD",
+    "gross_amount": 163.66,
+    "vgen_fee": 8.18,
+    "payment_proc_fee": 5.05,
+    "tips": [
+      {
+        "tip_id": "VGN-5167-T1",
+        "paid_at": "2026-03-17T14:15:00Z",
+        "amount": 15.0
+      },
+      {
+        "tip_id": "VGN-5167-T2",
+        "paid_at": "2026-03-17T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5168",
+    "created_at": "2026-03-24T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #27",
+    "client_username": "@vgen_client_5168",
+    "currency": "USD",
+    "gross_amount": 134.31,
+    "vgen_fee": 6.72,
+    "payment_proc_fee": 4.19,
+    "tips": [
+      {
+        "tip_id": "VGN-5168-T1",
+        "paid_at": "2026-03-26T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5169",
+    "created_at": "2026-03-25T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5169",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5170",
+    "created_at": "2026-03-27T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #29",
+    "client_username": "@vgen_client_5170",
+    "currency": "USD",
+    "gross_amount": 189.29,
+    "vgen_fee": 9.46,
+    "payment_proc_fee": 5.79,
+    "tips": [
+      {
+        "tip_id": "VGN-5170-T1",
+        "paid_at": "2026-03-27T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5171",
+    "created_at": "2026-03-28T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "OC Portrait Render High-Res #30",
+    "client_username": "@vgen_client_5171",
+    "currency": "USD",
+    "gross_amount": 249.03,
+    "vgen_fee": 12.45,
+    "payment_proc_fee": 7.52,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5172",
+    "created_at": "2026-03-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #31",
+    "client_username": "@vgen_client_5172",
+    "currency": "USD",
+    "gross_amount": 187.63,
+    "vgen_fee": 9.38,
+    "payment_proc_fee": 5.74,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5173",
+    "created_at": "2026-03-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #32",
+    "client_username": "@vgen_client_5173",
+    "currency": "USD",
+    "gross_amount": 220.7,
+    "vgen_fee": 11.04,
+    "payment_proc_fee": 6.7,
+    "tips": [
+      {
+        "tip_id": "VGN-5173-T1",
+        "paid_at": "2026-04-05T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5174",
+    "created_at": "2026-03-31T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #33",
+    "client_username": "@vgen_client_5174",
+    "currency": "USD",
+    "gross_amount": 150.12,
+    "vgen_fee": 7.51,
+    "payment_proc_fee": 4.65,
+    "tips": [
+      {
+        "tip_id": "VGN-5174-T1",
+        "paid_at": "2026-04-02T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": [
+      {
+        "refund_id": "VGN-5174-R1",
+        "refunded_at": "2026-04-04T09:30:00Z",
+        "amount": 150.12,
+        "vgen_fee_returned": 7.51
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5175",
+    "created_at": "2026-04-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #34",
+    "client_username": "@vgen_client_5175",
+    "currency": "EUR",
+    "gross_amount": 116.22,
+    "vgen_fee": 5.81,
+    "payment_proc_fee": 3.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5176",
+    "created_at": "2026-04-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #35",
+    "client_username": "@vgen_client_5176",
+    "currency": "USD",
+    "gross_amount": 122.62,
+    "vgen_fee": 6.13,
+    "payment_proc_fee": 3.86,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5177",
+    "created_at": "2026-04-03T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5177",
+    "currency": "SGD",
+    "gross_amount": 24.12,
+    "vgen_fee": 1.21,
+    "payment_proc_fee": 1.1,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5178",
+    "created_at": "2026-04-07T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #37",
+    "client_username": "@vgen_client_5178",
+    "currency": "USD",
+    "gross_amount": 306.0,
+    "vgen_fee": 15.3,
+    "payment_proc_fee": 9.17,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5179",
+    "created_at": "2026-04-09T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #38",
+    "client_username": "@vgen_client_5179",
+    "currency": "EUR",
+    "gross_amount": 101.37,
+    "vgen_fee": 5.07,
+    "payment_proc_fee": 3.22,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5180",
+    "created_at": "2026-04-13T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #39",
+    "client_username": "@vgen_client_5180",
+    "currency": "USD",
+    "gross_amount": 217.94,
+    "vgen_fee": 10.9,
+    "payment_proc_fee": 6.62,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5181",
+    "created_at": "2026-04-13T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #40",
+    "client_username": "@vgen_client_5181",
+    "currency": "SGD",
+    "gross_amount": 219.4,
+    "vgen_fee": 10.97,
+    "payment_proc_fee": 6.76,
+    "tips": [
+      {
+        "tip_id": "VGN-5181-T1",
+        "paid_at": "2026-04-18T14:15:00Z",
+        "amount": 20.1
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5182",
+    "created_at": "2026-04-20T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #41",
+    "client_username": "@vgen_client_5182",
+    "currency": "USD",
+    "gross_amount": 208.67,
+    "vgen_fee": 10.43,
+    "payment_proc_fee": 6.35,
+    "tips": [
+      {
+        "tip_id": "VGN-5182-T1",
+        "paid_at": "2026-04-26T14:15:00Z",
+        "amount": 15.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5183",
+    "created_at": "2026-04-27T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5183",
+    "currency": "USD",
+    "gross_amount": 22.0,
+    "vgen_fee": 1.1,
+    "payment_proc_fee": 0.94,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5184",
+    "created_at": "2026-04-27T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5184",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5185",
+    "created_at": "2026-04-30T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5185",
+    "currency": "SGD",
+    "gross_amount": 44.22,
+    "vgen_fee": 2.21,
+    "payment_proc_fee": 1.68,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5186",
+    "created_at": "2026-05-01T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5186",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5187",
+    "created_at": "2026-05-06T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5187",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5188",
+    "created_at": "2026-05-07T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5188",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5189",
+    "created_at": "2026-05-08T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #48",
+    "client_username": "@vgen_client_5189",
+    "currency": "USD",
+    "gross_amount": 90.5,
+    "vgen_fee": 4.53,
+    "payment_proc_fee": 2.92,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5190",
+    "created_at": "2026-05-10T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #49",
+    "client_username": "@vgen_client_5190",
+    "currency": "USD",
+    "gross_amount": 181.84,
+    "vgen_fee": 9.09,
+    "payment_proc_fee": 5.57,
+    "tips": [
+      {
+        "tip_id": "VGN-5190-T1",
+        "paid_at": "2026-05-10T14:15:00Z",
+        "amount": 10.0
+      },
+      {
+        "tip_id": "VGN-5190-T2",
+        "paid_at": "2026-05-16T14:15:00Z",
+        "amount": 10.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5191",
+    "created_at": "2026-05-13T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #50",
+    "client_username": "@vgen_client_5191",
+    "currency": "SGD",
+    "gross_amount": 136.04,
+    "vgen_fee": 6.8,
+    "payment_proc_fee": 4.35,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5191-R1",
+        "refunded_at": "2026-05-16T09:30:00Z",
+        "amount": 68.02,
+        "vgen_fee_returned": 3.4
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5192",
+    "created_at": "2026-05-14T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5192",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5193",
+    "created_at": "2026-05-17T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #52",
+    "client_username": "@vgen_client_5193",
+    "currency": "USD",
+    "gross_amount": 76.4,
+    "vgen_fee": 3.82,
+    "payment_proc_fee": 2.52,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5194",
+    "created_at": "2026-05-19T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5194",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5195",
+    "created_at": "2026-05-23T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5195",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5196",
+    "created_at": "2026-05-23T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5196",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5197",
+    "created_at": "2026-05-24T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #56",
+    "client_username": "@vgen_client_5197",
+    "currency": "USD",
+    "gross_amount": 173.7,
+    "vgen_fee": 8.69,
+    "payment_proc_fee": 5.34,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5198",
+    "created_at": "2026-05-25T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #57",
+    "client_username": "@vgen_client_5198",
+    "currency": "USD",
+    "gross_amount": 118.28,
+    "vgen_fee": 5.91,
+    "payment_proc_fee": 3.73,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5199",
+    "created_at": "2026-05-28T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #58",
+    "client_username": "@vgen_client_5199",
+    "currency": "SGD",
+    "gross_amount": 244.89,
+    "vgen_fee": 12.24,
+    "payment_proc_fee": 7.5,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5200",
+    "created_at": "2026-05-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Custom Shader Toon Outline Setup #59",
+    "client_username": "@vgen_client_5200",
+    "currency": "SGD",
+    "gross_amount": 176.6,
+    "vgen_fee": 8.83,
+    "payment_proc_fee": 5.52,
+    "tips": [
+      {
+        "tip_id": "VGN-5200-T1",
+        "paid_at": "2026-06-01T14:15:00Z",
+        "amount": 20.1
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5201",
+    "created_at": "2026-06-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #60",
+    "client_username": "@vgen_client_5201",
+    "currency": "USD",
+    "gross_amount": 304.9,
+    "vgen_fee": 15.24,
+    "payment_proc_fee": 9.14,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5202",
+    "created_at": "2026-06-04T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5202",
+    "currency": "JPY",
+    "gross_amount": 2736.0,
+    "vgen_fee": 136.8,
+    "payment_proc_fee": 125.34,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5203",
+    "created_at": "2026-06-06T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #62",
+    "client_username": "@vgen_client_5203",
+    "currency": "USD",
+    "gross_amount": 140.51,
+    "vgen_fee": 7.03,
+    "payment_proc_fee": 4.37,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5204",
+    "created_at": "2026-06-07T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5204",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5205",
+    "created_at": "2026-06-08T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #64",
+    "client_username": "@vgen_client_5205",
+    "currency": "SGD",
+    "gross_amount": 107.33,
+    "vgen_fee": 5.37,
+    "payment_proc_fee": 3.51,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5206",
+    "created_at": "2026-06-09T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5206",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5207",
+    "created_at": "2026-06-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Anime Key Visual Illustration #66",
+    "client_username": "@vgen_client_5207",
+    "currency": "USD",
+    "gross_amount": 191.65,
+    "vgen_fee": 9.58,
+    "payment_proc_fee": 5.86,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5208",
+    "created_at": "2026-06-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #67",
+    "client_username": "@vgen_client_5208",
+    "currency": "SGD",
+    "gross_amount": 158.79,
+    "vgen_fee": 7.94,
+    "payment_proc_fee": 5.0,
+    "tips": [
+      {
+        "tip_id": "VGN-5208-T1",
+        "paid_at": "2026-06-20T14:15:00Z",
+        "amount": 33.5
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5209",
+    "created_at": "2026-06-22T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #68",
+    "client_username": "@vgen_client_5209",
+    "currency": "USD",
+    "gross_amount": 259.79,
+    "vgen_fee": 12.99,
+    "payment_proc_fee": 7.83,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5210",
+    "created_at": "2026-06-24T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #69",
+    "client_username": "@vgen_client_5210",
+    "currency": "JPY",
+    "gross_amount": 20447.0,
+    "vgen_fee": 1022.35,
+    "payment_proc_fee": 638.96,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5211",
+    "created_at": "2026-06-29T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Anime Key Visual Illustration #70",
+    "client_username": "@vgen_client_5211",
+    "currency": "JPY",
+    "gross_amount": 29807.0,
+    "vgen_fee": 1490.35,
+    "payment_proc_fee": 910.4,
+    "tips": [
+      {
+        "tip_id": "VGN-5211-T1",
+        "paid_at": "2026-06-30T14:15:00Z",
+        "amount": 2280.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5212",
+    "created_at": "2026-06-30T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #71",
+    "client_username": "@vgen_client_5212",
+    "currency": "USD",
+    "gross_amount": 273.77,
+    "vgen_fee": 13.69,
+    "payment_proc_fee": 8.24,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5213",
+    "created_at": "2026-07-05T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #72",
+    "client_username": "@vgen_client_5213",
+    "currency": "EUR",
+    "gross_amount": 177.57,
+    "vgen_fee": 8.88,
+    "payment_proc_fee": 5.43,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5213-R1",
+        "refunded_at": "2026-07-16T09:30:00Z",
+        "amount": 71.03,
+        "vgen_fee_returned": 3.55
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5214",
+    "created_at": "2026-07-15T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #73",
+    "client_username": "@vgen_client_5214",
+    "currency": "USD",
+    "gross_amount": 127.52,
+    "vgen_fee": 6.38,
+    "payment_proc_fee": 4.0,
+    "tips": [
+      {
+        "tip_id": "VGN-5214-T1",
+        "paid_at": "2026-07-19T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5215",
+    "created_at": "2026-07-21T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5215",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5216",
+    "created_at": "2026-07-21T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5216",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5217",
+    "created_at": "2026-07-22T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #76",
+    "client_username": "@vgen_client_5217",
+    "currency": "EUR",
+    "gross_amount": 93.49,
+    "vgen_fee": 4.67,
+    "payment_proc_fee": 2.99,
+    "tips": [
+      {
+        "tip_id": "VGN-5217-T1",
+        "paid_at": "2026-07-22T14:15:00Z",
+        "amount": 9.2
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5218",
+    "created_at": "2026-07-23T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #77",
+    "client_username": "@vgen_client_5218",
+    "currency": "USD",
+    "gross_amount": 130.04,
+    "vgen_fee": 6.5,
+    "payment_proc_fee": 4.07,
+    "tips": [
+      {
+        "tip_id": "VGN-5218-T1",
+        "paid_at": "2026-07-30T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5219",
+    "created_at": "2026-07-25T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5219",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5220",
+    "created_at": "2026-07-25T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #79",
+    "client_username": "@vgen_client_5220",
+    "currency": "USD",
+    "gross_amount": 161.04,
+    "vgen_fee": 8.05,
+    "payment_proc_fee": 4.97,
+    "tips": [
+      {
+        "tip_id": "VGN-5220-T1",
+        "paid_at": "2026-07-30T14:15:00Z",
+        "amount": 10.0
+      },
+      {
+        "tip_id": "VGN-5220-T2",
+        "paid_at": "2026-07-25T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5221",
+    "created_at": "2026-07-27T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Anime Key Visual Illustration #80",
+    "client_username": "@vgen_client_5221",
+    "currency": "USD",
+    "gross_amount": 207.66,
+    "vgen_fee": 10.38,
+    "payment_proc_fee": 6.32,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5222",
+    "created_at": "2026-07-27T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5222",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5223",
+    "created_at": "2026-07-29T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5223",
+    "currency": "SGD",
+    "gross_amount": 36.18,
+    "vgen_fee": 1.81,
+    "payment_proc_fee": 1.45,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5224",
+    "created_at": "2026-08-01T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5224",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5225",
+    "created_at": "2026-08-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #84",
+    "client_username": "@vgen_client_5225",
+    "currency": "USD",
+    "gross_amount": 242.19,
+    "vgen_fee": 12.11,
+    "payment_proc_fee": 7.32,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5225-R1",
+        "refunded_at": "2026-08-14T09:30:00Z",
+        "amount": 96.88,
+        "vgen_fee_returned": 4.84
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5226",
+    "created_at": "2026-08-03T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #85",
+    "client_username": "@vgen_client_5226",
+    "currency": "EUR",
+    "gross_amount": 274.58,
+    "vgen_fee": 13.73,
+    "payment_proc_fee": 8.24,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5227",
+    "created_at": "2026-08-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #86",
+    "client_username": "@vgen_client_5227",
+    "currency": "USD",
+    "gross_amount": 205.51,
+    "vgen_fee": 10.28,
+    "payment_proc_fee": 6.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5228",
+    "created_at": "2026-08-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #87",
+    "client_username": "@vgen_client_5228",
+    "currency": "SGD",
+    "gross_amount": 177.43,
+    "vgen_fee": 8.87,
+    "payment_proc_fee": 5.55,
+    "tips": [
+      {
+        "tip_id": "VGN-5228-T1",
+        "paid_at": "2026-08-21T14:15:00Z",
+        "amount": 13.4
+      },
+      {
+        "tip_id": "VGN-5228-T2",
+        "paid_at": "2026-08-16T14:15:00Z",
+        "amount": 33.5
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5229",
+    "created_at": "2026-08-16T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5229",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5230",
+    "created_at": "2026-08-24T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5230",
+    "currency": "USD",
+    "gross_amount": 14.0,
+    "vgen_fee": 0.7,
+    "payment_proc_fee": 0.71,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5231",
+    "created_at": "2026-08-27T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5231",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5232",
+    "created_at": "2026-08-31T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5232",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5233",
+    "created_at": "2026-09-01T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Looping Indie Game BGM Track #92",
+    "client_username": "@vgen_client_5233",
+    "currency": "USD",
+    "gross_amount": 152.27,
+    "vgen_fee": 7.61,
+    "payment_proc_fee": 4.72,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5234",
+    "created_at": "2026-09-05T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Fullbody Character Illustration + BG #93",
+    "client_username": "@vgen_client_5234",
+    "currency": "USD",
+    "gross_amount": 151.04,
+    "vgen_fee": 7.55,
+    "payment_proc_fee": 4.68,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5235",
+    "created_at": "2026-09-14T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Game Splash Art Illustration #94",
+    "client_username": "@vgen_client_5235",
+    "currency": "USD",
+    "gross_amount": 102.39,
+    "vgen_fee": 5.12,
+    "payment_proc_fee": 3.27,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5236",
+    "created_at": "2026-09-14T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5236",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5237",
+    "created_at": "2026-09-16T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #96",
+    "client_username": "@vgen_client_5237",
+    "currency": "JPY",
+    "gross_amount": 25686.0,
+    "vgen_fee": 1284.3,
+    "payment_proc_fee": 790.89,
+    "tips": [
+      {
+        "tip_id": "VGN-5237-T1",
+        "paid_at": "2026-09-22T14:15:00Z",
+        "amount": 2280.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5238",
+    "created_at": "2026-09-20T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Dynamic Boss Theme Chiptune/Orchestral #0",
+    "client_username": "@vgen_client_5238",
+    "currency": "JPY",
+    "gross_amount": 14472.0,
+    "vgen_fee": 723.6,
+    "payment_proc_fee": 465.69,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5239",
+    "created_at": "2026-09-26T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5239",
+    "currency": "USD",
+    "gross_amount": 12.0,
+    "vgen_fee": 0.6,
+    "payment_proc_fee": 0.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5240",
+    "created_at": "2026-09-26T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "SynthV Vocal Ending Song Arrangement #2",
+    "client_username": "@vgen_client_5240",
+    "currency": "SGD",
+    "gross_amount": 149.16,
+    "vgen_fee": 7.46,
+    "payment_proc_fee": 4.73,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5241",
+    "created_at": "2026-09-28T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5241",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5242",
+    "created_at": "2026-10-02T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Godot Mechanic & State Controller #4",
+    "client_username": "@vgen_client_5242",
+    "currency": "USD",
+    "gross_amount": 215.95,
+    "vgen_fee": 10.8,
+    "payment_proc_fee": 6.56,
+    "tips": [],
+    "refunds": [
+      {
+        "refund_id": "VGN-5242-R1",
+        "refunded_at": "2026-10-14T09:30:00Z",
+        "amount": 86.38,
+        "vgen_fee_returned": 4.32
+      }
+    ]
+  },
+  {
+    "order_id": "VGN-5243",
+    "created_at": "2026-10-06T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5243",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5244",
+    "created_at": "2026-10-12T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5244",
+    "currency": "USD",
+    "gross_amount": 27.0,
+    "vgen_fee": 1.35,
+    "payment_proc_fee": 1.08,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5245",
+    "created_at": "2026-10-18T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Anime Key Visual Illustration #7",
+    "client_username": "@vgen_client_5245",
+    "currency": "SGD",
+    "gross_amount": 178.69,
+    "vgen_fee": 8.93,
+    "payment_proc_fee": 5.58,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5246",
+    "created_at": "2026-10-18T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #8",
+    "client_username": "@vgen_client_5246",
+    "currency": "EUR",
+    "gross_amount": 108.83,
+    "vgen_fee": 5.44,
+    "payment_proc_fee": 3.44,
+    "tips": [
+      {
+        "tip_id": "VGN-5246-T1",
+        "paid_at": "2026-10-20T14:15:00Z",
+        "amount": 23.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5247",
+    "created_at": "2026-10-21T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Isometric Tileset Commission 64x64 #9",
+    "client_username": "@vgen_client_5247",
+    "currency": "USD",
+    "gross_amount": 79.43,
+    "vgen_fee": 3.97,
+    "payment_proc_fee": 2.6,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5248",
+    "created_at": "2026-10-24T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Dungeon Matchmaker Pixel UI Kit Commercial",
+    "client_username": "@vgen_client_5248",
+    "currency": "USD",
+    "gross_amount": 21.0,
+    "vgen_fee": 1.05,
+    "payment_proc_fee": 0.91,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5249",
+    "created_at": "2026-10-24T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Retro Pixel Sprite Animation Sheet #11",
+    "client_username": "@vgen_client_5249",
+    "currency": "EUR",
+    "gross_amount": 67.01,
+    "vgen_fee": 3.35,
+    "payment_proc_fee": 2.22,
+    "tips": [
+      {
+        "tip_id": "VGN-5249-T1",
+        "paid_at": "2026-10-27T14:15:00Z",
+        "amount": 23.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5250",
+    "created_at": "2026-10-25T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Canting Batik Shader & NPR Toolkit",
+    "client_username": "@vgen_client_5250",
+    "currency": "USD",
+    "gross_amount": 33.0,
+    "vgen_fee": 1.65,
+    "payment_proc_fee": 1.26,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5251",
+    "created_at": "2026-10-27T11:20:00Z",
+    "service_kind": "COMMISSION",
+    "title": "HLSL/GDShader Stylized Water #13",
+    "client_username": "@vgen_client_5251",
+    "currency": "USD",
+    "gross_amount": 300.66,
+    "vgen_fee": 15.03,
+    "payment_proc_fee": 9.02,
+    "tips": [
+      {
+        "tip_id": "VGN-5251-T1",
+        "paid_at": "2026-10-31T14:15:00Z",
+        "amount": 15.0
+      },
+      {
+        "tip_id": "VGN-5251-T2",
+        "paid_at": "2026-10-27T14:15:00Z",
+        "amount": 25.0
+      }
+    ],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5252",
+    "created_at": "2026-10-28T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "Personal Space Isometric Room Low-Poly Props",
+    "client_username": "@vgen_client_5252",
+    "currency": "USD",
+    "gross_amount": 18.0,
+    "vgen_fee": 0.9,
+    "payment_proc_fee": 0.82,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-5253",
+    "created_at": "2026-10-31T11:20:00Z",
+    "service_kind": "SHOP_ASSET",
+    "title": "R*bert Rhythm Stem & SFX Pack",
+    "client_username": "@vgen_client_5253",
+    "currency": "SGD",
+    "gross_amount": 24.12,
+    "vgen_fee": 1.21,
+    "payment_proc_fee": 1.1,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-UNM-1",
+    "created_at": "2025-05-12T10:00:00Z",
+    "service_kind": "COMMISSION",
+    "title": "3D VTuber Fullbody ARKit Rigging",
+    "client_username": "@unmatched_vgen_1",
+    "currency": "USD",
+    "gross_amount": 150.0,
+    "vgen_fee": 7.5,
+    "payment_proc_fee": 4.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-UNM-2",
+    "created_at": "2025-06-12T10:00:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Live2D Cubism Physics & Toggle Setup",
+    "client_username": "@unmatched_vgen_2",
+    "currency": "USD",
+    "gross_amount": 150.0,
+    "vgen_fee": 7.5,
+    "payment_proc_fee": 4.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-UNM-3",
+    "created_at": "2025-07-12T10:00:00Z",
+    "service_kind": "COMMISSION",
+    "title": "VRChat Custom Avatar Retopology",
+    "client_username": "@unmatched_vgen_3",
+    "currency": "USD",
+    "gross_amount": 150.0,
+    "vgen_fee": 7.5,
+    "payment_proc_fee": 4.65,
+    "tips": [],
+    "refunds": []
+  },
+  {
+    "order_id": "VGN-UNM-4",
+    "created_at": "2025-08-12T10:00:00Z",
+    "service_kind": "COMMISSION",
+    "title": "Spine2D Chibi Idle Animation Rig",
+    "client_username": "@unmatched_vgen_4",
+    "currency": "USD",
+    "gross_amount": 150.0,
+    "vgen_fee": 7.5,
+    "payment_proc_fee": 4.65,
+    "tips": [],
+    "refunds": []
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "generated_at": "2026-11-24T19:25:04",
+  "mode": "real_ecb",
+  "window_requested": "2024-12-20..2026-10-31",
+  "real_ecb_days": 474,
+  "first_real_date": "2024-12-20",
+  "last_real_date": "2026-10-30",
+  "projected_business_days": 0,
+  "total_csv_rows": 3318,
+  "weekends_omitted": true
+}

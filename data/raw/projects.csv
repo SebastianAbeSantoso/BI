@@ -1,0 +1,13 @@
+project_code,project_name,project_type,production_field,stream
+GAME-AMMD,A Match Made in Dungeon,Game,Full Game Dev,GAME_SALES
+GAME-RBRT,R*bert,Game,Full Game Dev,GAME_SALES
+GAME-PSPC,Personal Space,Game,Full Game Dev,GAME_SALES
+GAME-CNTG,Canting Cloth,Game,Full Game Dev,GAME_SALES
+AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,Asset Pack,Pixel Art & UI,ASSET_SALES
+AST-ISOR,Personal Space Isometric Room & Props Pack,Asset Pack,3D Modeling,ASSET_SALES
+AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,Asset Pack,Audio & Music,ASSET_SALES
+AST-BATK,Canting NPR Batik Shader & Godot Toolkit,Asset Pack,Programming & Tech,ASSET_SALES
+COM-ILLU,Custom 2D Character & Key Visual Illustration,Commission Service,2D Illustration,COMMISSION
+COM-PXUI,Indie Game Pixel Art & HUD UI Commissions,Commission Service,Pixel Art & UI,COMMISSION
+COM-SHDR,Godot & Custom NPR Shader Commissions,Commission Service,Programming & Tech,COMMISSION
+COM-MUSC,Interactive Game BGM & SynthV Arrangement,Commission Service,Audio & Music,COMMISSION

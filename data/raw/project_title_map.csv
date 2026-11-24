@@ -1,0 +1,22 @@
+pattern,match_type,project_code
+dungeon matchmaker,contains,AST-DGPX
+pixel ui kit,contains,AST-DGPX
+isometric room,contains,AST-ISOR
+low-poly props,contains,AST-ISOR
+rhythm stem,contains,AST-RHYT
+sfx pack,contains,AST-RHYT
+batik shader,contains,AST-BATK
+npr toolkit,contains,AST-BATK
+character illustration,contains,COM-ILLU
+key visual,contains,COM-ILLU
+oc portrait,contains,COM-ILLU
+splash art,contains,COM-ILLU
+pixel sprite,contains,COM-PXUI
+hud icon,contains,COM-PXUI
+tileset commission,contains,COM-PXUI
+custom shader,contains,COM-SHDR
+godot mechanic,contains,COM-SHDR
+hlsl/gdshader,contains,COM-SHDR
+game bgm,contains,COM-MUSC
+synthv vocal,contains,COM-MUSC
+boss theme,contains,COM-MUSC

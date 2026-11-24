@@ -1,0 +1,518 @@
+itch_tx_id,payout_date,item_category,item_code,item_title,currency,gross_str,tip_str,itch_share_str,processor_fee_str,is_refunded,refund_date,buyer_email
+ITCH-20001,2025-01-01,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20001@example.org
+ITCH-20002,2025-01-01,Game,GAME-PSPC,Personal Space,IDR,"Rp 45,000",$0.00,"Rp 4,500","Rp 6,205",no,,indie_buyer_20002@example.org
+ITCH-20003,2025-01-02,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20003@example.org
+ITCH-20004,2025-01-03,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20004@example.org
+ITCH-20005,2025-01-09,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20005@example.org
+ITCH-20006,2025-01-10,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,JPY,"¥3,344",$0.00,¥334,¥143,no,,indie_buyer_20006@example.org
+ITCH-20007,2025-01-10,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20007@example.org
+ITCH-20008,2025-01-10,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20008@example.org
+ITCH-20009,2025-01-11,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20009@example.org
+ITCH-20010,2025-01-11,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20010@example.org
+ITCH-20011,2025-01-12,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20011@example.org
+ITCH-20012,2025-01-12,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20012@example.org
+ITCH-20013,2025-01-14,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20013@example.org
+ITCH-20014,2025-01-14,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20014@example.org
+ITCH-20015,2025-01-14,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20015@example.org
+ITCH-20016,2025-01-16,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20016@example.org
+ITCH-20017,2025-01-18,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,GBP,£11.06,$0.00,£1.11,£0.56,no,,indie_buyer_20017@example.org
+ITCH-20018,2025-01-18,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20018@example.org
+ITCH-20019,2025-01-18,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20019@example.org
+ITCH-20020,2025-01-20,Game,GAME-RBRT,R*bert,GBP,£5.79,£3.95,£0.58,£0.52,no,,indie_buyer_20020@example.org
+ITCH-20021,2025-01-22,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,SGD,S$16.08,$0.00,S$1.61,S$0.87,no,,indie_buyer_20021@example.org
+ITCH-20022,2025-01-23,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20022@example.org
+ITCH-20023,2025-01-25,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20023@example.org
+ITCH-20024,2025-01-25,Game,GAME-PSPC,Personal Space,USD,$4.99,$2.00,$0.50,$0.50,no,,indie_buyer_20024@example.org
+ITCH-20025,2025-01-29,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20025@example.org
+ITCH-20026,2025-01-29,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,$0.00,S$1.05,S$0.70,no,,indie_buyer_20026@example.org
+ITCH-20027,2025-01-30,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20027@example.org
+ITCH-20028,2025-02-01,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20028@example.org
+ITCH-20029,2025-02-03,Game,GAME-PSPC,Personal Space,SGD,S$5.50,$0.00,S$0.55,S$0.56,no,,indie_buyer_20029@example.org
+ITCH-20030,2025-02-10,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20030@example.org
+ITCH-20031,2025-02-12,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$5.00,$1.80,$0.97,no,,indie_buyer_20031@example.org
+ITCH-20032,2025-02-12,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20032@example.org
+ITCH-20033,2025-02-14,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,IDR,"Rp 356,400",$0.00,"Rp 35,640","Rp 15,236",no,,indie_buyer_20033@example.org
+ITCH-20034,2025-02-17,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20034@example.org
+ITCH-20035,2025-02-18,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,€1.84,€0.98,€0.62,no,,indie_buyer_20035@example.org
+ITCH-20036,2025-02-18,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20036@example.org
+ITCH-20037,2025-02-19,Game,GAME-AMMD,A Match Made in Dungeon,JPY,"¥1,200",$0.00,¥120,¥81,no,,indie_buyer_20037@example.org
+ITCH-20038,2025-02-19,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,GBP,£11.06,$0.00,£1.11,£0.56,no,,indie_buyer_20038@example.org
+ITCH-20039,2025-02-21,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20039@example.org
+ITCH-20040,2025-02-21,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20040@example.org
+ITCH-20041,2025-02-23,Game,GAME-PSPC,Personal Space,SGD,S$5.50,S$2.68,S$0.55,S$0.64,no,,indie_buyer_20041@example.org
+ITCH-20042,2025-02-25,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20042@example.org
+ITCH-20043,2025-02-28,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,SGD,S$18.76,$0.00,S$1.88,S$0.94,no,,indie_buyer_20043@example.org
+ITCH-20044,2025-02-28,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20044@example.org
+ITCH-20045,2025-03-03,Game,GAME-PSPC,Personal Space,IDR,"Rp 45,000",$0.00,"Rp 4,500","Rp 6,205",no,,indie_buyer_20045@example.org
+ITCH-20046,2025-03-03,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20046@example.org
+ITCH-20047,2025-03-04,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20047@example.org
+ITCH-20048,2025-03-04,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20048@example.org
+ITCH-20049,2025-03-04,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20049@example.org
+ITCH-20050,2025-03-09,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,JPY,"¥2,736",$0.00,¥274,¥125,no,,indie_buyer_20050@example.org
+ITCH-20051,2025-03-10,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,SGD,S$18.76,$0.00,S$1.88,S$0.94,no,,indie_buyer_20051@example.org
+ITCH-20052,2025-03-15,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20052@example.org
+ITCH-20053,2025-03-15,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20053@example.org
+ITCH-20054,2025-03-20,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,JPY,"¥2,128",$0.00,¥213,¥108,no,,indie_buyer_20054@example.org
+ITCH-20055,2025-03-23,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20055@example.org
+ITCH-20056,2025-03-23,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,JPY,"¥2,736",$0.00,¥274,¥125,no,,indie_buyer_20056@example.org
+ITCH-20057,2025-03-27,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20057@example.org
+ITCH-20058,2025-03-28,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20058@example.org
+ITCH-20059,2025-03-31,Game,GAME-RBRT,R*bert,USD,$6.99,$5.00,$0.70,$0.65,no,,indie_buyer_20059@example.org
+ITCH-20060,2025-03-31,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20060@example.org
+ITCH-20061,2025-04-01,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20061@example.org
+ITCH-20062,2025-04-02,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20062@example.org
+ITCH-20063,2025-04-02,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20063@example.org
+ITCH-20064,2025-04-03,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$2.00,$1.80,$0.88,no,,indie_buyer_20064@example.org
+ITCH-20065,2025-04-07,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20065@example.org
+ITCH-20066,2025-04-09,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20066@example.org
+ITCH-20067,2025-04-10,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20067@example.org
+ITCH-20068,2025-04-11,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,$0.00,S$1.05,S$0.70,yes,2025-04-20,indie_buyer_20068@example.org
+ITCH-20069,2025-04-13,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20069@example.org
+ITCH-20070,2025-04-13,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20070@example.org
+ITCH-20071,2025-04-13,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20071@example.org
+ITCH-20072,2025-04-14,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20072@example.org
+ITCH-20073,2025-04-15,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20073@example.org
+ITCH-20074,2025-04-18,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20074@example.org
+ITCH-20075,2025-04-25,Game,GAME-RBRT,R*bert,GBP,£5.79,$0.00,£0.58,£0.41,no,,indie_buyer_20075@example.org
+ITCH-20076,2025-04-26,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20076@example.org
+ITCH-20077,2025-04-27,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",$0.00,¥182,¥99,no,,indie_buyer_20077@example.org
+ITCH-20078,2025-05-01,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,JPY,"¥3,344",$0.00,¥334,¥143,no,,indie_buyer_20078@example.org
+ITCH-20079,2025-05-04,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20079@example.org
+ITCH-20080,2025-05-05,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,SGD,S$18.76,$0.00,S$1.88,S$0.94,no,,indie_buyer_20080@example.org
+ITCH-20081,2025-05-05,Game,GAME-PSPC,Personal Space,JPY,¥580,$0.00,¥58,¥63,no,,indie_buyer_20081@example.org
+ITCH-20082,2025-05-06,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,JPY,"¥2,736",$0.00,¥274,¥125,no,,indie_buyer_20082@example.org
+ITCH-20083,2025-05-08,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20083@example.org
+ITCH-20084,2025-05-11,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20084@example.org
+ITCH-20085,2025-05-12,Game,GAME-PSPC,Personal Space,USD,$4.99,$2.00,$0.50,$0.50,no,,indie_buyer_20085@example.org
+ITCH-20086,2025-05-15,Game,GAME-RBRT,R*bert,USD,$6.99,$2.00,$0.70,$0.56,no,,indie_buyer_20086@example.org
+ITCH-20087,2025-05-19,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20087@example.org
+ITCH-20088,2025-05-20,Game,GAME-PSPC,Personal Space,GBP,£4.29,$0.00,£0.43,£0.36,no,,indie_buyer_20088@example.org
+ITCH-20089,2025-05-21,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,€1.84,€2.02,€0.92,no,,indie_buyer_20089@example.org
+ITCH-20090,2025-05-22,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20090@example.org
+ITCH-20091,2025-05-25,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20091@example.org
+ITCH-20092,2025-05-25,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20092@example.org
+ITCH-20093,2025-05-26,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$2.00,$1.80,$0.88,no,,indie_buyer_20093@example.org
+ITCH-20094,2025-05-27,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20094@example.org
+ITCH-20095,2025-05-29,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,SGD,S$24.12,$0.00,S$2.41,S$1.10,no,,indie_buyer_20095@example.org
+ITCH-20096,2025-06-03,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20096@example.org
+ITCH-20097,2025-06-03,Game,GAME-RBRT,R*bert,USD,$6.99,$2.00,$0.70,$0.56,no,,indie_buyer_20097@example.org
+ITCH-20098,2025-06-03,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20098@example.org
+ITCH-20099,2025-06-04,Game,GAME-RBRT,R*bert,JPY,¥820,$0.00,¥82,¥70,no,,indie_buyer_20099@example.org
+ITCH-20100,2025-06-09,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20100@example.org
+ITCH-20101,2025-06-09,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20101@example.org
+ITCH-20102,2025-06-10,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,GBP,£14.22,$0.00,£1.42,£0.65,no,,indie_buyer_20102@example.org
+ITCH-20103,2025-06-11,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20103@example.org
+ITCH-20104,2025-06-12,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20104@example.org
+ITCH-20105,2025-06-12,Game,GAME-PSPC,Personal Space,IDR,"Rp 45,000",$0.00,"Rp 4,500","Rp 6,205",no,,indie_buyer_20105@example.org
+ITCH-20106,2025-06-13,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20106@example.org
+ITCH-20107,2025-06-13,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,yes,2025-06-15,indie_buyer_20107@example.org
+ITCH-20108,2025-06-16,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20108@example.org
+ITCH-20109,2025-06-17,Game,GAME-PSPC,Personal Space,GBP,£4.29,$0.00,£0.43,£0.36,no,,indie_buyer_20109@example.org
+ITCH-20110,2025-06-21,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20110@example.org
+ITCH-20111,2025-06-21,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20111@example.org
+ITCH-20112,2025-06-22,Game,GAME-PSPC,Personal Space,JPY,¥580,$0.00,¥58,¥63,no,,indie_buyer_20112@example.org
+ITCH-20113,2025-06-23,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20113@example.org
+ITCH-20114,2025-06-25,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,IDR,"Rp 226,800","Rp 81,000","Rp 22,680","Rp 13,826",no,,indie_buyer_20114@example.org
+ITCH-20115,2025-06-25,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20115@example.org
+ITCH-20116,2025-06-26,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20116@example.org
+ITCH-20117,2025-06-27,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20117@example.org
+ITCH-20118,2025-06-28,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20118@example.org
+ITCH-20119,2025-06-29,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20119@example.org
+ITCH-20120,2025-06-29,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20120@example.org
+ITCH-20121,2025-06-30,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,SGD,S$29.48,$0.00,S$2.95,S$1.25,no,,indie_buyer_20121@example.org
+ITCH-20122,2025-06-30,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20122@example.org
+ITCH-20123,2025-07-01,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20123@example.org
+ITCH-20124,2025-07-01,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20124@example.org
+ITCH-20125,2025-07-02,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$2.00,$1.40,$0.76,no,,indie_buyer_20125@example.org
+ITCH-20126,2025-07-03,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,SGD,S$18.76,S$2.68,S$1.88,S$1.02,no,,indie_buyer_20126@example.org
+ITCH-20127,2025-07-03,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20127@example.org
+ITCH-20128,2025-07-03,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20128@example.org
+ITCH-20129,2025-07-04,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$5.00,$1.00,$0.73,no,,indie_buyer_20129@example.org
+ITCH-20130,2025-07-04,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,JPY,"¥2,128",$0.00,¥213,¥108,yes,2025-07-09,indie_buyer_20130@example.org
+ITCH-20131,2025-07-05,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,SGD,S$18.76,$0.00,S$1.88,S$0.94,no,,indie_buyer_20131@example.org
+ITCH-20132,2025-07-05,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20132@example.org
+ITCH-20133,2025-07-06,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",$0.00,¥182,¥99,no,,indie_buyer_20133@example.org
+ITCH-20134,2025-07-07,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20134@example.org
+ITCH-20135,2025-07-08,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,IDR,"Rp 356,400",$0.00,"Rp 35,640","Rp 15,236",no,,indie_buyer_20135@example.org
+ITCH-20136,2025-07-08,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20136@example.org
+ITCH-20137,2025-07-09,Game,GAME-RBRT,R*bert,USD,$6.99,$2.00,$0.70,$0.56,yes,2025-07-10,indie_buyer_20137@example.org
+ITCH-20138,2025-07-09,Game,GAME-RBRT,R*bert,JPY,¥820,$0.00,¥82,¥70,no,,indie_buyer_20138@example.org
+ITCH-20139,2025-07-09,Game,GAME-PSPC,Personal Space,SGD,S$5.50,$0.00,S$0.55,S$0.56,no,,indie_buyer_20139@example.org
+ITCH-20140,2025-07-10,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20140@example.org
+ITCH-20141,2025-07-10,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20141@example.org
+ITCH-20142,2025-07-17,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20142@example.org
+ITCH-20143,2025-07-17,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20143@example.org
+ITCH-20144,2025-07-17,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20144@example.org
+ITCH-20145,2025-07-20,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20145@example.org
+ITCH-20146,2025-07-20,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,€1.84,€0.98,€0.62,no,,indie_buyer_20146@example.org
+ITCH-20147,2025-07-22,Game,GAME-RBRT,R*bert,JPY,¥820,$0.00,¥82,¥70,no,,indie_buyer_20147@example.org
+ITCH-20148,2025-07-22,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20148@example.org
+ITCH-20149,2025-07-22,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,IDR,"Rp 194,400",$0.00,"Rp 19,440","Rp 10,538",no,,indie_buyer_20149@example.org
+ITCH-20150,2025-07-24,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20150@example.org
+ITCH-20151,2025-07-24,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20151@example.org
+ITCH-20152,2025-07-28,Game,GAME-RBRT,R*bert,GBP,£5.79,$0.00,£0.58,£0.41,no,,indie_buyer_20152@example.org
+ITCH-20153,2025-07-28,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20153@example.org
+ITCH-20154,2025-07-31,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$5.00,$1.80,$0.97,no,,indie_buyer_20154@example.org
+ITCH-20155,2025-08-03,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20155@example.org
+ITCH-20156,2025-08-05,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20156@example.org
+ITCH-20157,2025-08-07,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20157@example.org
+ITCH-20158,2025-08-07,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20158@example.org
+ITCH-20159,2025-08-09,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20159@example.org
+ITCH-20160,2025-08-16,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20160@example.org
+ITCH-20161,2025-08-17,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20161@example.org
+ITCH-20162,2025-08-19,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20162@example.org
+ITCH-20163,2025-08-19,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20163@example.org
+ITCH-20164,2025-08-22,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$2.00,$1.00,$0.65,no,,indie_buyer_20164@example.org
+ITCH-20165,2025-08-23,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,€4.60,€0.98,€0.70,no,,indie_buyer_20165@example.org
+ITCH-20166,2025-08-25,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20166@example.org
+ITCH-20167,2025-08-25,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,IDR,"Rp 194,400",$0.00,"Rp 19,440","Rp 10,538",no,,indie_buyer_20167@example.org
+ITCH-20168,2025-08-25,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20168@example.org
+ITCH-20169,2025-08-26,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20169@example.org
+ITCH-20170,2025-08-30,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,€4.60,€1.29,€0.79,no,,indie_buyer_20170@example.org
+ITCH-20171,2025-08-30,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20171@example.org
+ITCH-20172,2025-08-31,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20172@example.org
+ITCH-20173,2025-09-02,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20173@example.org
+ITCH-20174,2025-09-03,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20174@example.org
+ITCH-20175,2025-09-04,Game,GAME-AMMD,A Match Made in Dungeon,JPY,"¥1,200",$0.00,¥120,¥81,no,,indie_buyer_20175@example.org
+ITCH-20176,2025-09-04,Game,GAME-RBRT,R*bert,GBP,£5.79,$0.00,£0.58,£0.41,no,,indie_buyer_20176@example.org
+ITCH-20177,2025-09-05,Game,GAME-PSPC,Personal Space,GBP,£4.29,£1.58,£0.43,£0.41,no,,indie_buyer_20177@example.org
+ITCH-20178,2025-09-05,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,£1.58,£0.85,£0.53,no,,indie_buyer_20178@example.org
+ITCH-20179,2025-09-09,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,GBP,£14.22,$0.00,£1.42,£0.65,no,,indie_buyer_20179@example.org
+ITCH-20180,2025-09-14,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20180@example.org
+ITCH-20181,2025-09-17,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20181@example.org
+ITCH-20182,2025-09-17,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,JPY,"¥2,128",$0.00,¥213,¥108,no,,indie_buyer_20182@example.org
+ITCH-20183,2025-09-18,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20183@example.org
+ITCH-20184,2025-09-18,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20184@example.org
+ITCH-20185,2025-09-20,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20185@example.org
+ITCH-20186,2025-09-23,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20186@example.org
+ITCH-20187,2025-09-24,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20187@example.org
+ITCH-20188,2025-09-26,Game,GAME-RBRT,R*bert,JPY,¥820,$0.00,¥82,¥70,no,,indie_buyer_20188@example.org
+ITCH-20189,2025-09-29,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20189@example.org
+ITCH-20190,2025-09-29,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20190@example.org
+ITCH-20191,2025-09-29,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20191@example.org
+ITCH-20192,2025-09-30,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20192@example.org
+ITCH-20193,2025-10-02,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$5.00,$1.00,$0.73,no,,indie_buyer_20193@example.org
+ITCH-20194,2025-10-03,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,yes,2025-10-11,indie_buyer_20194@example.org
+ITCH-20195,2025-10-03,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,SGD,S$16.08,$0.00,S$1.61,S$0.87,yes,2025-10-05,indie_buyer_20195@example.org
+ITCH-20196,2025-10-03,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",¥760,¥182,¥121,no,,indie_buyer_20196@example.org
+ITCH-20197,2025-10-06,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20197@example.org
+ITCH-20198,2025-10-14,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,SGD,S$29.48,$0.00,S$2.95,S$1.25,no,,indie_buyer_20198@example.org
+ITCH-20199,2025-10-14,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,GBP,£11.06,£1.58,£1.11,£0.61,no,,indie_buyer_20199@example.org
+ITCH-20200,2025-10-14,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20200@example.org
+ITCH-20201,2025-10-15,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20201@example.org
+ITCH-20202,2025-10-18,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20202@example.org
+ITCH-20203,2025-10-20,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20203@example.org
+ITCH-20204,2025-10-20,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20204@example.org
+ITCH-20205,2025-10-21,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20205@example.org
+ITCH-20206,2025-10-22,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,SGD,S$29.48,$0.00,S$2.95,S$1.25,no,,indie_buyer_20206@example.org
+ITCH-20207,2025-10-24,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,yes,2025-10-30,indie_buyer_20207@example.org
+ITCH-20208,2025-10-25,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20208@example.org
+ITCH-20209,2025-10-29,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20209@example.org
+ITCH-20210,2025-10-30,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20210@example.org
+ITCH-20211,2025-10-30,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20211@example.org
+ITCH-20212,2025-10-31,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20212@example.org
+ITCH-20213,2025-11-04,Game,GAME-PSPC,Personal Space,IDR,"Rp 45,000",$0.00,"Rp 4,500","Rp 6,205",no,,indie_buyer_20213@example.org
+ITCH-20214,2025-11-04,Game,GAME-PSPC,Personal Space,EUR,€4.99,€4.60,€0.50,€0.56,no,,indie_buyer_20214@example.org
+ITCH-20215,2025-11-04,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20215@example.org
+ITCH-20216,2025-11-11,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,JPY,"¥2,736",$0.00,¥274,¥125,no,,indie_buyer_20216@example.org
+ITCH-20217,2025-11-11,Game,GAME-RBRT,R*bert,SGD,S$7.50,$0.00,S$0.75,S$0.62,no,,indie_buyer_20217@example.org
+ITCH-20218,2025-11-11,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20218@example.org
+ITCH-20219,2025-11-12,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20219@example.org
+ITCH-20220,2025-11-12,Game,GAME-RBRT,R*bert,JPY,¥820,¥304,¥82,¥79,no,,indie_buyer_20220@example.org
+ITCH-20221,2025-11-13,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,JPY,"¥2,128",$0.00,¥213,¥108,no,,indie_buyer_20221@example.org
+ITCH-20222,2025-11-14,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20222@example.org
+ITCH-20223,2025-11-15,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20223@example.org
+ITCH-20224,2025-11-15,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20224@example.org
+ITCH-20225,2025-11-18,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20225@example.org
+ITCH-20226,2025-11-19,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20226@example.org
+ITCH-20227,2025-11-20,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,yes,2025-11-23,indie_buyer_20227@example.org
+ITCH-20228,2025-11-20,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,IDR,"Rp 356,400",$0.00,"Rp 35,640","Rp 15,236",no,,indie_buyer_20228@example.org
+ITCH-20229,2025-11-22,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20229@example.org
+ITCH-20230,2025-11-22,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20230@example.org
+ITCH-20231,2025-11-23,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$2.00,$1.80,$0.88,no,,indie_buyer_20231@example.org
+ITCH-20232,2025-11-24,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,IDR,"Rp 291,600",$0.00,"Rp 29,160","Rp 13,356",no,,indie_buyer_20232@example.org
+ITCH-20233,2025-11-24,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,EUR,€11.04,$0.00,€1.10,€0.60,no,,indie_buyer_20233@example.org
+ITCH-20234,2025-11-24,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20234@example.org
+ITCH-20235,2025-11-24,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20235@example.org
+ITCH-20236,2025-11-25,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,$0.00,S$1.05,S$0.70,no,,indie_buyer_20236@example.org
+ITCH-20237,2025-11-25,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20237@example.org
+ITCH-20238,2025-11-26,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20238@example.org
+ITCH-20239,2025-11-26,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20239@example.org
+ITCH-20240,2025-11-26,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20240@example.org
+ITCH-20241,2025-11-27,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$2.00,$1.80,$0.88,no,,indie_buyer_20241@example.org
+ITCH-20242,2025-11-29,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20242@example.org
+ITCH-20243,2025-11-30,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20243@example.org
+ITCH-20244,2025-11-30,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20244@example.org
+ITCH-20245,2025-11-30,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,€4.60,€2.02,€1.00,no,,indie_buyer_20245@example.org
+ITCH-20246,2025-12-01,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,IDR,"Rp 226,800",$0.00,"Rp 22,680","Rp 11,477",no,,indie_buyer_20246@example.org
+ITCH-20247,2025-12-03,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20247@example.org
+ITCH-20248,2025-12-03,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",$0.00,¥182,¥99,no,,indie_buyer_20248@example.org
+ITCH-20249,2025-12-04,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20249@example.org
+ITCH-20250,2025-12-05,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20250@example.org
+ITCH-20251,2025-12-07,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20251@example.org
+ITCH-20252,2025-12-08,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$2.00,$1.00,$0.65,no,,indie_buyer_20252@example.org
+ITCH-20253,2025-12-08,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20253@example.org
+ITCH-20254,2025-12-09,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20254@example.org
+ITCH-20255,2025-12-10,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20255@example.org
+ITCH-20256,2025-12-13,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20256@example.org
+ITCH-20257,2025-12-14,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20257@example.org
+ITCH-20258,2025-12-15,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$5.00,$2.20,$1.08,no,,indie_buyer_20258@example.org
+ITCH-20259,2025-12-15,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20259@example.org
+ITCH-20260,2025-12-15,Game,GAME-RBRT,R*bert,GBP,£5.79,$0.00,£0.58,£0.41,no,,indie_buyer_20260@example.org
+ITCH-20261,2025-12-16,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20261@example.org
+ITCH-20262,2025-12-17,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20262@example.org
+ITCH-20263,2025-12-19,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20263@example.org
+ITCH-20264,2025-12-20,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",$0.00,¥182,¥99,no,,indie_buyer_20264@example.org
+ITCH-20265,2025-12-20,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20265@example.org
+ITCH-20266,2025-12-20,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20266@example.org
+ITCH-20267,2025-12-21,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20267@example.org
+ITCH-20268,2025-12-21,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20268@example.org
+ITCH-20269,2025-12-22,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20269@example.org
+ITCH-20270,2025-12-22,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,$0.00,S$1.05,S$0.70,no,,indie_buyer_20270@example.org
+ITCH-20271,2025-12-22,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20271@example.org
+ITCH-20272,2025-12-22,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,SGD,S$16.08,$0.00,S$1.61,S$0.87,no,,indie_buyer_20272@example.org
+ITCH-20273,2025-12-25,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20273@example.org
+ITCH-20274,2025-12-25,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20274@example.org
+ITCH-20275,2025-12-26,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20275@example.org
+ITCH-20276,2025-12-27,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,£1.58,£0.85,£0.53,no,,indie_buyer_20276@example.org
+ITCH-20277,2025-12-28,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20277@example.org
+ITCH-20278,2025-12-28,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20278@example.org
+ITCH-20279,2025-12-28,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20279@example.org
+ITCH-20280,2025-12-29,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,IDR,"Rp 226,800","Rp 81,000","Rp 22,680","Rp 13,826",no,,indie_buyer_20280@example.org
+ITCH-20281,2025-12-30,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20281@example.org
+ITCH-20282,2025-12-30,Game,GAME-PSPC,Personal Space,GBP,£4.29,$0.00,£0.43,£0.36,no,,indie_buyer_20282@example.org
+ITCH-20283,2025-12-30,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20283@example.org
+ITCH-20284,2025-12-31,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20284@example.org
+ITCH-20285,2025-12-31,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,yes,2026-01-02,indie_buyer_20285@example.org
+ITCH-20286,2026-01-01,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20286@example.org
+ITCH-20287,2026-01-01,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20287@example.org
+ITCH-20288,2026-01-02,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$5.00,$2.20,$1.08,no,,indie_buyer_20288@example.org
+ITCH-20289,2026-01-03,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20289@example.org
+ITCH-20290,2026-01-04,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,yes,2026-01-10,indie_buyer_20290@example.org
+ITCH-20291,2026-01-04,Game,GAME-PSPC,Personal Space,JPY,¥580,$0.00,¥58,¥63,no,,indie_buyer_20291@example.org
+ITCH-20292,2026-01-08,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20292@example.org
+ITCH-20293,2026-01-14,Game,GAME-PSPC,Personal Space,GBP,£4.29,£1.58,£0.43,£0.41,no,,indie_buyer_20293@example.org
+ITCH-20294,2026-01-15,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,S$6.70,S$1.05,S$0.90,no,,indie_buyer_20294@example.org
+ITCH-20295,2026-01-15,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20295@example.org
+ITCH-20296,2026-01-18,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20296@example.org
+ITCH-20297,2026-01-21,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20297@example.org
+ITCH-20298,2026-01-24,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20298@example.org
+ITCH-20299,2026-01-25,Game,GAME-PSPC,Personal Space,SGD,S$5.50,$0.00,S$0.55,S$0.56,no,,indie_buyer_20299@example.org
+ITCH-20300,2026-01-26,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,$0.00,S$1.05,S$0.70,no,,indie_buyer_20300@example.org
+ITCH-20301,2026-01-26,Game,GAME-PSPC,Personal Space,SGD,S$5.50,$0.00,S$0.55,S$0.56,no,,indie_buyer_20301@example.org
+ITCH-20302,2026-01-29,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20302@example.org
+ITCH-20303,2026-01-30,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20303@example.org
+ITCH-20304,2026-01-31,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20304@example.org
+ITCH-20305,2026-01-31,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,yes,2026-02-08,indie_buyer_20305@example.org
+ITCH-20306,2026-02-02,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20306@example.org
+ITCH-20307,2026-02-03,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20307@example.org
+ITCH-20308,2026-02-04,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20308@example.org
+ITCH-20309,2026-02-04,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20309@example.org
+ITCH-20310,2026-02-06,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20310@example.org
+ITCH-20311,2026-02-07,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20311@example.org
+ITCH-20312,2026-02-08,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,yes,2026-02-11,indie_buyer_20312@example.org
+ITCH-20313,2026-02-09,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20313@example.org
+ITCH-20314,2026-02-09,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20314@example.org
+ITCH-20315,2026-02-11,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20315@example.org
+ITCH-20316,2026-02-12,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20316@example.org
+ITCH-20317,2026-02-12,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20317@example.org
+ITCH-20318,2026-02-13,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20318@example.org
+ITCH-20319,2026-02-13,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,GBP,£11.06,$0.00,£1.11,£0.56,no,,indie_buyer_20319@example.org
+ITCH-20320,2026-02-15,Game,GAME-RBRT,R*bert,JPY,¥820,$0.00,¥82,¥70,no,,indie_buyer_20320@example.org
+ITCH-20321,2026-02-15,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20321@example.org
+ITCH-20322,2026-02-15,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20322@example.org
+ITCH-20323,2026-02-18,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20323@example.org
+ITCH-20324,2026-02-19,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20324@example.org
+ITCH-20325,2026-02-21,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20325@example.org
+ITCH-20326,2026-02-24,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20326@example.org
+ITCH-20327,2026-02-25,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20327@example.org
+ITCH-20328,2026-02-25,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20328@example.org
+ITCH-20329,2026-02-26,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,£1.58,£0.95,£0.56,no,,indie_buyer_20329@example.org
+ITCH-20330,2026-02-26,Game,GAME-AMMD,A Match Made in Dungeon,SGD,S$10.50,$0.00,S$1.05,S$0.70,no,,indie_buyer_20330@example.org
+ITCH-20331,2026-02-27,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20331@example.org
+ITCH-20332,2026-03-03,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20332@example.org
+ITCH-20333,2026-03-03,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20333@example.org
+ITCH-20334,2026-03-04,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,IDR,"Rp 194,400",$0.00,"Rp 19,440","Rp 10,538",no,,indie_buyer_20334@example.org
+ITCH-20335,2026-03-04,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20335@example.org
+ITCH-20336,2026-03-04,Game,GAME-PSPC,Personal Space,GBP,£4.29,$0.00,£0.43,£0.36,no,,indie_buyer_20336@example.org
+ITCH-20337,2026-03-07,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20337@example.org
+ITCH-20338,2026-03-08,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20338@example.org
+ITCH-20339,2026-03-09,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20339@example.org
+ITCH-20340,2026-03-09,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20340@example.org
+ITCH-20341,2026-03-09,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",$0.00,¥182,¥99,no,,indie_buyer_20341@example.org
+ITCH-20342,2026-03-10,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20342@example.org
+ITCH-20343,2026-03-11,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20343@example.org
+ITCH-20344,2026-03-11,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20344@example.org
+ITCH-20345,2026-03-12,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20345@example.org
+ITCH-20346,2026-03-14,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,SGD,S$24.12,S$6.70,S$2.41,S$1.29,no,,indie_buyer_20346@example.org
+ITCH-20347,2026-03-14,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20347@example.org
+ITCH-20348,2026-03-16,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20348@example.org
+ITCH-20349,2026-03-17,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000","Rp 81,000","Rp 8,900","Rp 9,830",no,,indie_buyer_20349@example.org
+ITCH-20350,2026-03-18,Game,GAME-PSPC,Personal Space,SGD,S$5.50,$0.00,S$0.55,S$0.56,no,,indie_buyer_20350@example.org
+ITCH-20351,2026-03-19,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20351@example.org
+ITCH-20352,2026-03-19,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20352@example.org
+ITCH-20353,2026-03-20,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20353@example.org
+ITCH-20354,2026-03-20,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20354@example.org
+ITCH-20355,2026-03-21,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20355@example.org
+ITCH-20356,2026-03-24,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20356@example.org
+ITCH-20357,2026-03-25,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20357@example.org
+ITCH-20358,2026-03-26,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20358@example.org
+ITCH-20359,2026-03-26,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,€4.60,€2.02,€1.00,no,,indie_buyer_20359@example.org
+ITCH-20360,2026-03-27,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,SGD,S$18.76,$0.00,S$1.88,S$0.94,no,,indie_buyer_20360@example.org
+ITCH-20361,2026-03-29,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20361@example.org
+ITCH-20362,2026-03-30,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20362@example.org
+ITCH-20363,2026-04-01,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20363@example.org
+ITCH-20364,2026-04-07,Game,GAME-PSPC,Personal Space,JPY,¥580,$0.00,¥58,¥63,no,,indie_buyer_20364@example.org
+ITCH-20365,2026-04-07,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20365@example.org
+ITCH-20366,2026-04-07,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20366@example.org
+ITCH-20367,2026-04-08,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20367@example.org
+ITCH-20368,2026-04-09,Game,GAME-PSPC,Personal Space,JPY,¥580,$0.00,¥58,¥63,no,,indie_buyer_20368@example.org
+ITCH-20369,2026-04-11,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20369@example.org
+ITCH-20370,2026-04-12,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20370@example.org
+ITCH-20371,2026-04-14,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$5.00,$2.20,$1.08,no,,indie_buyer_20371@example.org
+ITCH-20372,2026-04-18,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20372@example.org
+ITCH-20373,2026-04-21,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20373@example.org
+ITCH-20374,2026-04-23,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20374@example.org
+ITCH-20375,2026-04-24,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20375@example.org
+ITCH-20376,2026-04-24,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,yes,2026-04-30,indie_buyer_20376@example.org
+ITCH-20377,2026-04-28,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20377@example.org
+ITCH-20378,2026-04-30,Game,GAME-PSPC,Personal Space,EUR,€4.99,$0.00,€0.50,€0.42,no,,indie_buyer_20378@example.org
+ITCH-20379,2026-05-01,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20379@example.org
+ITCH-20380,2026-05-01,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20380@example.org
+ITCH-20381,2026-05-02,Game,GAME-PSPC,Personal Space,USD,$4.99,$5.00,$0.50,$0.59,no,,indie_buyer_20381@example.org
+ITCH-20382,2026-05-04,Game,GAME-CNTG,Canting Cloth,JPY,"¥1,450",$0.00,¥145,¥88,no,,indie_buyer_20382@example.org
+ITCH-20383,2026-05-04,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20383@example.org
+ITCH-20384,2026-05-10,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,IDR,"Rp 356,400",$0.00,"Rp 35,640","Rp 15,236",no,,indie_buyer_20384@example.org
+ITCH-20385,2026-05-10,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20385@example.org
+ITCH-20386,2026-05-11,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20386@example.org
+ITCH-20387,2026-05-13,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20387@example.org
+ITCH-20388,2026-05-13,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20388@example.org
+ITCH-20389,2026-05-13,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,GBP,£14.22,$0.00,£1.42,£0.65,no,,indie_buyer_20389@example.org
+ITCH-20390,2026-05-16,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,SGD,S$29.48,$0.00,S$2.95,S$1.25,no,,indie_buyer_20390@example.org
+ITCH-20391,2026-05-18,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",¥760,¥182,¥121,no,,indie_buyer_20391@example.org
+ITCH-20392,2026-05-20,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,£3.95,£1.74,£0.86,no,,indie_buyer_20392@example.org
+ITCH-20393,2026-05-22,Game,GAME-CNTG,Canting Cloth,IDR,"Rp 109,000",$0.00,"Rp 10,900","Rp 8,061",no,,indie_buyer_20393@example.org
+ITCH-20394,2026-05-23,Game,GAME-CNTG,Canting Cloth,JPY,"¥1,450",$0.00,¥145,¥88,no,,indie_buyer_20394@example.org
+ITCH-20395,2026-05-25,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20395@example.org
+ITCH-20396,2026-05-26,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20396@example.org
+ITCH-20397,2026-05-27,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20397@example.org
+ITCH-20398,2026-06-01,Game,GAME-PSPC,Personal Space,USD,$4.99,$2.00,$0.50,$0.50,no,,indie_buyer_20398@example.org
+ITCH-20399,2026-06-04,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,no,,indie_buyer_20399@example.org
+ITCH-20400,2026-06-04,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20400@example.org
+ITCH-20401,2026-06-04,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,GBP,£14.22,$0.00,£1.42,£0.65,no,,indie_buyer_20401@example.org
+ITCH-20402,2026-06-07,Game,GAME-AMMD,A Match Made in Dungeon,GBP,£8.50,$0.00,£0.85,£0.49,no,,indie_buyer_20402@example.org
+ITCH-20403,2026-06-08,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20403@example.org
+ITCH-20404,2026-06-11,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$2.00,$1.80,$0.88,no,,indie_buyer_20404@example.org
+ITCH-20405,2026-06-12,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$5.00,$1.00,$0.73,no,,indie_buyer_20405@example.org
+ITCH-20406,2026-06-13,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,GBP,£14.22,$0.00,£1.42,£0.65,no,,indie_buyer_20406@example.org
+ITCH-20407,2026-06-13,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,SGD,S$16.08,$0.00,S$1.61,S$0.87,yes,2026-06-15,indie_buyer_20407@example.org
+ITCH-20408,2026-06-14,Game,GAME-PSPC,Personal Space,USD,$4.99,$5.00,$0.50,$0.59,no,,indie_buyer_20408@example.org
+ITCH-20409,2026-06-15,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,no,,indie_buyer_20409@example.org
+ITCH-20410,2026-06-16,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20410@example.org
+ITCH-20411,2026-06-16,Game,GAME-CNTG,Canting Cloth,EUR,€11.79,$0.00,€1.18,€0.62,no,,indie_buyer_20411@example.org
+ITCH-20412,2026-06-16,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,IDR,"Rp 194,400",$0.00,"Rp 19,440","Rp 10,538",no,,indie_buyer_20412@example.org
+ITCH-20413,2026-06-18,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20413@example.org
+ITCH-20414,2026-06-18,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,JPY,"¥1,824",$0.00,¥182,¥99,no,,indie_buyer_20414@example.org
+ITCH-20415,2026-06-19,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20415@example.org
+ITCH-20416,2026-06-20,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20416@example.org
+ITCH-20417,2026-06-21,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20417@example.org
+ITCH-20418,2026-06-22,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20418@example.org
+ITCH-20419,2026-06-22,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$5.00,$1.80,$0.97,no,,indie_buyer_20419@example.org
+ITCH-20420,2026-06-22,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20420@example.org
+ITCH-20421,2026-06-23,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20421@example.org
+ITCH-20422,2026-06-25,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20422@example.org
+ITCH-20423,2026-06-27,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20423@example.org
+ITCH-20424,2026-06-28,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20424@example.org
+ITCH-20425,2026-06-28,Game,GAME-AMMD,A Match Made in Dungeon,IDR,"Rp 89,000",$0.00,"Rp 8,900","Rp 7,481",no,,indie_buyer_20425@example.org
+ITCH-20426,2026-06-29,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20426@example.org
+ITCH-20427,2026-07-01,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,yes,2026-07-10,indie_buyer_20427@example.org
+ITCH-20428,2026-07-04,Game,GAME-RBRT,R*bert,EUR,€6.89,$0.00,€0.69,€0.48,no,,indie_buyer_20428@example.org
+ITCH-20429,2026-07-04,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20429@example.org
+ITCH-20430,2026-07-05,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20430@example.org
+ITCH-20431,2026-07-05,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20431@example.org
+ITCH-20432,2026-07-06,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20432@example.org
+ITCH-20433,2026-07-07,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,SGD,S$16.08,$0.00,S$1.61,S$0.87,no,,indie_buyer_20433@example.org
+ITCH-20434,2026-07-09,Game,GAME-RBRT,R*bert,SGD,S$7.50,$0.00,S$0.75,S$0.62,no,,indie_buyer_20434@example.org
+ITCH-20435,2026-07-09,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,JPY,"¥2,736",¥760,¥274,¥147,no,,indie_buyer_20435@example.org
+ITCH-20436,2026-07-09,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20436@example.org
+ITCH-20437,2026-07-09,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20437@example.org
+ITCH-20438,2026-07-10,Game,GAME-CNTG,Canting Cloth,GBP,£9.99,$0.00,£1.00,£0.53,no,,indie_buyer_20438@example.org
+ITCH-20439,2026-07-10,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20439@example.org
+ITCH-20440,2026-07-12,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20440@example.org
+ITCH-20441,2026-07-14,Game,GAME-CNTG,Canting Cloth,EUR,€11.79,$0.00,€1.18,€0.62,no,,indie_buyer_20441@example.org
+ITCH-20442,2026-07-16,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,yes,2026-07-21,indie_buyer_20442@example.org
+ITCH-20443,2026-07-17,Game,GAME-CNTG,Canting Cloth,EUR,€11.79,$0.00,€1.18,€0.62,no,,indie_buyer_20443@example.org
+ITCH-20444,2026-07-19,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20444@example.org
+ITCH-20445,2026-07-21,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,yes,2026-07-30,indie_buyer_20445@example.org
+ITCH-20446,2026-07-23,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20446@example.org
+ITCH-20447,2026-07-26,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20447@example.org
+ITCH-20448,2026-07-26,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,GBP,£9.48,$0.00,£0.95,£0.51,no,,indie_buyer_20448@example.org
+ITCH-20449,2026-07-28,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20449@example.org
+ITCH-20450,2026-07-29,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,no,,indie_buyer_20450@example.org
+ITCH-20451,2026-07-29,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20451@example.org
+ITCH-20452,2026-07-30,Game,GAME-RBRT,R*bert,USD,$6.99,$5.00,$0.70,$0.65,no,,indie_buyer_20452@example.org
+ITCH-20453,2026-08-01,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20453@example.org
+ITCH-20454,2026-08-02,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20454@example.org
+ITCH-20455,2026-08-03,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,JPY,"¥2,736",$0.00,¥274,¥125,yes,2026-08-07,indie_buyer_20455@example.org
+ITCH-20456,2026-08-05,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20456@example.org
+ITCH-20457,2026-08-07,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20457@example.org
+ITCH-20458,2026-08-08,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20458@example.org
+ITCH-20459,2026-08-08,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20459@example.org
+ITCH-20460,2026-08-11,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20460@example.org
+ITCH-20461,2026-08-12,Game,GAME-PSPC,Personal Space,GBP,£4.29,£1.58,£0.43,£0.41,yes,2026-08-13,indie_buyer_20461@example.org
+ITCH-20462,2026-08-12,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20462@example.org
+ITCH-20463,2026-08-15,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20463@example.org
+ITCH-20464,2026-08-16,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,IDR,"Rp 194,400",$0.00,"Rp 19,440","Rp 10,538",no,,indie_buyer_20464@example.org
+ITCH-20465,2026-08-18,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,no,,indie_buyer_20465@example.org
+ITCH-20466,2026-08-18,Game,GAME-AMMD,A Match Made in Dungeon,EUR,€9.79,$0.00,€0.98,€0.56,no,,indie_buyer_20466@example.org
+ITCH-20467,2026-08-20,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20467@example.org
+ITCH-20468,2026-08-21,Game,GAME-CNTG,Canting Cloth,GBP,£9.99,$0.00,£1.00,£0.53,no,,indie_buyer_20468@example.org
+ITCH-20469,2026-08-22,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,GBP,£17.38,$0.00,£1.74,£0.74,no,,indie_buyer_20469@example.org
+ITCH-20470,2026-08-23,Game,GAME-CNTG,Canting Cloth,GBP,£9.99,$0.00,£1.00,£0.53,no,,indie_buyer_20470@example.org
+ITCH-20471,2026-08-25,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20471@example.org
+ITCH-20472,2026-08-26,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20472@example.org
+ITCH-20473,2026-08-28,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20473@example.org
+ITCH-20474,2026-09-01,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20474@example.org
+ITCH-20475,2026-09-05,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$5.00,$2.20,$1.08,no,,indie_buyer_20475@example.org
+ITCH-20476,2026-09-05,Game,GAME-RBRT,R*bert,GBP,£5.79,$0.00,£0.58,£0.41,no,,indie_buyer_20476@example.org
+ITCH-20477,2026-09-07,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,no,,indie_buyer_20477@example.org
+ITCH-20478,2026-09-08,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20478@example.org
+ITCH-20479,2026-09-09,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20479@example.org
+ITCH-20480,2026-09-09,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$0.00,$1.00,$0.59,no,,indie_buyer_20480@example.org
+ITCH-20481,2026-09-11,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20481@example.org
+ITCH-20482,2026-09-12,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,EUR,€20.24,$0.00,€2.02,€0.87,no,,indie_buyer_20482@example.org
+ITCH-20483,2026-09-14,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20483@example.org
+ITCH-20484,2026-09-16,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20484@example.org
+ITCH-20485,2026-09-18,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20485@example.org
+ITCH-20486,2026-09-20,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20486@example.org
+ITCH-20487,2026-09-22,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20487@example.org
+ITCH-20488,2026-09-24,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20488@example.org
+ITCH-20489,2026-09-26,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20489@example.org
+ITCH-20490,2026-09-26,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,USD,$14.00,$0.00,$1.40,$0.71,no,,indie_buyer_20490@example.org
+ITCH-20491,2026-09-27,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20491@example.org
+ITCH-20492,2026-10-01,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,JPY,"¥2,128",$0.00,¥213,¥108,no,,indie_buyer_20492@example.org
+ITCH-20493,2026-10-02,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20493@example.org
+ITCH-20494,2026-10-03,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20494@example.org
+ITCH-20495,2026-10-04,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,JPY,"¥3,344",$0.00,¥334,¥143,no,,indie_buyer_20495@example.org
+ITCH-20496,2026-10-05,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20496@example.org
+ITCH-20497,2026-10-07,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20497@example.org
+ITCH-20498,2026-10-08,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20498@example.org
+ITCH-20499,2026-10-08,Asset Pack,AST-DGPX,Dungeon Matchmaker Pixel UI & Sprite Kit,EUR,€12.88,$0.00,€1.29,€0.65,no,,indie_buyer_20499@example.org
+ITCH-20500,2026-10-09,Game,GAME-CNTG,Canting Cloth,USD,$11.99,$0.00,$1.20,$0.65,no,,indie_buyer_20500@example.org
+ITCH-20501,2026-10-09,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20501@example.org
+ITCH-20502,2026-10-09,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20502@example.org
+ITCH-20503,2026-10-10,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20503@example.org
+ITCH-20504,2026-10-11,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20504@example.org
+ITCH-20505,2026-10-12,Game,GAME-RBRT,R*bert,USD,$6.99,$0.00,$0.70,$0.50,no,,indie_buyer_20505@example.org
+ITCH-20506,2026-10-13,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20506@example.org
+ITCH-20507,2026-10-13,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,EUR,€11.04,$0.00,€1.10,€0.60,no,,indie_buyer_20507@example.org
+ITCH-20508,2026-10-13,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20508@example.org
+ITCH-20509,2026-10-15,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,USD,$22.00,$0.00,$2.20,$0.94,no,,indie_buyer_20509@example.org
+ITCH-20510,2026-10-18,Game,GAME-PSPC,Personal Space,JPY,¥580,$0.00,¥58,¥63,no,,indie_buyer_20510@example.org
+ITCH-20511,2026-10-21,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,EUR,€16.56,$0.00,€1.66,€0.76,no,,indie_buyer_20511@example.org
+ITCH-20512,2026-10-24,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20512@example.org
+ITCH-20513,2026-10-24,Asset Pack,AST-RHYT,R*bert Reactive Rhythm & SFX Stem Pack,USD,$12.00,$0.00,$1.20,$0.65,no,,indie_buyer_20513@example.org
+ITCH-20514,2026-10-27,Game,GAME-PSPC,Personal Space,USD,$4.99,$0.00,$0.50,$0.44,no,,indie_buyer_20514@example.org
+ITCH-20515,2026-10-29,Game,GAME-AMMD,A Match Made in Dungeon,USD,$9.99,$2.00,$1.00,$0.65,no,,indie_buyer_20515@example.org
+ITCH-20516,2026-10-29,Asset Pack,AST-BATK,Canting NPR Batik Shader & Godot Toolkit,JPY,"¥3,344",$0.00,¥334,¥143,no,,indie_buyer_20516@example.org
+ITCH-20517,2026-10-29,Asset Pack,AST-ISOR,Personal Space Isometric Room & Props Pack,USD,$18.00,$0.00,$1.80,$0.82,no,,indie_buyer_20517@example.org

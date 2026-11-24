@@ -1,0 +1,190 @@
+tanggal,paypal_txn_id,ref_txn_id,tipe_aktivitas,judul_pembayaran,payer_name,payer_email,mata_uang,nilai_kotor,biaya_paypal
+14/01/2025,PP-9001,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9001,client_9001@mail-sample.test,USD,198.59,-9.04
+19/01/2025,PP-9002,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9002,client_9002@mail-sample.test,JPY,"30362,00","-1375,93"
+24/01/2025,PP-9003,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9003,client_9003@mail-sample.test,USD,"156,72","-7,20"
+26/01/2025,PP-9003-REF,PP-9003,Refund,Direct Invoice - HLSL/GDShader Stylized Water,Client #9003,client_9003@mail-sample.test,USD,"-156,72","0,00"
+05/02/2025,PP-9004,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9004,client_9004@mail-sample.test,EUR,"152,65","-7,07"
+10/02/2025,PP-9004-TIP1,PP-9004,Client Tip,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9004,client_9004@mail-sample.test,EUR,"7,36","-0,67"
+06/02/2025,PP-9005,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9005,client_9005@mail-sample.test,USD,"136,58","-6,31"
+13/02/2025,PP-9006,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9006,client_9006@mail-sample.test,USD,108.88,-5.09
+22/02/2025,PP-9007,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9007,client_9007@mail-sample.test,IDR,"2121200,00","-76720,80"
+27/02/2025,PP-9008,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9008,client_9008@mail-sample.test,SGD,"165,61","-7,79"
+14/03/2025,PP-9009,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9009,client_9009@mail-sample.test,JPY,22957.00,-1050.11
+20/03/2025,PP-9009-TIP1,PP-9009,Client Tip,Direct Invoice - HLSL/GDShader Stylized Water,Client #9009,client_9009@mail-sample.test,JPY,1216.00,-93.50
+15/03/2025,PP-9009-TIP2,PP-9009,Client Tip,Direct Invoice - HLSL/GDShader Stylized Water,Client #9009,client_9009@mail-sample.test,JPY,2280.00,-140.32
+16/03/2025,PP-9010,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9010,client_9010@mail-sample.test,IDR,"3901300,00","-137244,20"
+19/03/2025,PP-9011,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9011,client_9011@mail-sample.test,SGD,265.74,-12.19
+23/03/2025,PP-9012,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9012,client_9012@mail-sample.test,USD,190.08,-8.66
+25/03/2025,PP-9012-TIP1,PP-9012,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9012,client_9012@mail-sample.test,USD,25.00,-1.40
+25/03/2025,PP-9012-TIP2,PP-9012,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9012,client_9012@mail-sample.test,USD,15.00,-0.96
+27/03/2025,PP-9013,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9013,client_9013@mail-sample.test,IDR,"2105200,00","-76176,80"
+03/04/2025,PP-9014,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9014,client_9014@mail-sample.test,USD,60.59,-2.97
+06/04/2025,PP-9015,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9015,client_9015@mail-sample.test,IDR,2575000.00,-92150.00
+10/04/2025,PP-9016,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9016,client_9016@mail-sample.test,JPY,10313.00,-493.77
+16/04/2025,PP-9016-TIP1,PP-9016,Client Tip,Direct Invoice - Isometric Tileset Commission 64x64,Client #9016,client_9016@mail-sample.test,JPY,3800.00,-207.20
+12/04/2025,PP-9016-TIP2,PP-9016,Client Tip,Direct Invoice - Isometric Tileset Commission 64x64,Client #9016,client_9016@mail-sample.test,JPY,2280.00,-140.32
+14/04/2025,PP-9017,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9017,client_9017@mail-sample.test,EUR,"173,33","-7,98"
+18/04/2025,PP-9018,,Direct Commission,Direct Invoice - OC Portrait Render High-Res,Client #9018,client_9018@mail-sample.test,SGD,"145,64","-6,91"
+22/04/2025,PP-9019,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9019,client_9019@mail-sample.test,USD,"138,05","-6,37"
+29/04/2025,PP-9020,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9020,client_9020@mail-sample.test,USD,"217,19","-9,86"
+30/04/2025,PP-9021,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9021,client_9021@mail-sample.test,USD,138.27,-6.38
+01/05/2025,PP-9022,,Direct Commission,Direct Invoice - OC Portrait Render High-Res,Client #9022,client_9022@mail-sample.test,IDR,"1812000,00","-66208,00"
+03/05/2025,PP-9022-TIP1,PP-9022,Client Tip,Direct Invoice - OC Portrait Render High-Res,Client #9022,client_9022@mail-sample.test,IDR,"129600,00","-9006,40"
+04/05/2025,PP-9023,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9023,client_9023@mail-sample.test,USD,206.40,-9.38
+12/05/2025,PP-9024,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9024,client_9024@mail-sample.test,EUR,71.10,-3.48
+13/05/2025,PP-9025,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9025,client_9025@mail-sample.test,IDR,3855300.00,-135680.20
+14/05/2025,PP-9025-TIP1,PP-9025,Client Tip,Direct Invoice - Anime Key Visual Illustration,Client #9025,client_9025@mail-sample.test,IDR,129600.00,-9006.40
+17/05/2025,PP-9025-REF,PP-9025,Refund,Direct Invoice - Anime Key Visual Illustration,Client #9025,client_9025@mail-sample.test,IDR,-3855300.00,0.00
+15/05/2025,PP-9026,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9026,client_9026@mail-sample.test,SGD,183.69,-8.58
+18/05/2025,PP-9026-TIP1,PP-9026,Client Tip,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9026,client_9026@mail-sample.test,SGD,33.50,-1.97
+16/05/2025,PP-9026-TIP2,PP-9026,Client Tip,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9026,client_9026@mail-sample.test,SGD,10.72,-0.97
+18/05/2025,PP-9027,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9027,client_9027@mail-sample.test,USD,"194,12","-8,84"
+20/05/2025,PP-9028,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9028,client_9028@mail-sample.test,USD,121.61,-5.65
+23/05/2025,PP-9028-TIP1,PP-9028,Client Tip,Direct Invoice - Godot Mechanic & State Controller,Client #9028,client_9028@mail-sample.test,USD,15.00,-0.96
+30/05/2025,PP-9029,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9029,client_9029@mail-sample.test,CNY,1573.06,-71.71
+01/06/2025,PP-9030,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9030,client_9030@mail-sample.test,EUR,90.72,-4.34
+07/06/2025,PP-9031,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9031,client_9031@mail-sample.test,IDR,"2258800,00","-81399,20"
+17/06/2025,PP-9032,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9032,client_9032@mail-sample.test,USD,"133,20","-6,16"
+20/06/2025,PP-9033,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9033,client_9033@mail-sample.test,CNY,"1919,02","-86,94"
+22/06/2025,PP-9034,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9034,client_9034@mail-sample.test,USD,170.60,-7.81
+02/07/2025,PP-9035,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9035,client_9035@mail-sample.test,SGD,"141,60","-6,73"
+07/07/2025,PP-9036,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9036,client_9036@mail-sample.test,JPY,32645.00,-1476.38
+12/07/2025,PP-9036-TIP1,PP-9036,Client Tip,Direct Invoice - Game Splash Art Illustration,Client #9036,client_9036@mail-sample.test,JPY,3800.00,-207.20
+10/07/2025,PP-9036-TIP2,PP-9036,Client Tip,Direct Invoice - Game Splash Art Illustration,Client #9036,client_9036@mail-sample.test,JPY,2280.00,-140.32
+11/07/2025,PP-9037,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9037,client_9037@mail-sample.test,JPY,23259.00,-1063.40
+12/07/2025,PP-9037-TIP1,PP-9037,Client Tip,Direct Invoice - HLSL/GDShader Stylized Water,Client #9037,client_9037@mail-sample.test,JPY,3800.00,-207.20
+12/07/2025,PP-9037-TIP2,PP-9037,Client Tip,Direct Invoice - HLSL/GDShader Stylized Water,Client #9037,client_9037@mail-sample.test,JPY,3800.00,-207.20
+12/07/2025,PP-9038,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9038,client_9038@mail-sample.test,SGD,"189,25","-8,83"
+17/07/2025,PP-9039,,Direct Commission,Direct Invoice - OC Portrait Render High-Res,Client #9039,client_9039@mail-sample.test,USD,86.36,-4.10
+19/07/2025,PP-9040,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9040,client_9040@mail-sample.test,GBP,"127,54","-5,81"
+24/07/2025,PP-9040-REF,PP-9040,Refund,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9040,client_9040@mail-sample.test,GBP,"-127,54","0,00"
+21/07/2025,PP-9041,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9041,client_9041@mail-sample.test,SGD,138.85,-6.61
+27/07/2025,PP-9042,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9042,client_9042@mail-sample.test,IDR,"1661000,00","-61074,00"
+28/07/2025,PP-9043,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9043,client_9043@mail-sample.test,SGD,359.12,-16.30
+29/07/2025,PP-9044,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9044,client_9044@mail-sample.test,USD,"161,65","-7,41"
+15/08/2025,PP-9045,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9045,client_9045@mail-sample.test,IDR,"1195200,00","-45236,80"
+18/08/2025,PP-9046,,Direct Commission,Direct Invoice - OC Portrait Render High-Res,Client #9046,client_9046@mail-sample.test,USD,"205,89","-9,36"
+21/08/2025,PP-9047,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9047,client_9047@mail-sample.test,JPY,19132.00,-881.81
+22/08/2025,PP-9048,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9048,client_9048@mail-sample.test,USD,227.99,-10.33
+25/08/2025,PP-9049,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9049,client_9049@mail-sample.test,USD,111.98,-5.23
+27/08/2025,PP-9050,,Direct Commission,Direct Invoice - OC Portrait Render High-Res,Client #9050,client_9050@mail-sample.test,USD,198.19,-9.02
+29/08/2025,PP-9050-TIP1,PP-9050,Client Tip,Direct Invoice - OC Portrait Render High-Res,Client #9050,client_9050@mail-sample.test,USD,8.00,-0.65
+01/09/2025,PP-9050-REF,PP-9050,Refund,Direct Invoice - OC Portrait Render High-Res,Client #9050,client_9050@mail-sample.test,USD,-198.19,0.00
+29/08/2025,PP-9051,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9051,client_9051@mail-sample.test,SGD,217.40,-10.07
+16/09/2025,PP-9052,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9052,client_9052@mail-sample.test,SGD,"138,27","-6,58"
+23/09/2025,PP-9053,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9053,client_9053@mail-sample.test,USD,93.89,-4.43
+27/09/2025,PP-9054,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9054,client_9054@mail-sample.test,EUR,94.08,-4.49
+30/09/2025,PP-9055,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9055,client_9055@mail-sample.test,JPY,30941.00,-1401.40
+03/10/2025,PP-9056,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9056,client_9056@mail-sample.test,SGD,"208,50","-9,67"
+05/10/2025,PP-9057,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9057,client_9057@mail-sample.test,USD,89.49,-4.24
+19/10/2025,PP-9058,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9058,client_9058@mail-sample.test,IDR,"4638900,00","-162322,60"
+20/10/2025,PP-9058-TIP1,PP-9058,Client Tip,Direct Invoice - Custom Shader Toon Outline Setup,Client #9058,client_9058@mail-sample.test,IDR,"405000,00","-18370,00"
+03/11/2025,PP-9059,,Direct Commission,Direct Invoice - OC Portrait Render High-Res,Client #9059,client_9059@mail-sample.test,USD,"230,52","-10,44"
+04/11/2025,PP-9060,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9060,client_9060@mail-sample.test,EUR,99.12,-4.71
+08/11/2025,PP-9060-TIP1,PP-9060,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9060,client_9060@mail-sample.test,EUR,13.80,-0.96
+06/11/2025,PP-9061,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9061,client_9061@mail-sample.test,USD,144.64,-6.66
+07/11/2025,PP-9061-TIP1,PP-9061,Client Tip,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9061,client_9061@mail-sample.test,USD,25.00,-1.40
+09/11/2025,PP-9062,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9062,client_9062@mail-sample.test,IDR,"1669600,00","-61366,40"
+13/11/2025,PP-9063,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9063,client_9063@mail-sample.test,GBP,129.27,-5.89
+22/11/2025,PP-9064,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9064,client_9064@mail-sample.test,EUR,170.86,-7.87
+11/12/2025,PP-9065,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9065,client_9065@mail-sample.test,SGD,143.07,-6.80
+12/12/2025,PP-9066,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9066,client_9066@mail-sample.test,SGD,"146,80","-6,96"
+15/12/2025,PP-9067,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9067,client_9067@mail-sample.test,JPY,18862.00,-869.93
+17/12/2025,PP-9067-TIP1,PP-9067,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9067,client_9067@mail-sample.test,JPY,3800.00,-207.20
+24/12/2025,PP-9068,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9068,client_9068@mail-sample.test,IDR,1845700.00,-67353.80
+28/12/2025,PP-9069,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9069,client_9069@mail-sample.test,USD,115.63,-5.39
+30/12/2025,PP-9070,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9070,client_9070@mail-sample.test,USD,231.67,-10.49
+05/01/2026,PP-9070-TIP1,PP-9070,Client Tip,Direct Invoice - Fullbody Character Illustration + BG,Client #9070,client_9070@mail-sample.test,USD,15.00,-0.96
+31/12/2025,PP-9071,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9071,client_9071@mail-sample.test,EUR,"126,53","-5,92"
+09/01/2026,PP-9072,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9072,client_9072@mail-sample.test,JPY,"19669,00","-905,44"
+10/01/2026,PP-9073,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9073,client_9073@mail-sample.test,SGD,"168,69","-7,92"
+16/01/2026,PP-9074,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9074,client_9074@mail-sample.test,USD,236.80,-10.72
+16/01/2026,PP-9074-TIP1,PP-9074,Client Tip,Direct Invoice - HLSL/GDShader Stylized Water,Client #9074,client_9074@mail-sample.test,USD,25.00,-1.40
+26/01/2026,PP-9075,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9075,client_9075@mail-sample.test,EUR,"150,16","-6,96"
+28/01/2026,PP-9076,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9076,client_9076@mail-sample.test,IDR,3393600.00,-119982.40
+09/02/2026,PP-9077,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9077,client_9077@mail-sample.test,EUR,179.66,-8.26
+10/02/2026,PP-9078,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9078,client_9078@mail-sample.test,USD,104.45,-4.90
+11/02/2026,PP-9079,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9079,client_9079@mail-sample.test,IDR,3329700.00,-117809.80
+13/02/2026,PP-9080,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9080,client_9080@mail-sample.test,USD,203.88,-9.27
+17/02/2026,PP-9081,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9081,client_9081@mail-sample.test,USD,"216,76","-9,84"
+21/02/2026,PP-9081-TIP1,PP-9081,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9081,client_9081@mail-sample.test,USD,"25,00","-1,40"
+22/02/2026,PP-9081-TIP2,PP-9081,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9081,client_9081@mail-sample.test,USD,"15,00","-0,96"
+27/02/2026,PP-9081-REF,PP-9081,Refund,Direct Invoice - Looping Indie Game BGM Track,Client #9081,client_9081@mail-sample.test,USD,"-216,76","0,00"
+20/02/2026,PP-9082,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9082,client_9082@mail-sample.test,USD,237.59,-10.75
+25/02/2026,PP-9083,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9083,client_9083@mail-sample.test,JPY,"26504,00","-1206,18"
+27/02/2026,PP-9084,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9084,client_9084@mail-sample.test,SGD,"194,98","-9,08"
+03/03/2026,PP-9085,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9085,client_9085@mail-sample.test,EUR,"108,34","-5,12"
+04/03/2026,PP-9086,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9086,client_9086@mail-sample.test,SGD,"345,28","-15,69"
+13/03/2026,PP-9087,,Direct Commission,Direct Invoice - Godot Mechanic & State Controller,Client #9087,client_9087@mail-sample.test,USD,"170,13","-7,79"
+19/03/2026,PP-9088,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9088,client_9088@mail-sample.test,IDR,1507100.00,-55841.40
+21/03/2026,PP-9089,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9089,client_9089@mail-sample.test,EUR,"62,65","-3,11"
+30/03/2026,PP-9090,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9090,client_9090@mail-sample.test,JPY,10722.00,-511.77
+01/04/2026,PP-9091,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9091,client_9091@mail-sample.test,SGD,195.13,-9.09
+04/04/2026,PP-9092,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9092,client_9092@mail-sample.test,SGD,"306,99","-14,01"
+06/04/2026,PP-9092-TIP1,PP-9092,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9092,client_9092@mail-sample.test,SGD,"10,72","-0,97"
+09/04/2026,PP-9093,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9093,client_9093@mail-sample.test,SGD,83.04,-4.15
+19/04/2026,PP-9094,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9094,client_9094@mail-sample.test,USD,78.07,-3.74
+29/04/2026,PP-9095,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9095,client_9095@mail-sample.test,CNY,1033.56,-47.98
+30/04/2026,PP-9095-TIP1,PP-9095,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9095,client_9095@mail-sample.test,CNY,57.60,-5.03
+04/05/2026,PP-9095-TIP2,PP-9095,Client Tip,Direct Invoice - Looping Indie Game BGM Track,Client #9095,client_9095@mail-sample.test,CNY,108.00,-7.25
+09/05/2026,PP-9096,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9096,client_9096@mail-sample.test,SGD,126.01,-6.04
+14/05/2026,PP-9097,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9097,client_9097@mail-sample.test,USD,102.82,-4.82
+15/05/2026,PP-9098,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9098,client_9098@mail-sample.test,JPY,31984.00,-1447.30
+17/05/2026,PP-9099,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9099,client_9099@mail-sample.test,SGD,160.17,-7.55
+18/05/2026,PP-9100,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9100,client_9100@mail-sample.test,SGD,236.80,-10.92
+23/05/2026,PP-9101,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9101,client_9101@mail-sample.test,CNY,800.28,-37.71
+26/05/2026,PP-9102,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9102,client_9102@mail-sample.test,IDR,1920800.00,-69907.20
+30/05/2026,PP-9103,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9103,client_9103@mail-sample.test,IDR,"3566600,00","-125864,40"
+01/06/2026,PP-9103-TIP1,PP-9103,Client Tip,Direct Invoice - Anime Key Visual Illustration,Client #9103,client_9103@mail-sample.test,IDR,"243000,00","-12862,00"
+03/06/2026,PP-9104,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9104,client_9104@mail-sample.test,USD,"70,69","-3,41"
+05/06/2026,PP-9105,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9105,client_9105@mail-sample.test,USD,108.70,-5.08
+07/06/2026,PP-9106,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9106,client_9106@mail-sample.test,USD,"175,51","-8,02"
+12/06/2026,PP-9106-TIP1,PP-9106,Client Tip,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9106,client_9106@mail-sample.test,USD,"15,00","-0,96"
+08/06/2026,PP-9107,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9107,client_9107@mail-sample.test,USD,"195,95","-8,92"
+13/06/2026,PP-9108,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9108,client_9108@mail-sample.test,SGD,"133,84","-6,39"
+28/06/2026,PP-9109,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9109,client_9109@mail-sample.test,IDR,"1367000,00","-51078,00"
+04/07/2026,PP-9110,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9110,client_9110@mail-sample.test,USD,"184,92","-8,44"
+05/07/2026,PP-9111,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9111,client_9111@mail-sample.test,EUR,72.85,-3.56
+06/07/2026,PP-9112,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9112,client_9112@mail-sample.test,USD,174.65,-7.98
+07/07/2026,PP-9113,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9113,client_9113@mail-sample.test,CNY,"1840,03","-83,46"
+09/07/2026,PP-9114,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9114,client_9114@mail-sample.test,SGD,372.23,-16.88
+12/07/2026,PP-9115,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9115,client_9115@mail-sample.test,USD,128.34,-5.95
+15/07/2026,PP-9116,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9116,client_9116@mail-sample.test,IDR,"1861700,00","-67897,80"
+23/07/2026,PP-9116-REF,PP-9116,Refund,Direct Invoice - Custom Shader Toon Outline Setup,Client #9116,client_9116@mail-sample.test,IDR,"-1861700,00","0,00"
+18/07/2026,PP-9117,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9117,client_9117@mail-sample.test,JPY,31871.00,-1442.32
+20/07/2026,PP-9118,,Direct Commission,Direct Invoice - Looping Indie Game BGM Track,Client #9118,client_9118@mail-sample.test,USD,235.79,-10.67
+06/08/2026,PP-9119,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9119,client_9119@mail-sample.test,SGD,"151,45","-7,16"
+09/08/2026,PP-9119-TIP1,PP-9119,Client Tip,Direct Invoice - Custom Shader Toon Outline Setup,Client #9119,client_9119@mail-sample.test,SGD,"10,72","-0,97"
+12/08/2026,PP-9120,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9120,client_9120@mail-sample.test,CNY,1626.77,-74.08
+13/08/2026,PP-9121,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9121,client_9121@mail-sample.test,USD,147.52,-6.79
+14/08/2026,PP-9122,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9122,client_9122@mail-sample.test,USD,154.17,-7.08
+17/08/2026,PP-9123,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9123,client_9123@mail-sample.test,USD,218.10,-9.90
+27/08/2026,PP-9124,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9124,client_9124@mail-sample.test,USD,175.16,-8.01
+31/08/2026,PP-9125,,Direct Commission,Direct Invoice - Dynamic Boss Theme Chiptune/Orchestral,Client #9125,client_9125@mail-sample.test,EUR,150.57,-6.98
+04/09/2026,PP-9126,,Direct Commission,Direct Invoice - Game Splash Art Illustration,Client #9126,client_9126@mail-sample.test,IDR,4047700.00,-142221.80
+05/09/2026,PP-9126-TIP1,PP-9126,Client Tip,Direct Invoice - Game Splash Art Illustration,Client #9126,client_9126@mail-sample.test,IDR,243000.00,-12862.00
+07/09/2026,PP-9127,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9127,client_9127@mail-sample.test,USD,224.70,-10.19
+16/09/2026,PP-9128,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9128,client_9128@mail-sample.test,EUR,"214,19","-9,77"
+20/09/2026,PP-9129,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9129,client_9129@mail-sample.test,SGD,"403,66","-18,26"
+27/09/2026,PP-9130,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9130,client_9130@mail-sample.test,IDR,2557200.00,-91544.80
+28/09/2026,PP-9131,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9131,client_9131@mail-sample.test,EUR,"156,90","-7,25"
+05/10/2026,PP-9131-REF,PP-9131,Refund,Direct Invoice - Custom Shader Toon Outline Setup,Client #9131,client_9131@mail-sample.test,EUR,"-78,45","0,00"
+02/10/2026,PP-9132,,Direct Commission,Direct Invoice - Isometric Tileset Commission 64x64,Client #9132,client_9132@mail-sample.test,SGD,177.26,-8.30
+06/10/2026,PP-9133,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9133,client_9133@mail-sample.test,CNY,644.90,-30.88
+07/10/2026,PP-9134,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9134,client_9134@mail-sample.test,USD,298.15,-13.42
+08/10/2026,PP-9135,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9135,client_9135@mail-sample.test,IDR,2965700.00,-105433.80
+08/10/2026,PP-9135-TIP1,PP-9135,Client Tip,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9135,client_9135@mail-sample.test,IDR,243000.00,-12862.00
+14/10/2026,PP-9135-TIP2,PP-9135,Client Tip,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9135,client_9135@mail-sample.test,IDR,405000.00,-18370.00
+10/10/2026,PP-9136,,Direct Commission,Direct Invoice - RPG HUD Icon & Frame Pack,Client #9136,client_9136@mail-sample.test,JPY,24308.00,-1109.55
+13/10/2026,PP-9137,,Direct Commission,Direct Invoice - Fullbody Character Illustration + BG,Client #9137,client_9137@mail-sample.test,USD,157.68,-7.24
+16/10/2026,PP-9138,,Direct Commission,Direct Invoice - HLSL/GDShader Stylized Water,Client #9138,client_9138@mail-sample.test,EUR,250.67,-11.38
+19/10/2026,PP-9139,,Direct Commission,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9139,client_9139@mail-sample.test,USD,70.89,-3.42
+20/10/2026,PP-9139-REF,PP-9139,Refund,Direct Invoice - Retro Pixel Sprite Animation Sheet,Client #9139,client_9139@mail-sample.test,USD,-35.45,0.00
+22/10/2026,PP-9140,,Direct Commission,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9140,client_9140@mail-sample.test,SGD,"130,53","-6,24"
+27/10/2026,PP-9140-TIP1,PP-9140,Client Tip,Direct Invoice - SynthV Vocal Ending Song Arrangement,Client #9140,client_9140@mail-sample.test,SGD,"33,50","-1,97"
+23/10/2026,PP-9141,,Direct Commission,Direct Invoice - Custom Shader Toon Outline Setup,Client #9141,client_9141@mail-sample.test,SGD,"256,14","-11,77"
+28/10/2026,PP-9142,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9142,client_9142@mail-sample.test,EUR,"108,25","-5,11"
+31/10/2026,PP-9143,,Direct Commission,Direct Invoice - Anime Key Visual Illustration,Client #9143,client_9143@mail-sample.test,IDR,4022800.00,-141375.20
+09/03/2026,PP-UNM-1,,Direct Commission,Jasa Titip Artbook Comiket,Unmatched 1,unm_1@mail-sample.test,IDR,"350000,00","-16500,00"
+09/04/2026,PP-UNM-2,,Direct Commission,Reimbursement Server Hosting Kost,Unmatched 2,unm_2@mail-sample.test,IDR,"350000,00","-16500,00"
+09/05/2026,PP-UNM-3,,Direct Commission,Patungan Lisensi Plugin Kelas,Unmatched 3,unm_3@mail-sample.test,IDR,"350000,00","-16500,00"

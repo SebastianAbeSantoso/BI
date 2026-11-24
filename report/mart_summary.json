@@ -1,0 +1,336 @@
+{
+  "overall": {
+    "total_events": 5911,
+    "sale_events": 2295,
+    "gross_sales_idr": 1567043585.23,
+    "tips_idr": 47668387.47,
+    "platform_fees_idr": -175851493.86,
+    "processing_fees_idr": -38300522.52,
+    "refunds_idr": -88002459.66,
+    "fee_reversals_idr": 10524992.39,
+    "net_revenue_idr": 1323082489.05
+  },
+  "by_stream": [
+    {
+      "revenue_stream_name": "Komisi Klien",
+      "gross_idr": 1267678989.89,
+      "tips_idr": 44228965.08,
+      "net_idr": 1098273990.58,
+      "net_share_pct": 83.01
+    },
+    {
+      "revenue_stream_name": "Penjualan Gim Video",
+      "gross_idr": 187741560.89,
+      "tips_idr": 1639418.64,
+      "net_idr": 128983832.44,
+      "net_share_pct": 9.75
+    },
+    {
+      "revenue_stream_name": "Penjualan Aset Digital",
+      "gross_idr": 111623034.45,
+      "tips_idr": 1800003.75,
+      "net_idr": 95824666.03,
+      "net_share_pct": 7.24
+    }
+  ],
+  "by_project": [
+    {
+      "project_code": "COM-SHDR",
+      "project_name": "Godot & Custom NPR Shader Commissions",
+      "production_field": "Programming & Tech",
+      "revenue_stream_name": "Komisi Klien",
+      "gross_idr": 385974075.28,
+      "net_idr": 333071277.66,
+      "leakage_pct": 16.62,
+      "sale_count": 120
+    },
+    {
+      "project_code": "COM-MUSC",
+      "project_name": "Interactive Game BGM & SynthV Arrangement",
+      "production_field": "Audio & Music",
+      "revenue_stream_name": "Komisi Klien",
+      "gross_idr": 330948305.54,
+      "net_idr": 287938394.38,
+      "leakage_pct": 17.73,
+      "sale_count": 123
+    },
+    {
+      "project_code": "COM-ILLU",
+      "project_name": "Custom 2D Character & Key Visual Illustration",
+      "production_field": "2D Illustration",
+      "revenue_stream_name": "Komisi Klien",
+      "gross_idr": 313925761.39,
+      "net_idr": 270489415.04,
+      "leakage_pct": 16.39,
+      "sale_count": 106
+    },
+    {
+      "project_code": "COM-PXUI",
+      "project_name": "Indie Game Pixel Art & HUD UI Commissions",
+      "production_field": "Pixel Art & UI",
+      "revenue_stream_name": "Komisi Klien",
+      "gross_idr": 236830847.68,
+      "net_idr": 206774903.5,
+      "leakage_pct": 16.6,
+      "sale_count": 114
+    },
+    {
+      "project_code": "GAME-AMMD",
+      "project_name": "A Match Made in Dungeon",
+      "production_field": "Full Game Dev",
+      "revenue_stream_name": "Penjualan Gim Video",
+      "gross_idr": 100012113.8,
+      "net_idr": 69378712.9,
+      "leakage_pct": 31.38,
+      "sale_count": 634
+    },
+    {
+      "project_code": "AST-BATK",
+      "project_name": "Canting NPR Batik Shader & Godot Toolkit",
+      "production_field": "Programming & Tech",
+      "revenue_stream_name": "Penjualan Aset Digital",
+      "gross_idr": 41332148.22,
+      "net_idr": 35967620.74,
+      "leakage_pct": 14.54,
+      "sale_count": 99
+    },
+    {
+      "project_code": "GAME-RBRT",
+      "project_name": "R*bert",
+      "production_field": "Full Game Dev",
+      "revenue_stream_name": "Penjualan Gim Video",
+      "gross_idr": 47972921.24,
+      "net_idr": 32033063.38,
+      "leakage_pct": 34.03,
+      "sale_count": 443
+    },
+    {
+      "project_code": "AST-ISOR",
+      "project_name": "Personal Space Isometric Room & Props Pack",
+      "production_field": "3D Modeling",
+      "revenue_stream_name": "Penjualan Aset Digital",
+      "gross_idr": 30992144.19,
+      "net_idr": 26540143.7,
+      "leakage_pct": 16.29,
+      "sale_count": 94
+    },
+    {
+      "project_code": "GAME-PSPC",
+      "project_name": "Personal Space",
+      "production_field": "Full Game Dev",
+      "revenue_stream_name": "Penjualan Gim Video",
+      "gross_idr": 25430171.66,
+      "net_idr": 17823247.87,
+      "leakage_pct": 31.91,
+      "sale_count": 325
+    },
+    {
+      "project_code": "AST-DGPX",
+      "project_name": "Dungeon Matchmaker Pixel UI & Sprite Kit",
+      "production_field": "Pixel Art & UI",
+      "revenue_stream_name": "Penjualan Aset Digital",
+      "gross_idr": 20417737.23,
+      "net_idr": 17642614.87,
+      "leakage_pct": 15.31,
+      "sale_count": 79
+    },
+    {
+      "project_code": "AST-RHYT",
+      "project_name": "R*bert Reactive Rhythm & SFX Stem Pack",
+      "production_field": "Audio & Music",
+      "revenue_stream_name": "Penjualan Aset Digital",
+      "gross_idr": 18881004.81,
+      "net_idr": 15674286.72,
+      "leakage_pct": 18.07,
+      "sale_count": 85
+    },
+    {
+      "project_code": "GAME-CNTG",
+      "project_name": "Canting Cloth",
+      "production_field": "Full Game Dev",
+      "revenue_stream_name": "Penjualan Gim Video",
+      "gross_idr": 14326354.19,
+      "net_idr": 9748808.29,
+      "leakage_pct": 31.95,
+      "sale_count": 73
+    }
+  ],
+  "by_field": [
+    {
+      "production_field": "Programming & Tech",
+      "gross_idr": 427306223.5,
+      "net_idr": 369038898.4,
+      "leakage_idr": 70176683.56,
+      "leakage_pct": 16.42
+    },
+    {
+      "production_field": "Audio & Music",
+      "gross_idr": 349829310.35,
+      "net_idr": 303612681.1,
+      "leakage_idr": 62089401.34,
+      "leakage_pct": 17.75
+    },
+    {
+      "production_field": "2D Illustration",
+      "gross_idr": 313925761.39,
+      "net_idr": 270489415.04,
+      "leakage_idr": 51466592.17,
+      "leakage_pct": 16.39
+    },
+    {
+      "production_field": "Pixel Art & UI",
+      "gross_idr": 257248584.91,
+      "net_idr": 224417518.37,
+      "leakage_idr": 42452430.96,
+      "leakage_pct": 16.5
+    },
+    {
+      "production_field": "Full Game Dev",
+      "gross_idr": 187741560.89,
+      "net_idr": 128983832.44,
+      "leakage_idr": 60397147.09,
+      "leakage_pct": 32.17
+    },
+    {
+      "production_field": "3D Modeling",
+      "gross_idr": 30992144.19,
+      "net_idr": 26540143.7,
+      "leakage_idr": 5047228.53,
+      "leakage_pct": 16.29
+    }
+  ],
+  "by_platform": [
+    {
+      "platform_name": "Steam",
+      "gross_idr": 153217395.68,
+      "tips_idr": 0.0,
+      "pfee_idr": -46004389.69,
+      "prcfee_idr": 0.0,
+      "ref_idr": -10030834.67,
+      "frev_idr": 3012171.58,
+      "leakage_idr": 53023052.78,
+      "net_idr": 100194342.9,
+      "leakage_pct": 34.61
+    },
+    {
+      "platform_name": "Fiverr",
+      "gross_idr": 463084388.59,
+      "tips_idr": 18923161.35,
+      "pfee_idr": -96400657.47,
+      "prcfee_idr": 0.0,
+      "ref_idr": -29675499.65,
+      "frev_idr": 5935107.39,
+      "leakage_idr": 120141049.73,
+      "net_idr": 361866500.21,
+      "leakage_pct": 25.94
+    },
+    {
+      "platform_name": "itch.io",
+      "gross_idr": 108720672.5,
+      "tips_idr": 3439422.39,
+      "pfee_idr": -10877187.36,
+      "prcfee_idr": -5926743.47,
+      "ref_idr": -3418585.73,
+      "frev_idr": 342265.56,
+      "leakage_idr": 19880251.0,
+      "net_idr": 92279843.89,
+      "leakage_pct": 18.29
+    },
+    {
+      "platform_name": "VGen",
+      "gross_idr": 451364953.53,
+      "tips_idr": 15277392.24,
+      "pfee_idr": -22569259.34,
+      "prcfee_idr": -14390614.76,
+      "ref_idr": -24704741.16,
+      "frev_idr": 1235447.86,
+      "leakage_idr": 60429167.4,
+      "net_idr": 406213178.37,
+      "leakage_pct": 13.39
+    },
+    {
+      "platform_name": "Direct PayPal",
+      "gross_idr": 390656174.93,
+      "tips_idr": 10028411.49,
+      "pfee_idr": 0.0,
+      "prcfee_idr": -17983164.29,
+      "ref_idr": -20172798.45,
+      "frev_idr": 0.0,
+      "leakage_idr": 38155962.74,
+      "net_idr": 362528623.68,
+      "leakage_pct": 9.77
+    }
+  ],
+  "by_currency": [
+    {
+      "currency_code": "USD",
+      "currency_name": "US Dollar",
+      "net_orig": 45656.25,
+      "net_idr": 772898125.18,
+      "avg_fx": 16927.24,
+      "min_fx": 16104.4,
+      "max_fx": 18176.4,
+      "share_pct": 58.42
+    },
+    {
+      "currency_code": "SGD",
+      "currency_name": "Singapore Dollar",
+      "net_orig": 11521.53,
+      "net_idr": 152316587.65,
+      "avg_fx": 13099.17,
+      "min_fx": 11961.57,
+      "max_fx": 14196.31,
+      "share_pct": 11.51
+    },
+    {
+      "currency_code": "EUR",
+      "currency_name": "Euro",
+      "net_orig": 7751.34,
+      "net_idr": 151247125.81,
+      "avg_fx": 19344.92,
+      "min_fx": 16680.99,
+      "max_fx": 21034.06,
+      "share_pct": 11.43
+    },
+    {
+      "currency_code": "JPY",
+      "currency_name": "Japanese Yen",
+      "net_orig": 725332.55,
+      "net_idr": 80253192.43,
+      "avg_fx": 110.35,
+      "min_fx": 102.43,
+      "max_fx": 118.3,
+      "share_pct": 6.07
+    },
+    {
+      "currency_code": "GBP",
+      "currency_name": "British Pound",
+      "net_orig": 3454.4,
+      "net_idr": 76696500.39,
+      "avg_fx": 22505.83,
+      "min_fx": 19823.56,
+      "max_fx": 24335.68,
+      "share_pct": 5.8
+    },
+    {
+      "currency_code": "IDR",
+      "currency_name": "Indonesian Rupiah",
+      "net_orig": 61087618.8,
+      "net_idr": 61087618.8,
+      "avg_fx": 1.0,
+      "min_fx": 1.0,
+      "max_fx": 1.0,
+      "share_pct": 4.62
+    },
+    {
+      "currency_code": "CNY",
+      "currency_name": "Chinese Yuan",
+      "net_orig": 11550.15,
+      "net_idr": 28583338.79,
+      "avg_fx": 2422.68,
+      "min_fx": 2216.22,
+      "max_fx": 2677.33,
+      "share_pct": 2.16
+    }
+  ]
+}

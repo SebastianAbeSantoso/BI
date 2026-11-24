@@ -1,0 +1,41 @@
+{
+  "run_timestamp": "2026-11-24T19:20:27",
+  "stg_counts": {
+    "stg.raw_projects": 12,
+    "stg.raw_title_map": 21,
+    "stg.raw_fx_rates": 3318,
+    "stg.raw_steam": 1297,
+    "stg.raw_itch": 517,
+    "stg.raw_vgen": 257,
+    "stg.raw_fiverr": 250,
+    "stg.raw_paypal": 189
+  },
+  "pii_columns_dropped": [
+    "itch.buyer_email",
+    "vgen.client_username",
+    "fiverr.buyer_username",
+    "paypal.payer_name",
+    "paypal.payer_email"
+  ],
+  "duplicates_removed": {
+    "fiverr_earnings.csv": 15
+  },
+  "rejects_count": 11,
+  "fx_fallback_lookups": 1717,
+  "edw_counts": {
+    "edw.dim_date": 730,
+    "edw.dim_revenue_stream": 3,
+    "edw.dim_currency": 7,
+    "edw.dim_platform": 5,
+    "edw.dim_project": 12,
+    "edw.fact_revenue_event": 5911
+  },
+  "event_breakdown": {
+    "FEE_REVERSAL": 130,
+    "PLATFORM_FEE": 2203,
+    "PROCESSING_FEE": 948,
+    "REFUND": 138,
+    "SALE": 2295,
+    "TIP": 197
+  }
+}
