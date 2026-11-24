@@ -78,15 +78,29 @@ def add_figure(doc, image_path, caption_text, width_in=5.8):
     run.font.color.rgb = RGBColor(90, 98, 104)
 
 
-def add_bullet(doc, text):
-    p = doc.add_paragraph(style="List Bullet")
-    p.add_run(text)
+def add_subheading(doc, text):
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(10)
+    p.paragraph_format.space_after = Pt(4)
+    p.paragraph_format.keep_with_next = True
+    r = p.add_run(text)
+    r.bold = True
+    r.font.size = Pt(12)
+    r.font.color.rgb = RGBColor(31, 56, 100)
     return p
 
 
-def add_numbered(doc, text):
-    p = doc.add_paragraph(style="List Number")
-    p.add_run(text)
+def add_bullet(doc, text):
+    p = doc.add_paragraph(style="List Paragraph")
+    p.paragraph_format.left_indent = Inches(0.25)
+    p.add_run("- " + text)
+    return p
+
+
+def add_numbered(doc, num, text):
+    p = doc.add_paragraph(style="List Paragraph")
+    p.paragraph_format.left_indent = Inches(0.25)
+    p.add_run(f"{num}. " + text)
     return p
 
 
@@ -161,7 +175,7 @@ def build_report():
 
     doc.add_heading("1. Pendahuluan", level=1)
 
-    doc.add_heading("1.1 Latar Belakang Singkat dan Alur Bisnis", level=2)
+    add_subheading(doc, "1.1 Latar Belakang Singkat dan Alur Bisnis")
     doc.add_paragraph(
         "Wasaka Interactive adalah sebuah studio pengembangan gim independen (indie game studio) "
         "dan produksi kreatif digital yang beroperasi di Indonesia. Berbeda dengan perusahaan penerbit "
@@ -209,7 +223,7 @@ def build_report():
         "fluktuasi nilai tukar secara akurat."
     )
 
-    doc.add_heading("1.2 Referensi", level=2)
+    add_subheading(doc, "1.2 Referensi")
     refs = [
         "Kimball, R., & Ross, M. (2013). The Data Warehouse Toolkit: The Complete Guide to Dimensional Modeling (3rd ed.). John Wiley & Sons.",
         "Inmon, W. H. (2005). Building the Data Warehouse (4th ed.). John Wiley & Sons.",
@@ -219,10 +233,10 @@ def build_report():
         "DuckDB Documentation (2026). SQL, Constraints, and Columnar Analytical Storage.",
         "Streamlit & Plotly Documentation (2026). Interactive Web Front End for Data Applications.",
     ]
-    for r in refs:
-        add_numbered(doc, r)
+    for i, r in enumerate(refs, start=1):
+        add_numbered(doc, i, r)
 
-    doc.add_heading("1.3 Definisi dan Istilah Teknis", level=2)
+    add_subheading(doc, "1.3 Definisi dan Istilah Teknis")
     terms_rows = [
         ["Data Warehouse (DW)", "Repositori data terpusat yang bersifat subject-oriented, integrated, time-variant, dan non-volatile untuk mendukung proses analisis dan pengambilan keputusan bisnis."],
         ["Kimball Dimensional Modeling", "Metodologi perancangan data warehouse yang berfokus pada proses bisnis dengan menyusun tabel fakta berisi metrik terukur dan tabel dimensi berisi konteks deskriptif."],
@@ -245,7 +259,7 @@ def build_report():
     ]
     add_styled_table(doc, ["Istilah / Singkatan", "Definisi Teknis"], terms_rows, col_widths=[2.1, 4.3])
 
-    doc.add_heading("1.4 Batasan Desain dan Implementasi", level=2)
+    add_subheading(doc, "1.4 Batasan Desain dan Implementasi")
     doc.add_paragraph("Kendala teknis dan operasional yang membatasi penerapan desain penuh meliputi:")
     limits = [
         "Tidak tersedianya akses API transaksi langsung pada platform distribusi kreator: Steamworks, itch.io, VGen, Fiverr, dan PayPal tidak membuka endpoint REST API penarikan riwayat keuangan secara bebas untuk akun studio indie, sehingga tahap Extract memakai berkas ekspor penyelesaian (CSV/JSON) melalui File System Reader.",
@@ -255,12 +269,12 @@ def build_report():
         "Penggunaan data transaksi sintetis: seluruh catatan penjualan, tip, biaya, dan refund pada data/raw/ (2025-01-01 sampai 2026-10-31) merupakan data sintetis yang dibangkitkan dari aturan tarif resmi masing-masing platform, dipadukan dengan data kurs historis riil ECB (474 hari kerja, 2024-12-20 sampai 2026-10-30) via Frankfurter API.",
         "Penerapan lokal satu pengguna: aplikasi antarmuka Streamlit berjalan lokal dalam mode baca-saja tanpa mekanisme login atau kontrol akses berbasis peran (RBAC), sehingga pengaturan otorisasi multi-pengguna dicatat sebagai pekerjaan lanjutan.",
     ]
-    for lim in limits:
-        add_numbered(doc, lim)
+    for i, lim in enumerate(limits, start=1):
+        add_numbered(doc, i, lim)
 
     doc.add_heading("2. Konteks Organisasi dan Ruang Lingkup", level=1)
 
-    doc.add_heading("2.1 Profil Organisasi, Permasalahan Pelaporan, dan Struktur Fungsi", level=2)
+    add_subheading(doc, "2.1 Profil Organisasi, Permasalahan Pelaporan, dan Struktur Fungsi")
     doc.add_paragraph(
         "Wasaka Interactive mengoperasikan model bisnis hibrida untuk menjaga arus kas selama pengembangan "
         "gim jangka panjang melalui tiga aliran pendapatan simultan lintas enam bidang produksi (Full Game Dev, "
@@ -272,11 +286,11 @@ def build_report():
     add_bullet(doc, "Distorsi Pendapatan Bersih (Net Revenue Blindness): rekap spreadsheet manual mencampur nilai kotor dengan nilai bersih serta mengabaikan biaya pemrosesan pembayaran yang tetap hangus saat refund.")
     add_bullet(doc, "Ketidakakuratan Konversi Multi-Mata Uang: laporan bulanan sebelumnya memakai kurs rata-rata tebakan di akhir bulan, bukan kurs historis pada tanggal transaksi.")
     doc.add_paragraph("Struktur organisasi Wasaka Interactive terdiri atas lima fungsi utama:")
-    add_numbered(doc, "Studio Lead / Executive Management: penentu arah strategis studio, alokasi jam kerja tim, dan evaluasi kelayakan proyek.")
-    add_numbered(doc, "Game & Digital Asset Production Division: tim teknis dan artistik pengembang gim serta paket aset digital.")
-    add_numbered(doc, "Commission & Client Relations Division: pengelola pesanan kustom, milestone komisi, dan kamus judul pesanan.")
-    add_numbered(doc, "Finance & Administration Division: pengelola arus kas, rekonsiliasi payout, aturan tanda akuntansi, dan pelaporan kurs.")
-    add_numbered(doc, "IT & Data Engineering Function: pengelola berkas DuckDB, pipa ETL, validasi kualitas data, dan aplikasi kueri.")
+    add_numbered(doc, 1, "Studio Lead / Executive Management: penentu arah strategis studio, alokasi jam kerja tim, dan evaluasi kelayakan proyek.")
+    add_numbered(doc, 2, "Game & Digital Asset Production Division: tim teknis dan artistik pengembang gim serta paket aset digital.")
+    add_numbered(doc, 3, "Commission & Client Relations Division: pengelola pesanan kustom, milestone komisi, dan kamus judul pesanan.")
+    add_numbered(doc, 4, "Finance & Administration Division: pengelola arus kas, rekonsiliasi payout, aturan tanda akuntansi, dan pelaporan kurs.")
+    add_numbered(doc, 5, "IT & Data Engineering Function: pengelola berkas DuckDB, pipa ETL, validasi kualitas data, dan aplikasi kueri.")
     doc.add_paragraph(
         "Pengembangan Data Warehouse menjadi mendesak agar manajemen studio dapat menilai apakah alokasi waktu tim "
         "lebih menguntungkan pada penjualan gim penuh, aset digital, atau komisi klien. Sebagai Data Engineer, solusi "
@@ -284,14 +298,14 @@ def build_report():
         "dan API kurs untuk menyediakan jawaban berbasis bukti."
     )
 
-    doc.add_heading("2.2 Tujuan Dokumen", level=2)
+    add_subheading(doc, "2.2 Tujuan Dokumen")
     doc.add_paragraph(
         "Dokumen ini menyediakan panduan perancangan, implementasi, validasi, dan pemeliharaan Data Warehouse pendapatan "
         "Wasaka Interactive, mencakup pendefinisian masalah bisnis, matriks kepemilikan data, arsitektur Star Schema, "
         "aturan transformasi ETL, antarmuka kueri OLAP tanpa menulis kode SQL, serta temuan dari data yang telah dimuat."
     )
 
-    doc.add_heading("2.3 Ruang Lingkup Proyek", level=2)
+    add_subheading(doc, "2.3 Ruang Lingkup Proyek")
     doc.add_paragraph(
         "Ruang lingkup proyek (In-Scope) mencakup integrasi peristiwa pendapatan dari lima platform (Steam, itch.io, VGen, "
         "Fiverr, Direct PayPal), tiga aliran pendapatan, dua belas proyek portofolio pada enam bidang produksi, tujuh "
@@ -306,7 +320,7 @@ def build_report():
 
     doc.add_heading("3. Kebutuhan Bisnis dan Tata Kelola Data", level=1)
 
-    doc.add_heading("3.1 Permasalahan Bisnis dan Solusi Data Warehouse", level=2)
+    add_subheading(doc, "3.1 Permasalahan Bisnis dan Solusi Data Warehouse")
     prob_rows = [
         [
             "Silo data di 5 format ekspor (tanggal MM/DD/YYYY, DD/MM/YYYY, ISO; angka berformat teks dan koma desimal; JSON bertingkat; baris duplikat).",
@@ -346,7 +360,7 @@ def build_report():
         col_widths=[1.7, 1.4, 1.8, 1.5],
     )
 
-    doc.add_heading("3.2 Pemangku Kepentingan dan Kepemilikan Data (Tata Kelola Data)", level=2)
+    add_subheading(doc, "3.2 Pemangku Kepentingan dan Kepemilikan Data (Tata Kelola Data)")
     doc.add_paragraph(
         "Pembagian kepemilikan data menetapkan siapa yang bertanggung jawab penuh atas data (Data Owner), "
         "siapa yang menjaga aturan kualitas dan pemetaan (Data Steward), sistem penyedia ekspor (Data Provider), "
@@ -377,7 +391,7 @@ def build_report():
         "kolom PII di skema edw maupun mart."
     )
 
-    doc.add_heading("3.3 Rencana Anggaran", level=2)
+    add_subheading(doc, "3.3 Rencana Anggaran")
     budget_rows = [
         ["Perangkat Lunak", "DuckDB, Python, pandas, Streamlit, Plotly, PlantUML", "Rp 0", "Seluruh pustaka berlisensi open-source"],
         ["API Eksternal", "Frankfurter REST API (kurs referensi ECB)", "Rp 0", "Layanan publik gratis tanpa biaya langganan"],
@@ -387,7 +401,7 @@ def build_report():
     ]
     add_styled_table(doc, ["Kategori", "Item", "Estimasi Biaya (IDR)", "Catatan"], budget_rows, col_widths=[1.3, 2.1, 1.3, 1.7])
 
-    doc.add_heading("3.4 Perangkat dan Teknologi", level=2)
+    add_subheading(doc, "3.4 Perangkat dan Teknologi")
     tools_rows = [
         ["Python 3.10+ & pandas", "Pembangkit sumber ekspor sintetis, pembersihan data, pemetaan judul, dan pemuatan ETL"],
         ["requests + Frankfurter API", "Penarikan kurs historis harian ECB ke data/raw/fx_rates.csv"],
@@ -400,7 +414,7 @@ def build_report():
 
     doc.add_heading("4. Sumber Data", level=1)
 
-    doc.add_heading("4.1 Sumber Data Internal", level=2)
+    add_subheading(doc, "4.1 Sumber Data Internal")
     doc.add_paragraph(
         "Sumber internal terdiri atas daftar master proyek (data/raw/projects.csv) sebanyak 12 proyek portofolio "
         "Wasaka Interactive di enam bidang produksi, serta kamus pemetaan judul pesanan (data/raw/project_title_map.csv) "
@@ -427,7 +441,7 @@ def build_report():
         col_widths=[1.0, 2.1, 1.1, 1.2, 1.0],
     )
 
-    doc.add_heading("4.2 Sumber Data Eksternal", level=2)
+    add_subheading(doc, "4.2 Sumber Data Eksternal")
     ext_rows = [
         ["steam_sales_report.csv", "Steam (GAME_SALES)", "1.297 baris", "MM/DD/YYYY; angka titik", "Platform fee 30%; reversal saat refund", "Tidak ada"],
         ["itch_payouts.csv", "itch.io (GAME & ASSET)", "517 baris", "YYYY-MM-DD; string $ / Rp / ¥", "Share 10% kembali saat refund; proc fee hangus", "buyer_email"],
@@ -457,7 +471,7 @@ def build_report():
         width_in=5.6,
     )
 
-    doc.add_heading("5.1 Proses Extract", level=2)
+    add_subheading(doc, "5.1 Proses Extract")
     doc.add_paragraph(
         "Tahap Extract membaca lima berkas platform dan dua berkas master internal menggunakan File System Reader "
         "serta berkas fx_rates.csv hasil tarikan API Frankfurter. Seluruh kolom dimuat apa adanya ke delapan tabel "
@@ -471,7 +485,7 @@ def build_report():
         width_in=6.0,
     )
 
-    doc.add_heading("5.2 Penjadwalan", level=2)
+    add_subheading(doc, "5.2 Penjadwalan")
     sched_rows = [
         ["steam_sales_report.csv", "Bulanan (setelah tutup buku Steamworks)", "Tanggal 2 setiap bulan", "Eksekusi manual full refresh via src/etl.py"],
         ["itch_payouts.csv", "Mingguan / per pencairan payout", "Mingguan (Senin pagi)", "Eksekusi manual full refresh via src/etl.py"],
@@ -485,7 +499,7 @@ def build_report():
         col_widths=[1.7, 1.5, 1.5, 1.7],
     )
 
-    doc.add_heading("5.3 Proses Transform", level=2)
+    add_subheading(doc, "5.3 Proses Transform")
     trf_rows = [
         ["1", "Penghapusan PII", "Menghapus 5 kolom pribadi (email/username/nama pembayar) sebelum proses lanjut", "0 kolom PII masuk edw/mart (V13 PASS)"],
         ["2", "Deduplikasi Sumber", "Menghapus baris kembar persis akibat tumpang tindih rentang ekspor Fiverr", "15 baris duplikat Fiverr dibuang"],
@@ -500,7 +514,7 @@ def build_report():
     ]
     add_styled_table(doc, ["No.", "Aturan", "Logika Transformasi", "Hasil Tercatat"], trf_rows, col_widths=[0.4, 1.35, 2.85, 1.8])
 
-    doc.add_heading("5.4 Proses Load", level=2)
+    add_subheading(doc, "5.4 Proses Load")
     doc.add_paragraph(
         "Pemuatan ke skema edw memakai pola Full Refresh yang idempoten di dalam sql/01_ddl_edw.sql dan src/etl.py: "
         "view pada mart dan edw dijatuhkan lebih dulu, diikuti tabel fact_revenue_event lalu kelima tabel dimensi "
@@ -518,7 +532,7 @@ def build_report():
 
     doc.add_heading("6. Arsitektur Skema dan Penyimpanan Data Warehouse", level=1)
 
-    doc.add_heading("6.1 Arsitektur Data Warehouse", level=2)
+    add_subheading(doc, "6.1 Arsitektur Data Warehouse")
     doc.add_paragraph(
         "Proyek ini memilih arsitektur Kimball dibandingkan Inmon. Pendekatan Kimball bersifat bottom-up dan langsung "
         "membangun Star Schema di sekitar proses bisnis pendapatan studio agar kueri analitik dapat dijalankan segera "
@@ -531,7 +545,7 @@ def build_report():
         width_in=5.5,
     )
 
-    doc.add_heading("6.2 Kode PlantUML dan Desain Star Schema", level=2)
+    add_subheading(doc, "6.2 Kode PlantUML dan Desain Star Schema")
     puml_star = """@startuml
 skinparam linetype ortho
 hide circle
@@ -625,7 +639,7 @@ dim_project        ||--o{ fact_revenue_event : "attributed to"
         width_in=6.0,
     )
 
-    doc.add_heading("6.3 Desain Penyimpanan", level=2)
+    add_subheading(doc, "6.3 Desain Penyimpanan")
     doc.add_paragraph(
         "Ketiga skema logis berada dalam satu berkas DuckDB (data/warehouse.duckdb). DuckDB menyimpan data secara "
         "kolom (columnar) sehingga pemindaian agregasi cepat dilakukan di laptop lokal. Pada lapisan edw, database "
@@ -647,6 +661,7 @@ dim_project        ||--o{ fact_revenue_event : "attributed to"
     )
     add_numbered(
         doc,
+        1,
         "Pembuat Kueri Tanpa SQL (app/query_builder.py): Pengguna memilih 0 sampai 3 atribut pengelompokan, "
         "metrik pengukuran, filter dari tabel dimensi, urutan, dan batas baris lewat form. SQL dibangun hanya dari "
         "daftar kolom whitelist dengan nilai filter berparameter ? agar aman dari SQL injection. Metrik Nilai Mata "
@@ -655,10 +670,12 @@ dim_project        ||--o{ fact_revenue_event : "attributed to"
     )
     add_numbered(
         doc,
+        2,
         "Empat Pertanyaan Bisnis: Empat sub-tab siap pakai yang menjalankan kueri terhadap skema mart beserta grafik Plotly dan tabel angka.",
     )
     add_numbered(
         doc,
+        3,
         "Arsitektur & Validasi: Menampilkan ringkasan eksekusi ETL terbaru, tabel hasil pemeriksaan otomatis V1 sampai V14 langsung dari sql/03_validate.sql, dan isi tabel karantina stg.etl_rejects.",
     )
     add_figure(
@@ -677,7 +694,7 @@ dim_project        ||--o{ fact_revenue_event : "attributed to"
     doc.add_heading("8. Implementasi Kueri Analitik", level=1)
     doc.add_paragraph("Empat kueri inti berikut digunakan pada Tab 2 untuk menjawab pertanyaan bisnis studio secara langsung:")
 
-    doc.add_heading("8.1 Kueri Q1: Bauran dan Tren Pendapatan Bulanan", level=2)
+    add_subheading(doc, "8.1 Kueri Q1: Bauran dan Tren Pendapatan Bulanan")
     add_code_block(
         doc,
         """SELECT year_month, revenue_stream_name,
@@ -696,7 +713,7 @@ ORDER BY year_month ASC, revenue_stream_name ASC;""",
         width_in=6.0,
     )
 
-    doc.add_heading("8.2 Kueri Q2: Perbandingan Kinerja Proyek dan Bidang Produksi", level=2)
+    add_subheading(doc, "8.2 Kueri Q2: Perbandingan Kinerja Proyek dan Bidang Produksi")
     add_code_block(
         doc,
         """SELECT project_code, project_name, production_field, revenue_stream_name,
@@ -711,7 +728,7 @@ ORDER BY net_revenue_idr DESC;""",
         width_in=6.0,
     )
 
-    doc.add_heading("8.3 Kueri Q3: Erosi Pendapatan oleh Biaya Platform, Pemrosesan, dan Refund", level=2)
+    add_subheading(doc, "8.3 Kueri Q3: Erosi Pendapatan oleh Biaya Platform, Pemrosesan, dan Refund")
     add_code_block(
         doc,
         """SELECT platform_name,
@@ -735,7 +752,7 @@ ORDER BY leakage_pct DESC;""",
         width_in=6.0,
     )
 
-    doc.add_heading("8.4 Kueri Q4: Eksposur Mata Uang Asing dan Pergerakan Kurs", level=2)
+    add_subheading(doc, "8.4 Kueri Q4: Eksposur Mata Uang Asing dan Pergerakan Kurs")
     add_code_block(
         doc,
         """SELECT currency_code, currency_name,
@@ -832,7 +849,7 @@ ORDER BY total_net_idr DESC;""",
     add_bullet(doc, "Temuan Q3: Kebocoran di Fiverr mencapai 25,94% dibandingkan VGen (13,39%) dan Direct PayPal (9,77%). Memindahkan klien komisi berulang dari Fiverr ke VGen atau PayPal langsung menghemat sekitar 12 sampai 16 poin persentase penjualan kotor.")
     add_bullet(doc, "Temuan Q4: 95,38% pendapatan studio berdenominasi valuta asing (USD 58,42%) dengan fluktuasi USD/IDR hingga sekitar Rp 2.072 sepanjang periode ECB 2025 hingga 2026, membuktikan pentingnya pencatatan kurs per tanggal peristiwa.")
 
-    doc.add_heading("Hasil Suite Validasi Otomatis (sql/03_validate.sql)", level=2)
+    add_subheading(doc, "Hasil Suite Validasi Otomatis (sql/03_validate.sql)")
     val_rows = [
         ["V1", "Row counts per layer", f"{etl_meta['edw_counts']['edw.fact_revenue_event']:,} fact rows", "reported", "INFO"],
         ["V2", "Orphan FKs in fact_revenue_event", "0", "= 0", "PASS"],
