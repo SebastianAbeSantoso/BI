@@ -24,9 +24,11 @@ st.set_page_config(
 @st.cache_resource
 def get_connection():
     if not config.DB_PATH.exists():
-        raise FileNotFoundError(
-            f"Database belum ada di {config.DB_PATH}. Jalankan python src/etl.py terlebih dulu."
-        )
+        src_dir = str(ROOT_DIR / "src")
+        if src_dir not in sys.path:
+            sys.path.insert(0, src_dir)
+        import etl
+        etl.run_etl()
     return duckdb.connect(str(config.DB_PATH), read_only=True)
 
 
