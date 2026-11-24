@@ -1,11 +1,9 @@
--- Drop dependent views before rebuilding star schema tables (full-refresh idempotency)
 DROP VIEW IF EXISTS mart.v_fx_exposure;
 DROP VIEW IF EXISTS mart.v_fee_refund_leakage;
 DROP VIEW IF EXISTS mart.v_project_performance;
 DROP VIEW IF EXISTS mart.v_revenue_monthly;
 DROP VIEW IF EXISTS edw.v_fact_enriched;
 
--- Drop fact table before dimension tables to respect FK dependencies
 DROP TABLE IF EXISTS edw.fact_revenue_event;
 DROP TABLE IF EXISTS edw.dim_project;
 DROP TABLE IF EXISTS edw.dim_platform;

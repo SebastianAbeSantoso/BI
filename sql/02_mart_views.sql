@@ -1,4 +1,3 @@
--- Wide star-join view for whitelisted no-code query builder
 CREATE OR REPLACE VIEW edw.v_fact_enriched AS
 SELECT
     f.revenue_event_sk,
@@ -13,7 +12,7 @@ SELECT
     d.day_of_week,
     d.day_of_week_number,
     d.is_weekend,
-    CASE WHEN d.is_weekend THEN 'Akhir Pekan (Weekend)' ELSE 'Hari Kerja (Weekday)' END AS day_category,
+    CASE WHEN d.is_weekend THEN 'Akhir Pekan' ELSE 'Hari Kerja' END AS day_category,
     rs.revenue_stream_key,
     rs.revenue_stream_code,
     rs.revenue_stream_name,
@@ -43,7 +42,6 @@ INNER JOIN edw.dim_platform pl ON f.platform_key = pl.platform_key
 INNER JOIN edw.dim_project pr ON f.project_key = pr.project_key
 INNER JOIN edw.dim_currency cu ON f.currency_key = cu.currency_key;
 
--- Business Question 1: Monthly revenue mix & trend
 CREATE OR REPLACE VIEW mart.v_revenue_monthly AS
 SELECT
     d.year,
@@ -74,7 +72,6 @@ GROUP BY
     rs.revenue_stream_code, rs.revenue_stream_name,
     pl.platform_code, pl.platform_name, cu.currency_code;
 
--- Business Question 2: Project & production field performance
 CREATE OR REPLACE VIEW mart.v_project_performance AS
 WITH agg AS (
     SELECT
@@ -113,7 +110,6 @@ SELECT
     ) AS leakage_pct
 FROM agg;
 
--- Business Question 3: Platform fee, processing fee, and refund erosion
 CREATE OR REPLACE VIEW mart.v_fee_refund_leakage AS
 WITH agg AS (
     SELECT
@@ -151,7 +147,6 @@ SELECT
     ) AS leakage_pct
 FROM agg;
 
--- Business Question 4: Foreign-exchange exposure & rate movements
 CREATE OR REPLACE VIEW mart.v_fx_exposure AS
 WITH monthly_fx AS (
     SELECT

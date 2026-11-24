@@ -1,8 +1,8 @@
-# Wasaka Interactive — Multi-Revenue Data Warehouse (BI UTS)
+# Wasaka Interactive Revenue Data Warehouse
 
-End-to-end Kimball Star Schema Data Warehouse, Python ETL pipeline, V1–V14 validation suite, and no-code Streamlit OLAP query interface for **Wasaka Interactive** (Indie Game & Creative Production Studio).
+Kimball star schema data warehouse, Python ETL pipeline, validation checks, and Streamlit query app for the Kecerdasan Bisnis (BI) midterm project.
 
-## Quick Start (PowerShell)
+## Running locally (PowerShell)
 
 ```powershell
 Set-Location d:\Downloads\random\bi-dw-uts
@@ -13,27 +13,35 @@ Set-Location d:\Downloads\random\bi-dw-uts
 .\.venv\Scripts\streamlit.exe run app\app.py
 ```
 
-## Architecture Summary
+## Layout and schemas
 
-- **Engine:** Single-file **DuckDB** (`data/warehouse.duckdb`) organized into three logical schemas:
-  - `stg`: Transient raw ingestion tables (`raw_steam`, `raw_itch`, `raw_vgen`, `raw_fiverr`, `raw_paypal`, `raw_fx_rates`, `raw_projects`, `raw_title_map`) plus `stg.etl_rejects` quarantine log.
-  - `edw`: Locked 6-table Kimball Star Schema (`dim_date`, `dim_revenue_stream`, `dim_currency`, `dim_platform`, `dim_project`, `fact_revenue_event`) + `v_fact_enriched` wide star-join view.
-  - `mart`: Analytical views answering the 4 core studio business questions (`v_revenue_monthly`, `v_project_performance`, `v_fee_refund_leakage`, `v_fx_exposure`).
-- **Grain:** Atomic financial event (`SALE`, `TIP`, `FEE_REVERSAL` positive; `PLATFORM_FEE`, `PROCESSING_FEE`, `REFUND` negative). `SUM(amount_idr)` yields exact net revenue.
-- **Data Governance & PII Policy:** Buyer/client personal identifiers (`buyer_email`, `client_username`, `buyer_username`, `payer_name`, `payer_email`) exist only in transient `stg` tables and are stripped prior to `edw` / `mart` loading (verified by check `V13`).
+All data lives in a single DuckDB file (`data/warehouse.duckdb`) split across three schemas:
 
-## Data Provenance & Synthetic Data Disclosure
+- `stg` holds the raw files as loaded (`raw_steam`, `raw_itch`, `raw_vgen`, `raw_fiverr`, `raw_paypal`, `raw_fx_rates`, `raw_projects`, `raw_title_map`) plus `stg.etl_rejects` for rows that fail title mapping.
+- `edw` holds the 6 approved star schema tables (`dim_date`, `dim_revenue_stream`, `dim_currency`, `dim_platform`, `dim_project`, `fact_revenue_event`) and the helper view `edw.v_fact_enriched`.
+- `mart` holds four query views (`v_revenue_monthly`, `v_project_performance`, `v_fee_refund_leakage`, `v_fx_exposure`) backing the business questions in the app.
 
-- **Transaction Events (Synthetic):** Platform exports in `data/raw/` (`2025-01-01` to `2026-10-31`, deterministic seed `20261124`) are **synthetic**, generated from published platform fee structures and realistic multi-format export quirks (`MM/DD/YYYY` vs `DD/MM/YYYY` vs ISO timestamps, comma decimals, `$` / `¥` / `Rp` formatted strings, nested JSON arrays, re-export duplicates, and unmapped commission titles).
-- **Exchange Rates (Real External Data):** Historical spot reference rates in `data/raw/fx_rates.csv` (`474` published business days, `2024-12-20` to `2026-10-30`) are **real European Central Bank (ECB) daily reference rates** fetched via the Frankfurter API and cross-computed to `IDR`. Weekend/holiday transactions resolve via last-known prior business day fallback (`V11`).
-- **Fee Schedules Used (`config.py`):**
-  - **Steam:** `30.0%` platform fee (reversed on refund via `FEE_REVERSAL`).
-  - **itch.io:** `10.0%` creator-configured platform share (reversed on refund) + `2.9% + $0.30 USD eq.` checkout processing fee (non-refundable).
-  - **VGen:** `5.0%` creator platform fee on commissions & shop orders (verified via VGen Help Center; reversed on refund) + `2.9% + $0.30 USD eq.` payment processing fee (non-refundable).
-  - **Fiverr:** `20.0%` platform commission on orders and tips (reversed on cancellation/refund).
-  - **Direct PayPal:** `0%` platform fee; `3.40% + fixed fee` domestic (`IDR`) and `4.40% + fixed fee` international commercial processing fee (verified via `paypal.com/id` Merchant Fees; never reversed on refund).
+Each row in `fact_revenue_event` is a single financial event. Sales, tips, and fee reversals are stored as positive numbers; refunds, platform fees, and processing fees are stored as negative numbers. Summing `amount_idr` gives net revenue.
 
-## Open Administrative Items
+Personal fields from raw exports (`buyer_email`, `client_username`, `buyer_username`, `payer_name`, `payer_email`) stay in `stg` and are dropped before loading `edw`. Check `V13` verifies that none of those columns exist in `edw` or `mart`.
 
-- **Peer-review form definition ("Dua penilaian peer-review"):** `TBA`
-- **Exact e-learning submission cutoff:** `TBA`
+## Data notes and fee rates
+
+Transaction records in `data/raw/` (covering `2025-01-01` to `2026-10-31`, seed `20261124`) are synthetic. Each platform export uses its own file shape, date style, and number formatting so the ETL has real cleaning work to do.
+
+Exchange rates in `data/raw/fx_rates.csv` come from the European Central Bank through the Frankfurter API (`474` business days from `2024-12-20` to `2026-10-30`, cross-computed to IDR). Because the ECB does not publish rates on weekends or bank holidays, `src/etl.py` looks up the most recent earlier business day.
+
+Fee assumptions set in `config.py`:
+
+| Platform | Platform cut | Processing fee | Refund behavior | Source |
+|---|---|---|---|---|
+| Steam | 30% | none | Platform cut reversed | Steamworks standard tier |
+| itch.io | 10% | 2.9% + $0.30 USD eq. | Platform cut reversed, processing kept | itch.io open revenue share default |
+| VGen | 5% | 2.9% + $0.30 USD eq. | Platform cut reversed, processing kept | VGen Help Center |
+| Fiverr | 20% | none | Platform cut reversed (applies to orders and tips) | Fiverr Seller Terms |
+| Direct PayPal | 0% | 3.40% domestic / 4.40% cross-border + fixed fee | Processing fee kept | PayPal Indonesia merchant fees |
+
+## Remaining admin items
+
+- Definition of "Dua penilaian peer-review": TBA
+- Exact e-learning upload cutoff: TBA

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import pathlib
 
 ROOT_DIR = pathlib.Path(__file__).resolve().parent
@@ -13,18 +11,16 @@ RANDOM_SEED = 20261124
 DIM_DATE_START = "2025-01-01"
 DIM_DATE_END = "2026-12-31"
 
-# Fetch window starts in late Dec 2024 so 2025-01-01 (New Year holiday) has a real prior business day
 FX_FETCH_START = "2024-12-20"
 TX_START = "2025-01-01"
 TX_END = "2026-10-31"
 
-# Platform & payment processor fee schedules with verification provenance
 FEE_SCHEDULE = {
     "STEAM": {
         "platform_fee_pct": 0.30,
         "processing_fee_pct": 0.00,
         "refund_reverses_platform_fee": True,
-        "source": "Valve Steamworks standard distribution tier (30% gross revenue share; matches report Introduction).",
+        "source": "Steamworks standard 30% revenue share.",
         "verified": True,
     },
     "ITCH": {
@@ -32,7 +28,7 @@ FEE_SCHEDULE = {
         "processing_fee_pct": 0.029,
         "processing_fixed_usd": 0.30,
         "refund_reverses_platform_fee": True,
-        "source": "itch.io Open Revenue Share creator default (10% configurable) + standard card/PayPal checkout (~2.9% + $0.30 USD eq.).",
+        "source": "itch.io default 10% creator share plus 2.9% + $0.30 checkout fee.",
         "verified": True,
     },
     "VGEN": {
@@ -40,14 +36,14 @@ FEE_SCHEDULE = {
         "processing_fee_pct": 0.029,
         "processing_fixed_usd": 0.30,
         "refund_reverses_platform_fee": True,
-        "source": "Verified via VGen Help Center: 5% platform fee on commissions & shop orders + ~2.9% + $0.30 payment processing.",
+        "source": "VGen Help Center: 5% platform fee plus 2.9% + $0.30 processing.",
         "verified": True,
     },
     "FIVERR": {
         "platform_fee_pct": 0.20,
         "processing_fee_pct": 0.00,
         "refund_reverses_platform_fee": True,
-        "source": "Verified via Fiverr Seller Terms: 20% platform commission on orders and tips (matches report Introduction).",
+        "source": "Fiverr Seller Terms: 20% fee on orders and tips.",
         "verified": True,
     },
     "PAYPAL": {
@@ -64,7 +60,7 @@ FEE_SCHEDULE = {
             "GBP": 0.20,
         },
         "refund_reverses_platform_fee": False,
-        "source": "Verified via PayPal Indonesia (paypal.com/id) Merchant Commercial Fees: 3.40% + fixed fee domestic; ~4.40% + fixed fee cross-border commercial. Processing fee is non-refundable on refund.",
+        "source": "PayPal Indonesia (paypal.com/id): 3.40% + fixed fee domestic, 4.40% + fixed fee cross-border, non-refundable.",
         "verified": True,
     },
 }
@@ -74,19 +70,19 @@ STATIC_STREAMS = [
         1,
         "GAME_SALES",
         "Penjualan Gim Video",
-        "Distribusi gim komersial Wasaka Interactive kepada konsumen global melalui Steam dan itch.io.",
+        "Penjualan gim komersial Wasaka Interactive melalui Steam dan itch.io.",
     ),
     (
         2,
         "ASSET_SALES",
         "Penjualan Aset Digital",
-        "Penjualan paket aset siap pakai (pixel UI, 3D low-poly, audio stems, shader toolkit) melalui itch.io dan VGen Shop.",
+        "Penjualan paket aset (pixel UI, 3D low-poly, audio, shader) melalui itch.io dan VGen Shop.",
     ),
     (
         3,
         "COMMISSION",
         "Komisi Klien",
-        "Layanan pengerjaan pesanan kustom & milestone melalui VGen, Fiverr, dan Direct PayPal.",
+        "Pengerjaan pesanan kustom melalui VGen, Fiverr, dan Direct PayPal.",
     ),
 ]
 
@@ -108,7 +104,6 @@ STATIC_CURRENCIES = [
     (7, "GBP", "British Pound", "£"),
 ]
 
-# Real Wasaka Games / Sebastian Abe Santoso portfolio projects mapped across all 6 production fields
 PROJECTS_CATALOG = [
     ("GAME-AMMD", "A Match Made in Dungeon", "Game", "Full Game Dev", "GAME_SALES"),
     ("GAME-RBRT", "R*bert", "Game", "Full Game Dev", "GAME_SALES"),
@@ -148,7 +143,6 @@ TITLE_MAP_RULES = [
     ("boss theme", "contains", "COM-MUSC"),
 ]
 
-# Fallback baseline IDR rates only if Frankfurter API is unreachable or stops before TX_END
 ANCHOR_RATES_TO_IDR = {
     "IDR": 1.0,
     "USD": 16250.0,

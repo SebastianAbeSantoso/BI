@@ -1,12 +1,11 @@
--- Automated Data Warehouse Validation Suite (V1 - V14)
 WITH
 v1_counts AS (
     SELECT
         'V1' AS check_id,
-        'Row counts across stg / edw / mart layers' AS check_name,
-        'Informational' AS category,
+        'Row counts per layer' AS check_name,
+        'Info' AS category,
         CAST((SELECT COUNT(*) FROM edw.fact_revenue_event) AS VARCHAR) || ' fact rows' AS metric_value,
-        'Informational summary' AS expected_rule,
+        'reported' AS expected_rule,
         'INFO' AS status,
         'stg_steam=' || (SELECT COUNT(*) FROM stg.raw_steam)
         || ', stg_itch=' || (SELECT COUNT(*) FROM stg.raw_itch)
@@ -21,8 +20,7 @@ v1_counts AS (
         || ', rejects=' || (SELECT COUNT(*) FROM stg.etl_rejects) AS details
 ),
 v2_orphan_fks AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM edw.fact_revenue_event f
     LEFT JOIN edw.dim_date d ON f.date_key = d.date_key
     LEFT JOIN edw.dim_project pr ON f.project_key = pr.project_key
@@ -36,15 +34,13 @@ v2_orphan_fks AS (
        OR rs.revenue_stream_key IS NULL
 ),
 v3_signs AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM edw.fact_revenue_event
     WHERE (event_type IN ('SALE', 'TIP', 'FEE_REVERSAL') AND (amount_orig <= 0 OR amount_idr <= 0))
        OR (event_type IN ('REFUND', 'PLATFORM_FEE', 'PROCESSING_FEE') AND (amount_orig >= 0 OR amount_idr >= 0))
 ),
 v4_dup_tx AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM (
         SELECT transaction_code
         FROM edw.fact_revenue_event
@@ -53,8 +49,7 @@ v4_dup_tx AS (
     ) t
 ),
 v5_refund_cap AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM (
         SELECT
             r.parent_transaction_code,
@@ -70,8 +65,7 @@ v5_refund_cap AS (
     ) t
 ),
 v6_parent_ref AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM edw.fact_revenue_event c
     LEFT JOIN edw.fact_revenue_event p
         ON c.parent_transaction_code = p.transaction_code
@@ -80,8 +74,7 @@ v6_parent_ref AS (
        OR (c.event_type <> 'SALE' AND (c.parent_transaction_code IS NULL OR p.transaction_code IS NULL))
 ),
 v7_multi_tip AS (
-    SELECT
-        COUNT(*) AS multi_tip_parents
+    SELECT COUNT(*) AS multi_tip_parents
     FROM (
         SELECT parent_transaction_code
         FROM edw.fact_revenue_event
@@ -91,8 +84,7 @@ v7_multi_tip AS (
     ) t
 ),
 v8_stream_platform AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM edw.fact_revenue_event f
     INNER JOIN edw.dim_revenue_stream rs ON f.revenue_stream_key = rs.revenue_stream_key
     INNER JOIN edw.dim_platform pl ON f.platform_key = pl.platform_key
@@ -103,8 +95,7 @@ v8_stream_platform AS (
     )
 ),
 v9_stream_project AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM edw.fact_revenue_event f
     INNER JOIN edw.dim_revenue_stream rs ON f.revenue_stream_key = rs.revenue_stream_key
     INNER JOIN edw.dim_project pr ON f.project_key = pr.project_key
@@ -115,8 +106,7 @@ v9_stream_project AS (
     )
 ),
 v10_fx_math AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM edw.fact_revenue_event
     WHERE ABS(amount_idr - ROUND(amount_orig * exchange_rate_to_idr, 2)) > 0.01
 ),
@@ -133,11 +123,9 @@ v11_weekend_fx AS (
     INNER JOIN edw.dim_currency cu ON f.currency_key = cu.currency_key
 ),
 v12_proc_fee_rev AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM (
-        SELECT
-            f.revenue_event_sk
+        SELECT f.revenue_event_sk
         FROM edw.fact_revenue_event f
         INNER JOIN edw.dim_platform pl ON f.platform_key = pl.platform_key
         LEFT JOIN (
@@ -151,8 +139,7 @@ v12_proc_fee_rev AS (
     ) t
 ),
 v13_pii_cols AS (
-    SELECT
-        COUNT(*) AS bad_cnt
+    SELECT COUNT(*) AS bad_cnt
     FROM information_schema.columns
     WHERE table_schema IN ('edw', 'mart')
       AND (
@@ -171,68 +158,68 @@ v14_rejects AS (
 )
 SELECT * FROM v1_counts
 UNION ALL
-SELECT 'V2', 'Orphan foreign keys in fact_revenue_event', 'Integrity', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V2', 'Orphan FKs in fact_revenue_event', 'Integrity', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'All 5 dimension FKs (date, project, platform, currency, stream) checked'
+       'Checked date, project, platform, currency, and stream keys'
 FROM v2_orphan_fks
 UNION ALL
-SELECT 'V3', 'Event sign constraint violations', 'Business Rule', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V3', 'Sign rule violations', 'Business Rule', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'SALE/TIP/FEE_REVERSAL > 0; REFUND/PLATFORM_FEE/PROCESSING_FEE < 0'
+       'SALE, TIP, FEE_REVERSAL > 0; REFUND, PLATFORM_FEE, PROCESSING_FEE < 0'
 FROM v3_signs
 UNION ALL
-SELECT 'V4', 'Duplicate transaction_code (Degenerate Dimension)', 'Integrity', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V4', 'Duplicate transaction_code', 'Integrity', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Every atomic event has a globally unique transaction_code'
+       'Unique degenerate dimension key per event'
 FROM v4_dup_tx
 UNION ALL
-SELECT 'V5', 'Total refunds per parent <= root sale amount', 'Business Rule', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V5', 'Refunds exceeding parent sale', 'Business Rule', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Supports partial milestone refunds while preventing over-refunding'
+       'Sum of refunds per parent_transaction_code <= root SALE amount_orig'
 FROM v5_refund_cap
 UNION ALL
-SELECT 'V6', 'Valid parent_transaction_code lineage to root SALE', 'Lineage', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V6', 'Broken parent_transaction_code links', 'Lineage', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Root SALE has NULL parent; child events reference an existing SALE'
+       'Root SALE has NULL parent; child rows link to an existing SALE'
 FROM v6_parent_ref
 UNION ALL
-SELECT 'V7', 'Multi-tip orders preserved as distinct atomic rows', 'Grain', CAST(multi_tip_parents AS VARCHAR), '> 0',
+SELECT 'V7', 'Multi-tip orders kept separate', 'Grain', CAST(multi_tip_parents AS VARCHAR), '> 0',
        CASE WHEN multi_tip_parents > 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Parent transactions with >= 2 distinct TIP events preserved'
+       'Parents with at least 2 separate TIP rows'
 FROM v7_multi_tip
 UNION ALL
-SELECT 'V8', 'Valid revenue_stream x platform matrix', 'Domain Rule', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V8', 'Invalid stream and platform pair', 'Domain Rule', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'GAME:{STEAM,ITCH}, ASSET:{ITCH,VGEN}, COMMISSION:{VGEN,FIVERR,PAYPAL}'
+       'GAME: STEAM/ITCH, ASSET: ITCH/VGEN, COMMISSION: VGEN/FIVERR/PAYPAL'
 FROM v8_stream_platform
 UNION ALL
-SELECT 'V9', 'Revenue stream matches dim_project.project_type', 'Domain Rule', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V9', 'Stream vs project_type mismatch', 'Domain Rule', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Game->GAME_SALES, Asset Pack->ASSET_SALES, Commission Service->COMMISSION'
+       'Game=GAME_SALES, Asset Pack=ASSET_SALES, Commission Service=COMMISSION'
 FROM v9_stream_project
 UNION ALL
-SELECT 'V10', 'Currency conversion accuracy (amount_orig * FX = amount_idr)', 'Calculation', CAST(bad_cnt AS VARCHAR), '= 0 (>0.01 diff)',
+SELECT 'V10', 'IDR conversion rounding check', 'Calculation', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Exact DECIMAL rounding verified within Rp 0.01 tolerance'
+       'Difference between amount_idr and ROUND(amount_orig * rate, 2) <= 0.01'
 FROM v10_fx_math
 UNION ALL
-SELECT 'V11', 'Weekend/holiday FX fallback populated without NULLs', 'ETL Fallback',
-       CAST(weekend_fx_cnt AS VARCHAR) || ' events (' || CAST(bad_weekend_cnt AS VARCHAR) || ' bad)', '> 0 & 0 bad',
+SELECT 'V11', 'Weekend FX fallback check', 'ETL Fallback',
+       CAST(weekend_fx_cnt AS VARCHAR) || ' rows (' || CAST(bad_weekend_cnt AS VARCHAR) || ' bad)', '> 0 and 0 bad',
        CASE WHEN weekend_fx_cnt > 0 AND bad_weekend_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Foreign-currency weekend transactions resolved via prior business day rate'
+       'Non-IDR weekend rows resolved using prior business day rate'
 FROM v11_weekend_fx
 UNION ALL
-SELECT 'V12', 'Payment processing fees never reversed on refund', 'Business Rule', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V12', 'Processing fee reversed on refund', 'Business Rule', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'PayPal has 0 FEE_REVERSAL; platform reversals never exceed platform fee'
+       'No PayPal reversals and no reversal larger than original platform fee'
 FROM v12_proc_fee_rev
 UNION ALL
-SELECT 'V13', 'Zero PII columns exposed in edw or mart schemas', 'Governance', CAST(bad_cnt AS VARCHAR), '= 0',
+SELECT 'V13', 'PII columns in edw or mart', 'Governance', CAST(bad_cnt AS VARCHAR), '= 0',
        CASE WHEN bad_cnt = 0 THEN 'PASS' ELSE 'FAIL' END,
-       'Buyer/client emails, names, and usernames stripped at staging'
+       'No email, username, buyer, or payer name columns outside stg'
 FROM v13_pii_cols
 UNION ALL
-SELECT 'V14', 'Quarantined unmatched source rows logged in stg.etl_rejects', 'Informational', CAST(reject_cnt AS VARCHAR) || ' rows',
-       'Informational (>0 demo)', 'INFO',
-       'Reasons: ' || reasons
+SELECT 'V14', 'Quarantined rows in stg.etl_rejects', 'Info', CAST(reject_cnt AS VARCHAR) || ' rows',
+       'reported', 'INFO',
+       reasons
 FROM v14_rejects;

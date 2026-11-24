@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import bisect
 import json
 import pathlib
@@ -7,27 +5,26 @@ import re
 import sys
 from datetime import date, datetime, timedelta
 from decimal import Decimal, ROUND_HALF_UP
-from typing import Any
 
 import duckdb
 import pandas as pd
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
-import config  # noqa: E402
+import config
 
 TWO_DP = Decimal("0.01")
 SIX_DP = Decimal("0.000001")
 
 
-def d2(val: Any) -> Decimal:
+def d2(val):
     return Decimal(str(val)).quantize(TWO_DP, rounding=ROUND_HALF_UP)
 
 
-def d6(val: Any) -> Decimal:
+def d6(val):
     return Decimal(str(val)).quantize(SIX_DP, rounding=ROUND_HALF_UP)
 
 
-def parse_messy_amount(raw: str) -> Decimal:
+def parse_amount(raw):
     cleaned = re.sub(r"[^0-9,.\-]", "", str(raw).strip())
     if not cleaned:
         return Decimal("0.00")
@@ -43,9 +40,9 @@ def parse_messy_amount(raw: str) -> Decimal:
 
 
 class FXResolver:
-    def __init__(self, fx_df: pd.DataFrame) -> None:
-        self.by_currency: dict[str, tuple[list[date], list[Decimal]]] = {}
-        self.exact: dict[tuple[date, str], Decimal] = {}
+    def __init__(self, fx_df):
+        self.by_currency = {}
+        self.exact = {}
         self.fallback_hits = 0
 
         for cur_code, grp in fx_df.groupby("currency_code"):
@@ -56,7 +53,7 @@ class FXResolver:
             for dt_obj, rt_obj in zip(d_list, r_list):
                 self.exact[(dt_obj, str(cur_code))] = rt_obj
 
-    def get_rate(self, tx_date: date, currency_code: str) -> Decimal:
+    def get_rate(self, tx_date, currency_code):
         cur = currency_code.upper().strip()
         if cur == "IDR":
             return Decimal("1.000000")
@@ -71,13 +68,13 @@ class FXResolver:
         return r_list[idx]
 
 
-def build_dim_date_df() -> pd.DataFrame:
+def build_dim_date():
     start_d = date.fromisoformat(config.DIM_DATE_START)
     end_d = date.fromisoformat(config.DIM_DATE_END)
     rows = []
     cur = start_d
     while cur <= end_d:
-        iso_dow = cur.isoweekday()  # 1=Monday .. 7=Sunday
+        iso_dow = cur.isoweekday()
         rows.append({
             "date_key": int(cur.strftime("%Y%m%d")),
             "full_date": cur,
@@ -95,7 +92,7 @@ def build_dim_date_df() -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def match_project_code(title: str, rules: list[tuple[str, str, str]]) -> str | None:
+def match_project(title, rules):
     norm = str(title).lower().strip()
     for pattern, match_type, proj_code in rules:
         pat = pattern.lower().strip()
@@ -106,11 +103,11 @@ def match_project_code(title: str, rules: list[tuple[str, str, str]]) -> str | N
     return None
 
 
-def run_etl() -> dict[str, Any]:
+def run_etl():
     config.DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     config.REPORT_DIR.mkdir(parents=True, exist_ok=True)
 
-    telemetry: dict[str, Any] = {
+    stats = {
         "run_timestamp": datetime.now().isoformat(timespec="seconds"),
         "stg_counts": {},
         "pii_columns_dropped": [],
@@ -123,7 +120,6 @@ def run_etl() -> dict[str, Any]:
     with duckdb.connect(str(config.DB_PATH)) as con:
         con.execute((config.SQL_DIR / "00_schemas.sql").read_text(encoding="utf-8"))
 
-        # 1. EXTRACT: Load raw files as-is into transient stg schema (including PII)
         df_projects_raw = pd.read_csv(config.RAW_DIR / "projects.csv", dtype=str)
         df_title_map_raw = pd.read_csv(config.RAW_DIR / "project_title_map.csv", dtype=str)
         df_fx_raw = pd.read_csv(config.RAW_DIR / "fx_rates.csv", dtype=str)
@@ -164,9 +160,8 @@ def run_etl() -> dict[str, Any]:
             con.register("tmp_df", df_obj)
             con.execute(f"CREATE OR REPLACE TABLE stg.{tbl_name} AS SELECT * FROM tmp_df")
             con.unregister("tmp_df")
-            telemetry["stg_counts"][f"stg.{tbl_name}"] = len(df_obj)
+            stats["stg_counts"][f"stg.{tbl_name}"] = len(df_obj)
 
-        # 2. TRANSFORM: Governance PII strip, deduplication, title mapping, event explosion, FX conversion
         pii_dropped = [
             "itch.buyer_email",
             "vgen.client_username",
@@ -174,18 +169,16 @@ def run_etl() -> dict[str, Any]:
             "paypal.payer_name",
             "paypal.payer_email",
         ]
-        telemetry["pii_columns_dropped"] = pii_dropped
+        stats["pii_columns_dropped"] = pii_dropped
         df_itch = df_itch_raw.drop(columns=["buyer_email"])
-        df_fiverr_no_pii = df_fiverr_raw.drop(columns=["buyer_username"])
+        df_fiverr_clean = df_fiverr_raw.drop(columns=["buyer_username"])
         df_paypal = df_paypal_raw.drop(columns=["payer_name", "payer_email"])
 
-        before_fiverr = len(df_fiverr_no_pii)
-        df_fiverr = df_fiverr_no_pii.drop_duplicates().reset_index(drop=True)
-        fiverr_dups = before_fiverr - len(df_fiverr)
-        telemetry["duplicates_removed"]["fiverr_earnings.csv"] = int(fiverr_dups)
+        before_fiverr = len(df_fiverr_clean)
+        df_fiverr = df_fiverr_clean.drop_duplicates().reset_index(drop=True)
+        stats["duplicates_removed"]["fiverr_earnings.csv"] = int(before_fiverr - len(df_fiverr))
 
-        # Lookup structures for surrogate keys
-        dim_date_df = build_dim_date_df()
+        dim_date_df = build_dim_date()
         dim_stream_df = pd.DataFrame(
             config.STATIC_STREAMS,
             columns=["revenue_stream_key", "revenue_stream_code", "revenue_stream_name", "description"],
@@ -201,11 +194,11 @@ def run_etl() -> dict[str, Any]:
         dim_project_df = df_projects_raw[["project_code", "project_name", "project_type", "production_field"]].copy()
         dim_project_df.insert(0, "project_key", range(1, len(dim_project_df) + 1))
 
-        stream_sk_by_code = dict(zip(dim_stream_df["revenue_stream_code"], dim_stream_df["revenue_stream_key"]))
-        platform_sk_by_code = dict(zip(dim_platform_df["platform_code"], dim_platform_df["platform_key"]))
-        currency_sk_by_code = dict(zip(dim_currency_df["currency_code"], dim_currency_df["currency_key"]))
-        project_sk_by_code = dict(zip(dim_project_df["project_code"], dim_project_df["project_key"]))
-        project_stream_by_code = dict(zip(df_projects_raw["project_code"], df_projects_raw["stream"]))
+        stream_sk = dict(zip(dim_stream_df["revenue_stream_code"], dim_stream_df["revenue_stream_key"]))
+        platform_sk = dict(zip(dim_platform_df["platform_code"], dim_platform_df["platform_key"]))
+        currency_sk = dict(zip(dim_currency_df["currency_code"], dim_currency_df["currency_key"]))
+        project_sk = dict(zip(dim_project_df["project_code"], dim_project_df["project_key"]))
+        project_stream = dict(zip(df_projects_raw["project_code"], df_projects_raw["stream"]))
 
         rules = [
             (str(r["pattern"]), str(r["match_type"]), str(r["project_code"]))
@@ -213,31 +206,22 @@ def run_etl() -> dict[str, Any]:
         ]
         fx = FXResolver(df_fx_raw)
 
-        events: list[dict[str, Any]] = []
-        rejects: list[dict[str, str]] = []
+        events = []
+        rejects = []
 
-        def emit_event(
-            ev_date: date,
-            proj_code: str,
-            plat_code: str,
-            cur_code: str,
-            tx_code: str,
-            parent_tx_code: str | None,
-            ev_type: str,
-            signed_orig: Decimal,
-        ) -> None:
+        def emit_event(ev_date, proj_code, plat_code, cur_code, tx_code, parent_tx_code, ev_type, signed_orig):
             if signed_orig == Decimal("0.00"):
                 return
             cur_norm = cur_code.upper().strip()
             rate = fx.get_rate(ev_date, cur_norm)
             amt_idr = d2(signed_orig * rate)
-            stream_code = project_stream_by_code[proj_code]
+            stream_code = project_stream[proj_code]
             events.append({
                 "date_key": int(ev_date.strftime("%Y%m%d")),
-                "project_key": project_sk_by_code[proj_code],
-                "platform_key": platform_sk_by_code[plat_code],
-                "currency_key": currency_sk_by_code[cur_norm],
-                "revenue_stream_key": stream_sk_by_code[stream_code],
+                "project_key": project_sk[proj_code],
+                "platform_key": platform_sk[plat_code],
+                "currency_key": currency_sk[cur_norm],
+                "revenue_stream_key": stream_sk[stream_code],
                 "transaction_code": tx_code,
                 "parent_transaction_code": parent_tx_code,
                 "event_type": ev_type,
@@ -246,11 +230,10 @@ def run_etl() -> dict[str, Any]:
                 "amount_idr": amt_idr,
             })
 
-        # 2a. Steam transform
         for _, r in df_steam_raw.iterrows():
             tx_d = datetime.strptime(r["tx_date"], "%m/%d/%Y").date()
             p_code = r["game_code"].strip()
-            if p_code not in project_sk_by_code:
+            if p_code not in project_sk:
                 rejects.append({"source": "STEAM", "source_id": r["order_id"], "reason": f"Unknown game_code: {p_code}"})
                 continue
             cur = r["buyer_currency"].upper().strip()
@@ -268,19 +251,18 @@ def run_etl() -> dict[str, Any]:
                 emit_event(tx_d, p_code, "STEAM", cur, f"STM-{oid}-REF", root_code, "REFUND", -abs(gross_val))
                 emit_event(tx_d, p_code, "STEAM", cur, f"STM-{oid}-FREV", root_code, "FEE_REVERSAL", abs(fee_val))
 
-        # 2b. itch.io transform
         for _, r in df_itch.iterrows():
             tx_d = date.fromisoformat(r["payout_date"].strip())
             p_code = r["item_code"].strip()
-            if p_code not in project_sk_by_code:
+            if p_code not in project_sk:
                 rejects.append({"source": "ITCH", "source_id": r["itch_tx_id"], "reason": f"Unknown item_code: {p_code}"})
                 continue
             cur = r["currency"].upper().strip()
             oid = r["itch_tx_id"].strip()
-            gross = abs(parse_messy_amount(r["gross_str"]))
-            tip = abs(parse_messy_amount(r["tip_str"]))
-            itch_fee = abs(parse_messy_amount(r["itch_share_str"]))
-            proc_fee = abs(parse_messy_amount(r["processor_fee_str"]))
+            gross = abs(parse_amount(r["gross_str"]))
+            tip = abs(parse_amount(r["tip_str"]))
+            itch_fee = abs(parse_amount(r["itch_share_str"]))
+            proc_fee = abs(parse_amount(r["processor_fee_str"]))
 
             root_code = f"{oid}-SALE"
             emit_event(tx_d, p_code, "ITCH", cur, root_code, None, "SALE", gross)
@@ -292,18 +274,16 @@ def run_etl() -> dict[str, Any]:
             if r["is_refunded"].strip().lower() == "yes" and r["refund_date"].strip():
                 ref_d = date.fromisoformat(r["refund_date"].strip())
                 emit_event(ref_d, p_code, "ITCH", cur, f"{oid}-REF", root_code, "REFUND", -gross)
-                # Platform share returned; payment processor fee NOT returned
                 emit_event(ref_d, p_code, "ITCH", cur, f"{oid}-FREV", root_code, "FEE_REVERSAL", itch_fee)
 
-        # 2c. VGen transform (nested JSON flattened; free-text title mapped)
         for o in vgen_orders:
             oid = str(o["order_id"]).strip()
-            p_code = match_project_code(o["title"], rules)
+            p_code = match_project(o["title"], rules)
             if p_code is None:
                 rejects.append({
                     "source": "VGEN",
                     "source_id": oid,
-                    "reason": f"Unmatched title in project_title_map: '{o['title']}'",
+                    "reason": f"Unmatched title: {o['title']}",
                 })
                 continue
             tx_d = date.fromisoformat(str(o["created_at"])[:10])
@@ -329,19 +309,18 @@ def run_etl() -> dict[str, Any]:
                 emit_event(rd, p_code, "VGEN", cur, f"{oid}-REF{idx_r}", root_code, "REFUND", -r_amt)
                 emit_event(rd, p_code, "VGEN", cur, f"{oid}-FREV{idx_r}", root_code, "FEE_REVERSAL", r_frev)
 
-        # 2d. Fiverr transform (deduplicated; parent tracking so rejected parents skip child rows)
-        valid_fiverr_roots: dict[str, str] = {}
+        valid_fiverr = {}
         for _, r in df_fiverr[df_fiverr["row_kind"] == "ORDER"].iterrows():
             oid = r["fiverr_order_id"].strip()
-            p_code = match_project_code(r["order_title"], rules)
+            p_code = match_project(r["order_title"], rules)
             if p_code is None:
                 rejects.append({
                     "source": "FIVERR",
                     "source_id": oid,
-                    "reason": f"Unmatched title in project_title_map: '{r['order_title']}'",
+                    "reason": f"Unmatched title: {r['order_title']}",
                 })
                 continue
-            valid_fiverr_roots[oid] = p_code
+            valid_fiverr[oid] = p_code
             tx_d = date.fromisoformat(r["clearing_date"].strip())
             cur = r["currency"].upper().strip()
             gross = abs(d2(r["gross_amount"]))
@@ -353,14 +332,14 @@ def run_etl() -> dict[str, Any]:
         for _, r in df_fiverr[df_fiverr["row_kind"] != "ORDER"].iterrows():
             oid = r["fiverr_order_id"].strip()
             parent_oid = r["parent_order_id"].strip()
-            if parent_oid not in valid_fiverr_roots:
+            if parent_oid not in valid_fiverr:
                 rejects.append({
                     "source": "FIVERR",
                     "source_id": oid,
-                    "reason": f"Missing or quarantined parent_order_id: '{parent_oid}'",
+                    "reason": f"Missing parent order: {parent_oid}",
                 })
                 continue
-            p_code = valid_fiverr_roots[parent_oid]
+            p_code = valid_fiverr[parent_oid]
             root_code = f"FVR-{parent_oid}-SALE"
             tx_d = date.fromisoformat(r["clearing_date"].strip())
             cur = r["currency"].upper().strip()
@@ -374,23 +353,22 @@ def run_etl() -> dict[str, Any]:
                 emit_event(tx_d, p_code, "FIVERR", cur, f"FVR-{oid}-REF", root_code, "REFUND", -amt)
                 emit_event(tx_d, p_code, "FIVERR", cur, f"FVR-{oid}-FREV", root_code, "FEE_REVERSAL", fee)
 
-        # 2e. PayPal transform (DD/MM/YYYY + comma decimals; zero fee reversal on refund)
-        valid_paypal_roots: dict[str, str] = {}
+        valid_paypal = {}
         for _, r in df_paypal[df_paypal["tipe_aktivitas"] == "Direct Commission"].iterrows():
             pid = r["paypal_txn_id"].strip()
-            p_code = match_project_code(r["judul_pembayaran"], rules)
+            p_code = match_project(r["judul_pembayaran"], rules)
             if p_code is None:
                 rejects.append({
                     "source": "PAYPAL",
                     "source_id": pid,
-                    "reason": f"Unmatched title in project_title_map: '{r['judul_pembayaran']}'",
+                    "reason": f"Unmatched title: {r['judul_pembayaran']}",
                 })
                 continue
-            valid_paypal_roots[pid] = p_code
+            valid_paypal[pid] = p_code
             tx_d = datetime.strptime(r["tanggal"].strip(), "%d/%m/%Y").date()
             cur = r["mata_uang"].upper().strip()
-            gross = abs(parse_messy_amount(r["nilai_kotor"]))
-            pr_fee = abs(parse_messy_amount(r["biaya_paypal"]))
+            gross = abs(parse_amount(r["nilai_kotor"]))
+            pr_fee = abs(parse_amount(r["biaya_paypal"]))
             root_code = f"{pid}-SALE"
             emit_event(tx_d, p_code, "PAYPAL", cur, root_code, None, "SALE", gross)
             emit_event(tx_d, p_code, "PAYPAL", cur, f"{pid}-PRCFEE", root_code, "PROCESSING_FEE", -pr_fee)
@@ -398,19 +376,19 @@ def run_etl() -> dict[str, Any]:
         for _, r in df_paypal[df_paypal["tipe_aktivitas"] != "Direct Commission"].iterrows():
             pid = r["paypal_txn_id"].strip()
             parent_pid = r["ref_txn_id"].strip()
-            if parent_pid not in valid_paypal_roots:
+            if parent_pid not in valid_paypal:
                 rejects.append({
                     "source": "PAYPAL",
                     "source_id": pid,
-                    "reason": f"Missing or quarantined ref_txn_id: '{parent_pid}'",
+                    "reason": f"Missing parent txn: {parent_pid}",
                 })
                 continue
-            p_code = valid_paypal_roots[parent_pid]
+            p_code = valid_paypal[parent_pid]
             root_code = f"{parent_pid}-SALE"
             tx_d = datetime.strptime(r["tanggal"].strip(), "%d/%m/%Y").date()
             cur = r["mata_uang"].upper().strip()
-            amt = abs(parse_messy_amount(r["nilai_kotor"]))
-            pr_fee = abs(parse_messy_amount(r["biaya_paypal"]))
+            amt = abs(parse_amount(r["nilai_kotor"]))
+            pr_fee = abs(parse_amount(r["biaya_paypal"]))
 
             if r["tipe_aktivitas"] == "Client Tip":
                 emit_event(tx_d, p_code, "PAYPAL", cur, pid, root_code, "TIP", amt)
@@ -418,18 +396,15 @@ def run_etl() -> dict[str, Any]:
             elif r["tipe_aktivitas"] == "Refund":
                 emit_event(tx_d, p_code, "PAYPAL", cur, pid, root_code, "REFUND", -amt)
 
-        # Save quarantined rows to stg.etl_rejects
         df_rejects = pd.DataFrame(rejects, columns=["source", "source_id", "reason"])
         con.register("tmp_rej", df_rejects)
         con.execute("CREATE OR REPLACE TABLE stg.etl_rejects AS SELECT * FROM tmp_rej")
         con.unregister("tmp_rej")
 
-        # Deterministic ordering before assigning surrogate keys so full refresh is 100% reproducible
         fact_df = pd.DataFrame(events)
         fact_df = fact_df.sort_values(["date_key", "transaction_code"]).reset_index(drop=True)
         fact_df.insert(0, "revenue_event_sk", range(1, len(fact_df) + 1))
 
-        # 3. LOAD -> edw (DDL drop & recreate, dims first, then fact)
         con.execute((config.SQL_DIR / "01_ddl_edw.sql").read_text(encoding="utf-8"))
 
         dim_loads = [
@@ -443,7 +418,7 @@ def run_etl() -> dict[str, Any]:
             con.register("tmp_dim", df_dim)
             con.execute(f"INSERT INTO edw.{tbl_name} SELECT * FROM tmp_dim")
             con.unregister("tmp_dim")
-            telemetry["edw_counts"][f"edw.{tbl_name}"] = len(df_dim)
+            stats["edw_counts"][f"edw.{tbl_name}"] = len(df_dim)
 
         con.register("tmp_fact", fact_df)
         con.execute(
@@ -464,30 +439,24 @@ def run_etl() -> dict[str, Any]:
             """
         )
         con.unregister("tmp_fact")
-        telemetry["edw_counts"]["edw.fact_revenue_event"] = len(fact_df)
+        stats["edw_counts"]["edw.fact_revenue_event"] = len(fact_df)
 
-        # 4. Create edw.v_fact_enriched + mart.* views
         con.execute((config.SQL_DIR / "02_mart_views.sql").read_text(encoding="utf-8"))
 
-        telemetry["rejects_count"] = len(df_rejects)
-        telemetry["fx_fallback_lookups"] = fx.fallback_hits
-        telemetry["event_breakdown"] = (
-            fact_df["event_type"].value_counts().sort_index().to_dict()
-        )
+        stats["rejects_count"] = len(df_rejects)
+        stats["fx_fallback_lookups"] = fx.fallback_hits
+        stats["event_breakdown"] = fact_df["event_type"].value_counts().sort_index().to_dict()
 
-    (config.REPORT_DIR / "etl_last_run.json").write_text(
-        json.dumps(telemetry, indent=2), encoding="utf-8"
-    )
+    (config.REPORT_DIR / "etl_last_run.json").write_text(json.dumps(stats, indent=2), encoding="utf-8")
 
-    print("=== WASAKA INTERACTIVE DW — ETL RUN COMPLETE ===")
-    print(f"Staging tables loaded : {telemetry['stg_counts']}")
-    print(f"Duplicates removed    : {telemetry['duplicates_removed']}")
-    print(f"PII columns dropped   : {', '.join(pii_dropped)}")
-    print(f"Quarantined rejects   : {telemetry['rejects_count']} rows -> stg.etl_rejects")
-    print(f"FX fallback lookups   : {telemetry['fx_fallback_lookups']} weekend/holiday events resolved")
-    print(f"EDW row counts        : {telemetry['edw_counts']}")
-    print(f"Fact event breakdown  : {telemetry['event_breakdown']}")
-    return telemetry
+    print("ETL finished")
+    print("stg:", stats["stg_counts"])
+    print("duplicates removed:", stats["duplicates_removed"])
+    print("rejects:", stats["rejects_count"])
+    print("fx fallbacks:", stats["fx_fallback_lookups"])
+    print("edw:", stats["edw_counts"])
+    print("events:", stats["event_breakdown"])
+    return stats
 
 
 if __name__ == "__main__":

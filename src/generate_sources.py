@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import csv
 import json
 import pathlib
@@ -8,9 +6,8 @@ import sys
 from datetime import date, timedelta
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent.parent))
-import config  # noqa: E402
+import config
 
-# Regional base prices in local currency for natural storefront pricing
 GAME_PRICES = {
     "GAME-AMMD": {"USD": 9.99, "EUR": 9.79, "GBP": 8.50, "JPY": 1200.0, "CNY": 42.0, "SGD": 10.50, "IDR": 89000.0},
     "GAME-RBRT": {"USD": 6.99, "EUR": 6.89, "GBP": 5.79, "JPY": 820.0, "CNY": 28.0, "SGD": 7.50, "IDR": 64000.0},
@@ -25,7 +22,7 @@ ASSET_PRICES_USD = {
     "AST-BATK": 22.00,
 }
 
-USD_TO_CUR_APPROX = {
+USD_TO_CUR = {
     "USD": 1.0,
     "EUR": 0.92,
     "GBP": 0.79,
@@ -42,28 +39,28 @@ COMMISSION_TEMPLATES = [
     ("COM-MUSC", ["Looping Indie Game BGM Track", "SynthV Vocal Ending Song Arrangement", "Dynamic Boss Theme Chiptune/Orchestral"], (80.0, 240.0)),
 ]
 
-UNMATCHED_TITLES_VGEN = [
+UNMATCHED_VGEN = [
     "3D VTuber Fullbody ARKit Rigging",
     "Live2D Cubism Physics & Toggle Setup",
     "VRChat Custom Avatar Retopology",
     "Spine2D Chibi Idle Animation Rig",
 ]
 
-UNMATCHED_TITLES_FIVERR = [
+UNMATCHED_FIVERR = [
     "Translate English Steam Page to Indonesian",
     "Youtube Gaming Montage Video Editing",
     "Discord Bot Moderation Script Hosting",
     "Podcast Audio Noise Cleanup & Mastering",
 ]
 
-UNMATCHED_TITLES_PAYPAL = [
+UNMATCHED_PAYPAL = [
     "Jasa Titip Artbook Comiket",
     "Reimbursement Server Hosting Kost",
     "Patungan Lisensi Plugin Kelas",
 ]
 
 
-def _all_dates(start_s: str, end_s: str) -> list[date]:
+def date_list(start_s, end_s):
     s = date.fromisoformat(start_s)
     e = date.fromisoformat(end_s)
     out = []
@@ -74,7 +71,7 @@ def _all_dates(start_s: str, end_s: str) -> list[date]:
     return out
 
 
-def _is_sale_season(d: date) -> bool:
+def is_sale_season(d):
     if d.month == 6 and d.day >= 25:
         return True
     if d.month == 7 and d.day <= 10:
@@ -86,7 +83,7 @@ def _is_sale_season(d: date) -> bool:
     return False
 
 
-def _fmt_currency_messy(amount: float, cur: str) -> str:
+def fmt_currency_str(amount, cur):
     symbols = {"USD": "$", "EUR": "€", "GBP": "£", "SGD": "S$", "JPY": "¥", "CNY": "¥", "IDR": "Rp "}
     sym = symbols[cur]
     if cur in ("JPY", "IDR"):
@@ -94,90 +91,82 @@ def _fmt_currency_messy(amount: float, cur: str) -> str:
     return f"{sym}{amount:,.2f}"
 
 
-def _convert_from_usd(usd_amt: float, cur: str) -> float:
-    raw = usd_amt * USD_TO_CUR_APPROX[cur]
+def from_usd(usd_amt, cur):
+    raw = usd_amt * USD_TO_CUR[cur]
     if cur in ("JPY", "IDR"):
         return float(round(raw, -2 if cur == "IDR" else 0))
     return round(raw, 2)
 
 
-def write_internal_masters() -> None:
-    projects_path = config.RAW_DIR / "projects.csv"
-    with projects_path.open("w", newline="", encoding="utf-8") as f:
+def write_masters():
+    with (config.RAW_DIR / "projects.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["project_code", "project_name", "project_type", "production_field", "stream"])
-        for row in config.PROJECTS_CATALOG:
-            w.writerow(row)
+        w.writerows(config.PROJECTS_CATALOG)
 
-    map_path = config.RAW_DIR / "project_title_map.csv"
-    with map_path.open("w", newline="", encoding="utf-8") as f:
+    with (config.RAW_DIR / "project_title_map.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["pattern", "match_type", "project_code"])
-        for row in config.TITLE_MAP_RULES:
-            w.writerow(row)
+        w.writerows(config.TITLE_MAP_RULES)
 
 
-def generate_steam_csv(rng: random.Random, dates: list[date], max_date: date) -> int:
-    path = config.RAW_DIR / "steam_sales_report.csv"
+def gen_steam(rng, dates, max_date):
     currencies = ["USD", "EUR", "GBP", "JPY", "CNY", "SGD", "IDR"]
-    cur_weights = [0.38, 0.18, 0.11, 0.13, 0.09, 0.05, 0.06]
+    weights = [0.38, 0.18, 0.11, 0.13, 0.09, 0.05, 0.06]
     games = [p for p in config.PROJECTS_CATALOG if p[4] == "GAME_SALES"]
-    game_weights = [0.38, 0.27, 0.17, 0.18]
+    g_weights = [0.38, 0.27, 0.17, 0.18]
+    country_map = {"USD": "US", "EUR": "DE", "GBP": "GB", "JPY": "JP", "CNY": "CN", "SGD": "SG", "IDR": "ID"}
 
-    rows: list[list] = []
+    rows = []
     seq = 100000
     for d in dates:
-        # Canting Cloth launches mid-2026 in synthetic scenario; earlier games active throughout
         avail_games = games if d >= date(2026, 5, 1) else games[:3]
-        avail_weights = game_weights if d >= date(2026, 5, 1) else [0.46, 0.33, 0.21]
+        avail_weights = g_weights if d >= date(2026, 5, 1) else [0.46, 0.33, 0.21]
 
-        lam = 2.6 if _is_sale_season(d) else (1.15 if d.weekday() >= 5 else 0.75)
         n_sales = rng.choices([0, 1, 2, 3, 4, 5], weights=[0.22, 0.34, 0.22, 0.12, 0.07, 0.03])[0]
-        if _is_sale_season(d):
+        if is_sale_season(d):
             n_sales += rng.randint(1, 3)
-        elif lam > 1.0 and rng.random() < 0.35:
+        elif d.weekday() >= 5 and rng.random() < 0.35:
             n_sales += 1
 
         for _ in range(n_sales):
             seq += 1
-            order_id = f"STM-{seq}"
+            oid = f"STM-{seq}"
             g_code, g_name, _, _, _ = rng.choices(avail_games, weights=avail_weights, k=1)[0]
-            cur = rng.choices(currencies, weights=cur_weights, k=1)[0]
-            discount = rng.choice([1.0, 0.85, 0.80, 0.75]) if _is_sale_season(d) else 1.0
-            base_price = GAME_PRICES[g_code][cur] * discount
-            gross = round(base_price, 0 if cur in ("JPY", "IDR") else 2)
-            steam_fee = round(gross * config.FEE_SCHEDULE["STEAM"]["platform_fee_pct"], 2)
-            country = {"USD": "US", "EUR": "DE", "GBP": "GB", "JPY": "JP", "CNY": "CN", "SGD": "SG", "IDR": "ID"}[cur]
+            cur = rng.choices(currencies, weights=weights, k=1)[0]
+            disc = rng.choice([1.0, 0.85, 0.80, 0.75]) if is_sale_season(d) else 1.0
+            gross = round(GAME_PRICES[g_code][cur] * disc, 0 if cur in ("JPY", "IDR") else 2)
+            fee = round(gross * config.FEE_SCHEDULE["STEAM"]["platform_fee_pct"], 2)
 
             rows.append([
-                order_id,
+                oid,
                 d.strftime("%m/%d/%Y"),
                 "SALE",
                 g_code,
                 g_name,
                 cur,
                 f"{gross:.2f}",
-                f"{-steam_fee:.2f}",
+                f"{-fee:.2f}",
                 "",
-                country,
+                country_map[cur],
             ])
 
             if rng.random() < 0.058:
-                ref_date = min(max_date, d + timedelta(days=rng.randint(1, 12)))
+                ref_d = min(max_date, d + timedelta(days=rng.randint(1, 12)))
                 rows.append([
-                    f"{order_id}-RF",
-                    ref_date.strftime("%m/%d/%Y"),
+                    f"{oid}-RF",
+                    ref_d.strftime("%m/%d/%Y"),
                     "REFUND",
                     g_code,
                     g_name,
                     cur,
                     f"{-gross:.2f}",
-                    f"{steam_fee:.2f}",
-                    order_id,
-                    country,
+                    f"{fee:.2f}",
+                    oid,
+                    country_map[cur],
                 ])
 
-    with path.open("w", newline="", encoding="utf-8") as f:
+    with (config.RAW_DIR / "steam_sales_report.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow([
             "order_id", "tx_date", "record_type", "game_code", "game_title",
@@ -187,17 +176,16 @@ def generate_steam_csv(rng: random.Random, dates: list[date], max_date: date) ->
     return len(rows)
 
 
-def generate_itch_csv(rng: random.Random, dates: list[date], max_date: date) -> int:
-    path = config.RAW_DIR / "itch_payouts.csv"
+def gen_itch(rng, dates, max_date):
     currencies = ["USD", "EUR", "GBP", "SGD", "JPY", "IDR"]
-    cur_weights = [0.52, 0.17, 0.11, 0.08, 0.06, 0.06]
+    weights = [0.52, 0.17, 0.11, 0.08, 0.06, 0.06]
     items = [p for p in config.PROJECTS_CATALOG if p[4] in ("GAME_SALES", "ASSET_SALES")]
 
-    rows: list[list] = []
+    rows = []
     seq = 20000
     for d in dates:
         n_orders = rng.choices([0, 1, 2, 3], weights=[0.48, 0.33, 0.14, 0.05])[0]
-        if _is_sale_season(d):
+        if is_sale_season(d):
             n_orders += rng.randint(0, 2)
         for _ in range(n_orders):
             seq += 1
@@ -205,19 +193,15 @@ def generate_itch_csv(rng: random.Random, dates: list[date], max_date: date) -> 
             p_code, p_name, p_type, _, stream = rng.choice(items)
             if p_code == "GAME-CNTG" and d < date(2026, 5, 1):
                 p_code, p_name, p_type, _, stream = items[0]
-            cur = rng.choices(currencies, weights=cur_weights, k=1)[0]
-            if stream == "GAME_SALES":
-                gross = GAME_PRICES[p_code][cur]
-            else:
-                gross = _convert_from_usd(ASSET_PRICES_USD[p_code], cur)
-            # Occasional tip/bonus on itch.io pay-what-you-want
-            extra_tip = _convert_from_usd(rng.choice([2.0, 5.0]), cur) if rng.random() < 0.14 else 0.0
+            cur = rng.choices(currencies, weights=weights, k=1)[0]
+            gross = GAME_PRICES[p_code][cur] if stream == "GAME_SALES" else from_usd(ASSET_PRICES_USD[p_code], cur)
+            tip = from_usd(rng.choice([2.0, 5.0]), cur) if rng.random() < 0.14 else 0.0
             itch_share = round(gross * config.FEE_SCHEDULE["ITCH"]["platform_fee_pct"], 2)
-            fixed_fee_cur = _convert_from_usd(config.FEE_SCHEDULE["ITCH"]["processing_fixed_usd"], cur)
-            proc_fee = round((gross + extra_tip) * config.FEE_SCHEDULE["ITCH"]["processing_fee_pct"] + fixed_fee_cur, 2)
+            fixed_cur = from_usd(config.FEE_SCHEDULE["ITCH"]["processing_fixed_usd"], cur)
+            proc_fee = round((gross + tip) * config.FEE_SCHEDULE["ITCH"]["processing_fee_pct"] + fixed_cur, 2)
 
             is_ref = rng.random() < 0.04
-            ref_date_s = min(max_date, d + timedelta(days=rng.randint(1, 9))).isoformat() if is_ref else ""
+            ref_s = min(max_date, d + timedelta(days=rng.randint(1, 9))).isoformat() if is_ref else ""
 
             rows.append([
                 tx_id,
@@ -226,16 +210,16 @@ def generate_itch_csv(rng: random.Random, dates: list[date], max_date: date) -> 
                 p_code,
                 p_name,
                 cur,
-                _fmt_currency_messy(gross, cur),
-                _fmt_currency_messy(extra_tip, cur) if extra_tip > 0 else "$0.00",
-                _fmt_currency_messy(itch_share, cur),
-                _fmt_currency_messy(proc_fee, cur),
+                fmt_currency_str(gross, cur),
+                fmt_currency_str(tip, cur) if tip > 0 else "$0.00",
+                fmt_currency_str(itch_share, cur),
+                fmt_currency_str(proc_fee, cur),
                 "yes" if is_ref else "no",
-                ref_date_s,
+                ref_s,
                 f"indie_buyer_{seq}@example.org",
             ])
 
-    with path.open("w", newline="", encoding="utf-8") as f:
+    with (config.RAW_DIR / "itch_payouts.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow([
             "itch_tx_id", "payout_date", "item_category", "item_code", "item_title",
@@ -246,8 +230,7 @@ def generate_itch_csv(rng: random.Random, dates: list[date], max_date: date) -> 
     return len(rows)
 
 
-def generate_vgen_json(rng: random.Random, dates: list[date], max_date: date) -> int:
-    path = config.RAW_DIR / "vgen_export.json"
+def gen_vgen(rng, dates, max_date):
     asset_titles = [
         ("Dungeon Matchmaker Pixel UI Kit Commercial", "AST-DGPX"),
         ("Personal Space Isometric Room Low-Poly Props", "AST-ISOR"),
@@ -255,18 +238,17 @@ def generate_vgen_json(rng: random.Random, dates: list[date], max_date: date) ->
         ("Canting Batik Shader & NPR Toolkit", "AST-BATK"),
     ]
     currencies = ["USD", "SGD", "EUR", "JPY", "GBP"]
-    cur_weights = [0.64, 0.11, 0.10, 0.09, 0.06]
+    weights = [0.64, 0.11, 0.10, 0.09, 0.06]
 
-    orders: list[dict] = []
+    orders = []
     seq = 5000
     for d in dates:
         if rng.random() > 0.34:
             continue
-        n_ord = rng.choices([1, 2], weights=[0.8, 0.2])[0]
-        for _ in range(n_ord):
+        for _ in range(rng.choices([1, 2], weights=[0.8, 0.2])[0]):
             seq += 1
             oid = f"VGN-{seq}"
-            cur = rng.choices(currencies, weights=cur_weights, k=1)[0]
+            cur = rng.choices(currencies, weights=weights, k=1)[0]
             is_shop = rng.random() < 0.42
 
             if is_shop:
@@ -279,37 +261,34 @@ def generate_vgen_json(rng: random.Random, dates: list[date], max_date: date) ->
                 gross_usd = round(rng.uniform(lo, hi), 2)
                 service_kind = "COMMISSION"
 
-            gross = _convert_from_usd(gross_usd, cur)
+            gross = from_usd(gross_usd, cur)
             vgen_fee = round(gross * config.FEE_SCHEDULE["VGEN"]["platform_fee_pct"], 2)
             proc_fee = round(
                 gross * config.FEE_SCHEDULE["VGEN"]["processing_fee_pct"]
-                + _convert_from_usd(config.FEE_SCHEDULE["VGEN"]["processing_fixed_usd"], cur),
+                + from_usd(config.FEE_SCHEDULE["VGEN"]["processing_fixed_usd"], cur),
                 2,
             )
 
             tips = []
             if not is_shop and rng.random() < 0.28:
-                n_tips = 2 if rng.random() < 0.35 else 1  # Multi-tip orders for V7
+                n_tips = 2 if rng.random() < 0.35 else 1
                 for t_idx in range(1, n_tips + 1):
                     t_date = min(max_date, d + timedelta(days=rng.randint(0, 7)))
-                    t_amt = _convert_from_usd(rng.choice([10.0, 15.0, 25.0]), cur)
                     tips.append({
                         "tip_id": f"{oid}-T{t_idx}",
                         "paid_at": f"{t_date.isoformat()}T14:15:00Z",
-                        "amount": t_amt,
+                        "amount": from_usd(rng.choice([10.0, 15.0, 25.0]), cur),
                     })
 
             refunds = []
             if rng.random() < 0.055:
                 r_date = min(max_date, d + timedelta(days=rng.randint(2, 14)))
                 ratio = rng.choice([0.4, 0.5]) if (not is_shop and rng.random() < 0.45) else 1.0
-                r_amt = round(gross * ratio, 2)
-                r_fee_rev = round(vgen_fee * ratio, 2)
                 refunds.append({
                     "refund_id": f"{oid}-R1",
                     "refunded_at": f"{r_date.isoformat()}T09:30:00Z",
-                    "amount": r_amt,
-                    "vgen_fee_returned": r_fee_rev,
+                    "amount": round(gross * ratio, 2),
+                    "vgen_fee_returned": round(vgen_fee * ratio, 2),
                 })
 
             orders.append({
@@ -326,8 +305,7 @@ def generate_vgen_json(rng: random.Random, dates: list[date], max_date: date) ->
                 "refunds": refunds,
             })
 
-    # Inject 4 unmatched commission titles to exercise quarantine (stg.etl_rejects)
-    for idx, bad_title in enumerate(UNMATCHED_TITLES_VGEN, start=1):
+    for idx, bad_title in enumerate(UNMATCHED_VGEN, start=1):
         seq += 1
         d_bad = date(2025, 4 + idx, 12)
         orders.append({
@@ -344,16 +322,15 @@ def generate_vgen_json(rng: random.Random, dates: list[date], max_date: date) ->
             "refunds": [],
         })
 
-    path.write_text(json.dumps(orders, indent=2), encoding="utf-8")
+    (config.RAW_DIR / "vgen_export.json").write_text(json.dumps(orders, indent=2), encoding="utf-8")
     return len(orders)
 
 
-def generate_fiverr_csv(rng: random.Random, dates: list[date], max_date: date) -> tuple[int, int]:
-    path = config.RAW_DIR / "fiverr_earnings.csv"
+def gen_fiverr(rng, dates, max_date):
     currencies = ["USD", "EUR", "GBP", "SGD"]
-    cur_weights = [0.76, 0.10, 0.08, 0.06]
+    weights = [0.76, 0.10, 0.08, 0.06]
 
-    rows: list[list] = []
+    rows = []
     seq = 7000
     for d in dates:
         if rng.random() > 0.24:
@@ -362,8 +339,8 @@ def generate_fiverr_csv(rng: random.Random, dates: list[date], max_date: date) -
         oid = f"FO-{seq}"
         _, titles, (lo, hi) = rng.choice(COMMISSION_TEMPLATES)
         title = f"{rng.choice(titles)} [Tier {rng.choice(['Basic', 'Standard', 'Pro'])}]"
-        cur = rng.choices(currencies, weights=cur_weights, k=1)[0]
-        gross = _convert_from_usd(round(rng.uniform(lo, hi), 2), cur)
+        cur = rng.choices(currencies, weights=weights, k=1)[0]
+        gross = from_usd(round(rng.uniform(lo, hi), 2), cur)
         fee = round(gross * config.FEE_SCHEDULE["FIVERR"]["platform_fee_pct"], 2)
         buyer = f"fiverr_user_{seq}"
 
@@ -373,7 +350,7 @@ def generate_fiverr_csv(rng: random.Random, dates: list[date], max_date: date) -
             n_tips = 2 if rng.random() < 0.30 else 1
             for t_i in range(1, n_tips + 1):
                 t_date = min(max_date, d + timedelta(days=rng.randint(0, 5)))
-                tip_amt = _convert_from_usd(rng.choice([10.0, 20.0, 30.0]), cur)
+                tip_amt = from_usd(rng.choice([10.0, 20.0, 30.0]), cur)
                 tip_fee = round(tip_amt * config.FEE_SCHEDULE["FIVERR"]["platform_fee_pct"], 2)
                 rows.append([
                     t_date.isoformat(), f"{oid}-TIP{t_i}", "TIP", title, buyer, cur,
@@ -384,27 +361,23 @@ def generate_fiverr_csv(rng: random.Random, dates: list[date], max_date: date) -
             r_date = min(max_date, d + timedelta(days=rng.randint(2, 15)))
             partial = rng.random() < 0.35
             ratio = 0.5 if partial else 1.0
-            r_amt = round(gross * ratio, 2)
-            r_fee_rev = round(fee * ratio, 2)
             kind = "CANCELLATION_PARTIAL" if partial else "CANCELLATION_FULL"
             rows.append([
                 r_date.isoformat(), f"{oid}-REF", kind, title, buyer, cur,
-                f"{-r_amt:.2f}", f"{r_fee_rev:.2f}", oid,
+                f"{-round(gross * ratio, 2):.2f}", f"{round(fee * ratio, 2):.2f}", oid,
             ])
 
-    # Inject 4 unmatched Fiverr rows
-    for idx, bad_title in enumerate(UNMATCHED_TITLES_FIVERR, start=1):
+    for idx, bad_title in enumerate(UNMATCHED_FIVERR, start=1):
         d_bad = date(2025, 7 + idx, 18)
         rows.append([
             d_bad.isoformat(), f"FO-UNM-{idx}", "ORDER", bad_title,
             f"fiverr_unm_{idx}", "USD", "75.00", "-15.00", "",
         ])
 
-    # Inject 15 exact duplicate rows (simulating overlapping date-range CSV re-exports)
     dup_samples = rng.sample(rows[:60], k=15)
     rows.extend(dup_samples)
 
-    with path.open("w", newline="", encoding="utf-8") as f:
+    with (config.RAW_DIR / "fiverr_earnings.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow([
             "clearing_date", "fiverr_order_id", "row_kind", "order_title",
@@ -414,16 +387,15 @@ def generate_fiverr_csv(rng: random.Random, dates: list[date], max_date: date) -
     return len(rows), len(dup_samples)
 
 
-def generate_paypal_csv(rng: random.Random, dates: list[date], max_date: date) -> int:
-    path = config.RAW_DIR / "paypal_activity.csv"
+def gen_paypal(rng, dates, max_date):
     currencies = ["USD", "SGD", "IDR", "EUR", "JPY", "CNY", "GBP"]
-    cur_weights = [0.40, 0.16, 0.16, 0.10, 0.08, 0.05, 0.05]
+    weights = [0.40, 0.16, 0.16, 0.10, 0.08, 0.05, 0.05]
 
-    def fmt_num(val: float, use_comma: bool) -> str:
+    def fmt_num(val, use_comma):
         s = f"{val:.2f}"
         return s.replace(".", ",") if use_comma else s
 
-    rows: list[list] = []
+    rows = []
     seq = 9000
     for d in dates:
         if rng.random() > 0.21:
@@ -432,8 +404,8 @@ def generate_paypal_csv(rng: random.Random, dates: list[date], max_date: date) -
         pid = f"PP-{seq}"
         _, titles, (lo, hi) = rng.choice(COMMISSION_TEMPLATES)
         title = f"Direct Invoice - {rng.choice(titles)}"
-        cur = rng.choices(currencies, weights=cur_weights, k=1)[0]
-        gross = _convert_from_usd(round(rng.uniform(lo, hi), 2), cur)
+        cur = rng.choices(currencies, weights=weights, k=1)[0]
+        gross = from_usd(round(rng.uniform(lo, hi), 2), cur)
 
         pct = (
             config.FEE_SCHEDULE["PAYPAL"]["processing_fee_dom_pct"]
@@ -456,7 +428,7 @@ def generate_paypal_csv(rng: random.Random, dates: list[date], max_date: date) -
             n_tips = 2 if rng.random() < 0.35 else 1
             for t_i in range(1, n_tips + 1):
                 t_date = min(max_date, d + timedelta(days=rng.randint(0, 6)))
-                tip_amt = _convert_from_usd(rng.choice([8.0, 15.0, 25.0]), cur)
+                tip_amt = from_usd(rng.choice([8.0, 15.0, 25.0]), cur)
                 tip_fee = round(tip_amt * pct + fixed, 2)
                 rows.append([
                     t_date.strftime("%d/%m/%Y"), f"{pid}-TIP{t_i}", pid, "Client Tip", title,
@@ -467,23 +439,20 @@ def generate_paypal_csv(rng: random.Random, dates: list[date], max_date: date) -
         if rng.random() < 0.055:
             r_date = min(max_date, d + timedelta(days=rng.randint(1, 10)))
             ratio = 0.5 if rng.random() < 0.35 else 1.0
-            r_amt = round(gross * ratio, 2)
-            # PayPal keeps processing fee on refund -> biaya_paypal = 0.00
             rows.append([
                 r_date.strftime("%d/%m/%Y"), f"{pid}-REF", pid, "Refund", title,
                 payer_name, payer_email, cur,
-                fmt_num(-r_amt, comma_mode), fmt_num(0.0, comma_mode),
+                fmt_num(-round(gross * ratio, 2), comma_mode), fmt_num(0.0, comma_mode),
             ])
 
-    # Inject 3 unmatched PayPal rows for quarantine test
-    for idx, bad_title in enumerate(UNMATCHED_TITLES_PAYPAL, start=1):
+    for idx, bad_title in enumerate(UNMATCHED_PAYPAL, start=1):
         d_bad = date(2026, 2 + idx, 9)
         rows.append([
             d_bad.strftime("%d/%m/%Y"), f"PP-UNM-{idx}", "", "Direct Commission", bad_title,
             f"Unmatched {idx}", f"unm_{idx}@mail-sample.test", "IDR", "350000,00", "-16500,00",
         ])
 
-    with path.open("w", newline="", encoding="utf-8") as f:
+    with (config.RAW_DIR / "paypal_activity.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow([
             "tanggal", "paypal_txn_id", "ref_txn_id", "tipe_aktivitas", "judul_pembayaran",
@@ -493,26 +462,22 @@ def generate_paypal_csv(rng: random.Random, dates: list[date], max_date: date) -
     return len(rows)
 
 
-def main() -> None:
+def main():
     config.RAW_DIR.mkdir(parents=True, exist_ok=True)
     rng = random.Random(config.RANDOM_SEED)
-    dates = _all_dates(config.TX_START, config.TX_END)
+    dates = date_list(config.TX_START, config.TX_END)
     max_d = date.fromisoformat(config.TX_END)
 
-    write_internal_masters()
-    n_steam = generate_steam_csv(rng, dates, max_d)
-    n_itch = generate_itch_csv(rng, dates, max_d)
-    n_vgen = generate_vgen_json(rng, dates, max_d)
-    n_fiverr, n_dups = generate_fiverr_csv(rng, dates, max_d)
-    n_paypal = generate_paypal_csv(rng, dates, max_d)
+    write_masters()
+    n_steam = gen_steam(rng, dates, max_d)
+    n_itch = gen_itch(rng, dates, max_d)
+    n_vgen = gen_vgen(rng, dates, max_d)
+    n_fiverr, n_dups = gen_fiverr(rng, dates, max_d)
+    n_paypal = gen_paypal(rng, dates, max_d)
 
     print(
-        f"[SOURCES] Generated raw files in {config.RAW_DIR}:\n"
-        f"  - steam_sales_report.csv : {n_steam} rows\n"
-        f"  - itch_payouts.csv       : {n_itch} rows\n"
-        f"  - vgen_export.json       : {n_vgen} orders\n"
-        f"  - fiverr_earnings.csv    : {n_fiverr} rows (includes {n_dups} injected duplicates)\n"
-        f"  - paypal_activity.csv    : {n_paypal} rows"
+        f"Generated raw exports in {config.RAW_DIR}: "
+        f"steam={n_steam}, itch={n_itch}, vgen={n_vgen}, fiverr={n_fiverr} ({n_dups} dups), paypal={n_paypal}"
     )
 
 

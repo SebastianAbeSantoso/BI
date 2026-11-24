@@ -1,14 +1,12 @@
-# BI Data Warehouse UTS — Execution Plan (24–25 Nov 2026)
+# BI Data Warehouse UTS Execution Plan (24 to 25 Nov 2026)
 
-**Owner:** Sebastian (ULM, Teknologi Informasi, Big Data)
-**Course:** Kecerdasan Bisnis (BI): UTS individual Data Warehouse project
-**Case (locked):** *Wasaka Interactive*, Indie Studio Multi-Revenue Analytics
-**Plan written:** 23 Nov 2026, 19:30 WITA
-**Target:** the working app and report are presentation-ready by the end of **25 Nov 2026**
+Owner: Sebastian (ULM, Teknologi Informasi, Big Data)
+Course: Kecerdasan Bisnis (BI), individual Data Warehouse UTS
+Case (locked): Wasaka Interactive, Indie Studio Multi-Revenue Analytics
+Plan written: 23 Nov 2026
+Target: working app and report ready by the end of 25 Nov 2026
 
-> This plan is written for another AI model or collaborator to execute. Read **Section 0 (Guardrails)** and **Section 1 (Locked Decisions)** before touching anything. When something is ambiguous, ask Sebastian. Don't guess.
-
----
+Read Section 0 (Guardrails) and Section 1 (Locked Decisions) before changing files. If a requirement is unclear, ask Sebastian instead of guessing.
 
 ## Overview
 
@@ -30,55 +28,47 @@ flowchart LR
     J --> K["Upload 4 deliverables to e-learning"]
 ```
 
-### Fixed calendar constraints (classes, not movable)
+### Fixed class schedule
+
 | Day | Class | Time (WITA) |
 |---|---|---|
-| Tue 24 Nov | DATA ANALITIK (Lab Big Data) | 13:00–15:30 |
-| Wed 25 Nov | KECERDASAN BISNIS (A.14) | 08:00–10:30 |
-| Wed 25 Nov | METODOLOGI PENELITIAN (A.14) | 10:30–12:10 |
+| Tue 24 Nov | DATA ANALITIK (Lab Big Data) | 13:00-15:30 |
+| Wed 25 Nov | KECERDASAN BISNIS (A.14) | 08:00-10:30 |
+| Wed 25 Nov | METODOLOGI PENELITIAN (A.14) | 10:30-12:10 |
 
-**Gimersia Inspire 2026 (Canting Cloth)** is due **30 Nov 2026, 00:59 WITA**. BI work has a **hard stop at the end of 25 Nov**. From 26 Nov the only BI work left is presenting, recording, and writing the post-review conclusion, all on the lecturer's schedule.
+Gimersia Inspire 2026 (Canting Cloth) is due 30 Nov 2026 at 00:59 WITA. BI build and report work stops at the end of 25 Nov. From 26 Nov onward, only presenting, recording, and writing the post-review conclusion remain on the lecturer's schedule. Stop work around 23:30 both nights.
 
-**Sleep guardrail:** stop work by ~23:30 both nights. A tired demo is worse than a slightly smaller app.
+## 0. Guardrails
 
----
+1. Keep the 6-table star schema in Section 2 unchanged. Do not add, remove, or rename columns or tables in `edw`.
+2. Do not reopen the business case, tech stack, or atomic event grain.
+3. No ML, forecasting, or Data Analytics operations (roll-up, drill-down, dice, pivot). Label the UI as a query interface.
+4. Leave the original `BI-Design-Template.docx` untouched. Edit only the copy under `report/`.
+5. Environment is Windows PowerShell with Python 3.10+ inside a local `.venv`.
+6. Disclose clearly in the README and report that transaction records are synthetic while FX rates are real ECB data.
+7. Keep fee rates in `config.py` with their sources documented.
+8. Raw exports include buyer usernames and emails; staging drops them so no PII enters `edw` or `mart`.
+9. Report language is Bahasa Indonesia matching the existing draft; code identifiers are English.
 
-## 0. Guardrails for the executor
-
-1. **Do NOT redesign the schema.** The 6-table star schema in Section 2 is approved. Don't add, remove or rename columns or tables in `edw`.
-2. **Do NOT reopen the case**, the stack, or the event-level grain.
-3. **No ML, no forecasting, no "advanced analytics."** The lecturer put roll-up, drill-down, dice and pivot under the *Data Analytics* course. The app is a **query interface** over the DW. Don't label features with those terms.
-4. **Never modify the original `BI-Design-Template.docx`.** Work on a copy (Section 7).
-5. **Environment:** Windows, PowerShell (no bash-isms), Python 3.10+. Use a venv inside the repo.
-6. **Be honest about synthetic data.** The report must state clearly that transaction data is synthetic, generated from documented assumptions. FX rates are real (Frankfurter/ECB) if the fetch works.
-7. **Fee percentages:** keep them in `config.py` with a `source`/`verify` note. Don't state a fee rate as a fact in the report unless it has been checked against the platform's current published terms. Mark unverified ones for Sebastian.
-8. **No personal data in the DW.** Raw exports deliberately include buyer usernames and emails. Staging drops them (governance demo).
-9. **Report language:** Bahasa Indonesia, matching the existing document. Code and comments: English.
-10. Keep comments in the code minimal and meaningful.
-
----
-
-## 1. Locked decisions (do not revisit)
+## 1. Locked decisions
 
 | Topic | Decision |
 |---|---|
-| Stack | **DuckDB** (single file DW + OLAP engine) + **Python/pandas** (ETL + data generation) + **Streamlit** (front end). Plotly or Streamlit-native charts. |
-| Architecture | Kimball star schema. Logical layers inside **one DuckDB file**: `stg` (raw, as-is) → `edw` (star schema) → `mart` (views). The template's `INT_DB` layer is folded into transform logic and views (already justified by Limitation #4 in the docx). |
-| Grain | **One row = one financial event**: SALE, TIP, REFUND, PLATFORM_FEE, PROCESSING_FEE, FEE_REVERSAL. Never daily aggregates. |
-| `FEE_REVERSAL` | **Keep.** It's already in the docx (Introduction). It models the key asymmetry: on a refund the storefront returns its platform cut (`FEE_REVERSAL`, +) but the payment processor keeps its processing fee. This is exactly the "Net Revenue Blindness" problem in the Background section. |
-| Stripe | **Remove** from the docx (lines mentioning Stripe in Introduction and Definitions). It isn't modelled; processing fees come from PayPal and itch.io's checkout. |
-| Partial refunds | **Allowed** (commissions can be partly refunded per milestone). Rule: total refunds per parent ≤ the parent sale amount. |
-| Signs | Positive: SALE, TIP, FEE_REVERSAL. Negative: REFUND, PLATFORM_FEE, PROCESSING_FEE. Net revenue = `SUM(amount_idr)`. |
-| Identifiers | `transaction_code` = `<<DD>>`, unique per event. `parent_transaction_code` = lineage key (**not** `<<DD>>`, intentionally), linking fees, refunds, reversals and tips to the root SALE. NULL on a root SALE. |
-| Currencies | IDR, USD, SGD, JPY, CNY, EUR, GBP → IDR via the per-event spot rate. |
-| Stream × platform | GAME_SALES: STEAM, ITCH · ASSET_SALES: ITCH, VGEN · COMMISSION: VGEN, FIVERR, PAYPAL. PayPal is a **direct-commission platform**, not just a processor. |
+| Stack | DuckDB (single file DW and OLAP engine), Python/pandas (ETL and generation), Streamlit + Plotly (front end). |
+| Architecture | Kimball star schema with logical schemas `stg`, `edw`, and `mart` inside one DuckDB file (`INT_DB` folded into transform logic and views, matching Limitation #4). |
+| Grain | One row per financial event: `SALE`, `TIP`, `REFUND`, `PLATFORM_FEE`, `PROCESSING_FEE`, `FEE_REVERSAL`. |
+| `FEE_REVERSAL` | Kept. Models the asymmetry where storefronts reverse platform cuts on refund while payment processors keep processing fees. |
+| Stripe | Removed from the report copy (not in the platform list; processing fees come from PayPal, VGen, and itch.io checkout). |
+| Partial refunds | Allowed for commissions. Total refunds per `parent_transaction_code` must stay at or below the parent sale amount. |
+| Signs | Positive: `SALE`, `TIP`, `FEE_REVERSAL`. Negative: `REFUND`, `PLATFORM_FEE`, `PROCESSING_FEE`. Net revenue equals `SUM(amount_idr)`. |
+| Identifiers | `transaction_code` is `<<DD>>` and unique per event. `parent_transaction_code` is a lineage key (intentionally not `<<DD>>`), NULL on root sales. |
+| Currencies | IDR, USD, SGD, JPY, CNY, EUR, GBP converted to IDR using the event-date spot rate. |
+| Stream and platform pairs | `GAME_SALES`: STEAM, ITCH. `ASSET_SALES`: ITCH, VGEN. `COMMISSION`: VGEN, FIVERR, PAYPAL (PayPal modeled as direct-commission platform). |
 | Repo | `d:\Downloads\random\bi-dw-uts\` |
-| Load strategy | Full refresh (drop & rebuild) per run, which keeps it idempotent. Incremental loading = future work. |
-| Peer review | The lecturer assigns reviewers (1 business, 1 technical). Sebastian doesn't pick. The presentation date is **not confirmed**; be ready from 25 Nov. |
+| Load strategy | Idempotent full refresh per run. Incremental loads noted as future work. |
+| Peer review | Lecturer assigns two reviewers (1 business, 1 technical). Presentation date is unconfirmed; be ready from 25 Nov. |
 
----
-
-## 2. Approved schema (from the docx PlantUML, do not change)
+## 2. Approved schema (`edw`)
 
 ```
 dim_date(date_key INT PK, full_date DATE NK, day_of_week VARCHAR(20), day_of_week_number INT,
@@ -91,328 +81,127 @@ dim_platform(platform_key INT PK, platform_code VARCHAR(50) NK, platform_name VA
 dim_project(project_key INT PK, project_code VARCHAR(50) NK, project_name VARCHAR(150),
             project_type VARCHAR(50), production_field VARCHAR(100))
 fact_revenue_event(revenue_event_sk BIGINT PK,
-                   date_key, project_key, platform_key, currency_key, revenue_stream_key  -- all INT FK NOT NULL
+                   date_key INT FK, project_key INT FK, platform_key INT FK,
+                   currency_key INT FK, revenue_stream_key INT FK,
                    transaction_code VARCHAR(100) DD, parent_transaction_code VARCHAR(100),
                    event_type VARCHAR(30), amount_orig DECIMAL(18,2),
                    exchange_rate_to_idr DECIMAL(18,6), amount_idr DECIMAL(18,2))
 ```
 
-**Constraints to add in DDL** (these add integrity, not columns, so they're allowed):
-- PKs and FKs as above. DuckDB enforces FKs, so insert dims before facts and drop the fact table first on rebuild.
-- `UNIQUE(transaction_code)`.
-- `CHECK (event_type IN ('SALE','TIP','REFUND','PLATFORM_FEE','PROCESSING_FEE','FEE_REVERSAL'))`.
-- Sign check:
-  `CHECK ((event_type IN ('SALE','TIP','FEE_REVERSAL') AND amount_orig > 0 AND amount_idr > 0) OR (event_type IN ('REFUND','PLATFORM_FEE','PROCESSING_FEE') AND amount_orig < 0 AND amount_idr < 0))`
-- `CHECK (exchange_rate_to_idr > 0)`.
-- `date_key` format `YYYYMMDD`. `dim_date` covers **2025-01-01 → 2026-12-31**.
-- Surrogate keys: DuckDB sequences, or assigned in pandas (either is fine; be consistent).
+DDL constraints: primary keys, five foreign keys, `UNIQUE(transaction_code)`, `event_type` check, sign check on `amount_orig` and `amount_idr`, and `exchange_rate_to_idr > 0`. `dim_date` spans `2025-01-01` through `2026-12-31` with `YYYYMMDD` keys.
 
----
-
-## 3. Repo layout (target)
+## 3. Target repository layout
 
 ```
 bi-dw-uts/
-├── PLAN.md                  # this file
-├── README.md                # how to run, architecture summary, synthetic-data disclosure
-├── requirements.txt         # duckdb, pandas, streamlit, plotly, requests
-├── config.py                # date window, fee rates (with source/verify notes), seeds, paths
+├── PLAN.md
+├── README.md
+├── IMPLEMENTATION_LOG.md
+├── requirements.txt
+├── config.py
 ├── data/
-│   ├── raw/                 # generated "platform exports" + fx_rates.csv + internal master files
-│   └── warehouse.duckdb     # built output (gitignored)
+│   ├── raw/
+│   └── warehouse.duckdb
 ├── sql/
-│   ├── 00_schemas.sql       # CREATE SCHEMA stg, edw, mart
-│   ├── 01_ddl_edw.sql       # 6 tables + constraints
-│   ├── 02_mart_views.sql    # mart views (Section 5.3)
-│   └── 03_validate.sql      # validation queries (Section 6)
+│   ├── 00_schemas.sql
+│   ├── 01_ddl_edw.sql
+│   ├── 02_mart_views.sql
+│   └── 03_validate.sql
 ├── src/
-│   ├── generate_sources.py  # Phase 2
-│   ├── fetch_fx.py          # Phase 2 (Frankfurter, cached)
-│   ├── etl.py               # Phase 3 (extract → transform → load)
-│   └── validate.py          # runs 03_validate.sql, prints PASS/FAIL table, non-zero exit on FAIL
+│   ├── generate_sources.py
+│   ├── fetch_fx.py
+│   ├── etl.py
+│   └── validate.py
 ├── app/
-│   ├── app.py               # Streamlit entry
-│   └── query_builder.py     # whitelisted SQL generation
-├── diagrams/                # .puml sources + rendered .png
+│   ├── app.py
+│   └── query_builder.py
+├── diagrams/
 └── report/
-    ├── sections_id.md       # ready-to-paste Indonesian text per docx section
+    ├── findings_raw.md
+    ├── sections_id.md
     └── screenshots/
 ```
 
----
+## 4. Tuesday 24 Nov: Build phases (Done)
 
-## 4. TUESDAY 24 NOV: Build day
+- Phase 1: create directory layout, `.venv`, install dependencies, initialize Git.
+- Phase 2: author `projects.csv` (from Sebastian's real portfolio) and `project_title_map.csv`, generate 5 raw exports in different formats (`steam_sales_report.csv`, `itch_payouts.csv`, `vgen_export.json`, `fiverr_earnings.csv`, `paypal_activity.csv`), and fetch real ECB daily rates via Frankfurter API into `fx_rates.csv`.
+- Phase 3: load raw files into `stg`, drop PII, deduplicate Fiverr re-exports, map titles and quarantine unmatched rows in `stg.etl_rejects`, expand events with sign rules and prior-business-day FX fallback, load `edw`, and build `edw.v_fact_enriched` + 4 `mart` views.
+- Phase 4: run `sql/03_validate.sql` through `src/validate.py` verifying V1 through V14.
+- Phase 5: build the 3-tab Streamlit app (whitelisted no-code query builder with currency-group guard and SQL expander, 4 business-question presets, architecture and live validation tab), write `README.md`, `report/findings_raw.md`, and `IMPLEMENTATION_LOG.md`, and commit.
 
-### Phase 1: Setup (09:00–09:30)
-- Create the folders above, `python -m venv .venv`, install requirements, `git init`, `.gitignore` (`.venv/`, `data/warehouse.duckdb`, `__pycache__/`).
-- **Done when:** `python -c "import duckdb, streamlit, pandas"` works.
+## 5. Views reference
 
-### Phase 2: Source data (09:30–11:15)
+- `edw.v_fact_enriched`: wide star join of `fact_revenue_event` to all 5 dimension tables.
+- `mart.v_revenue_monthly`: monthly gross, tips, fees, refunds, reversals, net, and event count by stream, platform, and currency.
+- `mart.v_project_performance`: gross, net, leakage amount, and leakage % per project and production field.
+- `mart.v_fee_refund_leakage`: gross, platform fees, processing fees, refunds, reversals, net, and leakage % per platform and stream.
+- `mart.v_fx_exposure`: monthly original-currency totals, net IDR, rate min/avg/max, and currency shares.
 
-**2a. Internal master data (hand-authored CSVs in `data/raw/`)**
+## 6. Wednesday 25 Nov: Report and presentation prep
 
-`projects.csv` (internal registry, owned by the Production Division):
+### Phase 6: Diagrams and screenshots (06:30 to 08:00)
+Write PlantUML sources in `diagrams/` and render to PNG:
+1. Overall DW architecture (`stg` -> `edw` -> `mart` -> Streamlit), replacing template `image4`.
+2. ETL pipeline flow with quarantine branch, replacing `image1`.
+3. Data tunnel flow tracing one sale from each source to fact rows.
+4. JSON structure diagram for `vgen_export.json`, replacing `image2`.
+5. Logical storage layout inside single DuckDB file, replacing `image7`.
+6. Reuse existing approved star schema (`image5`).
 
-| project_code | project_name | project_type | production_field | stream |
-|---|---|---|---|---|
-| GAME-RR | Roti & Rupiah | Game | Full Game Dev | GAME_SALES |
-| GAME-KPD | Kapidaraan | Game | Full Game Dev | GAME_SALES |
-| AST-PXUI | Pixel UI Pack Vol.1 | Asset Pack | Pixel Art & UI | ASSET_SALES |
-| AST-LPK | Low-Poly Kampung Props | Asset Pack | 3D Modeling | ASSET_SALES |
-| AST-GSFX | Gamelan SFX Pack | Asset Pack | Audio & Music | ASSET_SALES |
-| AST-TOON | Toon Shader Pack | Asset Pack | Programming & Tech | ASSET_SALES |
-| COM-ILLU | Character Illustration Commissions | Commission Service | 2D Illustration | COMMISSION |
-| COM-SHDR | Custom Shader Commissions | Commission Service | Programming & Tech | COMMISSION |
-| COM-MUSC | Game Music Commissions | Commission Service | Audio & Music | COMMISSION |
+Capture screenshots of all three Streamlit tabs, the SQL expander, all four presets, the validation table, and an ETL terminal run into `report/screenshots/`.
 
-(`stream` is used by the ETL to assign `revenue_stream_key`; it is not a `dim_project` column.)
-Names are fictional placeholders. Sebastian may rename them; just keep the codes stable.
+### Phase 7: Complete report copy (12:30 to 19:00)
+Copy `BI-Design-Template.docx` to `report/UTS_BI_Sebastian_Wasaka_DW.docx` and edit only the copy. Draft Indonesian text in `report/sections_id.md` first, delete all `<...>` placeholders and Bang Ham example images (`image1` to `image4`, `image6`, `image7`), and work through each fix:
 
-`project_title_map.csv`: maps messy free-text titles from commission platforms to `project_code` (pattern, match_type, project_code), roughly 10–20 rows. Example patterns: `"character art"`, `"OC illustration"`, `"vtuber"` → COM-ILLU; `"shader"`, `"toon"` → COM-SHDR; `"bgm"`, `"soundtrack"`, `"music"` → COM-MUSC.
+- Title page: delete line 2 warning text ("THIS IS NOT FOR ACTUAL DATA WAREHOUSE DESIGN DOCUMENT...").
+- Validation & Revision History: update Sebastian's date and add version `1.1`.
+- Introduction & Definitions: remove Stripe mentions; clarify `parent_transaction_code` is not `<<DD>>`; delete the stray `"Implementation. Springer-Verlag..."` line; add OLAP, Data Mart, Staging Area, `FEE_REVERSAL`, Owner/Steward/Custodian/Provider, and Full Refresh terms.
+- Limitations: update Limitation #4 to single-file DuckDB (`stg`/`edw`/`mart`), add synthetic-transaction disclosure (with real ECB FX), and note single-user local deployment without authentication.
+- Background: reword `"pipa ETL terotomatisasi"` to semi-automated file-based ETL so it agrees with Limitation #1.
+- Purpose & Project Scope: remove stray surrogate-key sentence; state revenue-only scope and insert architecture diagram.
+- Business Problems & Solution: table mapping each problem to impact, DW solution, and expected outcome tied to the four questions.
+- Stakeholders & Data Owners: replace generic template table with the governance matrix in Section 8 plus PII policy note.
+- Budget Plans: replace the Rp 4.7 to 10.85B corporate table with a realistic indie open-source budget (Rp 0 software licensing, existing local hardware, optional modest VPS estimate, part-time engineering hours).
+- Tools, Sources, ETL Design, Architecture, Schema Notes (`original_amount` -> `amount_orig`), Storage Design, plus new Sections 7 to 10 (OLAP Implementation, Query Implementation, Business Findings from `report/findings_raw.md`, Conclusion and future work).
 
-**2b. Synthetic platform exports** (`generate_sources.py`, fixed random seed, window **2025-01-01 → 2026-10-31**)
+### Phase 8: Presentation prep (19:00 to 21:00)
+Draft `report/qa_prep.md` with 1 to 2 sentence answers for likely Business and Technical reviewer questions (grain choice, `parent_transaction_code`, refund cap vs multi-tips, DuckDB vs PostgreSQL, weekend FX fallback, unmatched title quarantine, idempotency, currency-safe sums, why SCD Type 2 is deferred) and do one timed 15 to 20 minute walkthrough. Hard stop at the end of 25 Nov so 26 to 29 Nov stay free for Gimersia.
 
-Each file uses a **different, platform-like format** (this is what makes the ETL meaningful):
+## 7. After presenting
 
-| File | Platforms/streams | Format quirks to include | PII columns (dropped in staging) |
-|---|---|---|---|
-| `steam_sales_report.csv` | STEAM · games | Monthly-style rows per transaction, buyer local currency, gross + Steam cut columns, refund rows reference the original order id, `MM/DD/YYYY` dates | none |
-| `itch_payouts.csv` | ITCH · games + assets | `YYYY-MM-DD`, separate platform-share and processing-fee columns, amounts as strings with `$`/commas | `buyer_email` |
-| `vgen_export.json` | VGEN · assets + commissions | Nested JSON (order → items → tips[] → refunds[]), ISO timestamps, free-text `title` | `client_username` |
-| `fiverr_earnings.csv` | FIVERR · commissions | Free-text `order_title`, tips as separate rows, **a few duplicated rows (overlapping re-export)** to demonstrate dedup | `buyer_username` |
-| `paypal_activity.csv` | PAYPAL · direct commissions + tips | Activity-log style: `Type` column (Payment/Tip/Refund/Fee), `DD/MM/YYYY`, comma-decimal in some rows | `payer_email`, `payer_name` |
-
-**Behaviour rules for the generator:**
-- Volume: ~**3,000–6,000 fact events** in total.
-- Seasonality: Steam/itch spikes around sale seasons (late Jun–Jul, late Nov, late Dec). Commissions are steadier.
-- Currency mix: Steam/itch across all 7 currencies, weighted toward USD/EUR/GBP/JPY; VGen/Fiverr mainly USD; PayPal USD/SGD/IDR/EUR.
-- Refund rate: ~3–8% of sales; ~30% of commission refunds are **partial**.
-- Tips: some commission orders get **multiple distinct tips** (must stay as separate rows).
-- Fees (put in `config.py`, each with a `source`/`verify` note):
-  - STEAM platform fee ≈ 30% of gross (the docx already states 30%). On refund: REFUND (−gross) + FEE_REVERSAL (+platform fee).
-  - FIVERR platform fee ≈ 20% (docx states 20%). On refund: fee reversal yes.
-  - ITCH platform share: configurable (default 10%; itch's share is creator-adjustable), plus a processing fee.
-  - VGEN platform fee: **placeholder value, Sebastian must verify**.
-  - PAYPAL processing fee: percentage + fixed fee (placeholder, verify). **On refund the processing fee is NOT returned** (no reversal row for PROCESSING_FEE).
-- Inject **~10 commission titles that match no pattern** so the reject/quarantine path is exercised.
-
-**2c. Real FX** (`fetch_fx.py`)
-- Fetch the ECB daily rates time series from the Frankfurter API for 2025-01-01 → 2026-10-31 (base EUR; symbols USD, SGD, JPY, CNY, GBP, IDR) and compute cross rates **X→IDR** (IDR→IDR = 1).
-- Save to `data/raw/fx_rates.csv` (date, currency_code, rate_to_idr) so later runs don't need the network.
-- ECB publishes no rates on weekends or holidays. The **last-business-day fallback** happens in the ETL (already promised in docx Limitation #3).
-- **If the network fetch fails:** generate a seeded random walk anchored to approximate real levels, write the same CSV, and record in README + report that FX is simulated. Tell Sebastian.
-
-**Done when:** all raw files exist, open correctly, and contain the quirks listed above.
-
-### Phase 3: DDL + ETL (11:15–13:00, then 15:45–17:00)
-
-`etl.py` runs in this order. Every step is logged with row counts (these logs become report material).
-
-1. **Extract → `stg`**: load each raw file **as-is** into `stg.raw_steam`, `stg.raw_itch`, `stg.raw_vgen` (flattened), `stg.raw_fiverr`, `stg.raw_paypal`, `stg.raw_fx_rates`, `stg.raw_projects`, `stg.raw_title_map`. Keep everything, including PII. Staging is transient.
-2. **Transform (in pandas or SQL):**
-   - Drop PII columns (governance rule).
-   - Standardize dates (multiple formats → DATE), amounts (strip `$`, fix comma decimals → DECIMAL), currency codes (upper ISO).
-   - Deduplicate exact duplicate source rows (Fiverr re-export). Log the count removed.
-   - Map commission titles → `project_code` via the title map (case-insensitive contains). **Unmatched rows go to `stg.etl_rejects` (source, source_id, reason)**, not into the fact table. Log the count.
-   - Explode each source transaction into atomic events (SALE / TIP / REFUND / PLATFORM_FEE / PROCESSING_FEE / FEE_REVERSAL) with correct signs.
-   - Build `transaction_code` = `<PLATFORM>-<source_id>-<SUFFIX>` (e.g. `STM-100231-SALE`, `STM-100231-PFEE`, `VGN-5532-TIP1`, `VGN-5532-TIP2`). Set `parent_transaction_code` to the root SALE code (NULL on the SALE itself).
-   - FX lookup: rate on the event date; if missing (weekend/holiday), use the **last available prior business day**. `amount_idr = ROUND(amount_orig * rate, 2)`.
-   - Resolve surrogate keys from the dims.
-3. **Load → `edw`**: drop and recreate (fact first), insert the dims (date generated in code; stream/platform/currency from static definitions; project from `stg.raw_projects`), then the fact.
-4. Create the `mart` views (Section 5.3).
-
-**Done when:** `python src/etl.py` runs end to end from a clean state twice in a row with identical row counts.
-
-### Phase 4: Validation (17:00–17:45)
-
-`sql/03_validate.sql` + `src/validate.py` prints a PASS/FAIL table (also shown in the app, Tab 3):
-
-| # | Check | Pass condition |
-|---|---|---|
-| V1 | Row counts per layer (stg tables, each dim, fact, rejects) | reported (informational) |
-| V2 | Orphan FKs in fact (all 5 keys) | 0 |
-| V3 | Sign rule violations | 0 |
-| V4 | Duplicate `transaction_code` | 0 |
-| V5 | Refunds exceed parent sale (per parent, in amount_orig) | 0 parents |
-| V6 | Events whose `parent_transaction_code` points to a non-existent SALE | 0 |
-| V7 | Multi-tip orders preserved (parents with ≥2 TIP rows) | > 0 (proves tips weren't collapsed) |
-| V8 | Invalid stream × platform combinations | 0 |
-| V9 | Stream doesn't match the project's type | 0 |
-| V10 | `amount_idr` ≠ ROUND(amount_orig × rate, 2) beyond 0.01 tolerance | 0 |
-| V11 | Weekend events that used the fallback FX rate | > 0 (proves fallback works) and 0 with NULL rate |
-| V12 | Processing fees reversed on refund (should never happen) | 0 |
-| V13 | PII columns present in any `edw` table | 0 |
-| V14 | Rejected rows logged with reasons | reported (informational) |
-
-**Done when:** every non-informational check passes.
-
-### Phase 5: Streamlit app (17:45–21:30)
-
-Run with `streamlit run app/app.py`. Open the DuckDB file **read-only**, cached with `st.cache_resource`. Three tabs:
-
-**Tab 1: Query Builder (no-code; "SQL for people who barely know SQL")**
-A form that builds a SELECT from **whitelisted** pieces only. User text never goes into the SQL; filter values are passed as **parameters**.
-- **What to measure** (multi-select). Each measure maps to a fixed SQL expression:
-  - Net Revenue (IDR) = `SUM(amount_idr)`
-  - Gross Sales (IDR) = `SUM(amount_idr) FILTER (WHERE event_type='SALE')`
-  - Tips (IDR), Refunds (IDR), Platform Fees (IDR), Processing Fees (IDR), Fee Reversals (IDR): same pattern
-  - Fee & Refund Leakage % = `-(fees + refunds - reversals) / gross sales`
-  - Event Count = `COUNT(*)`
-  - **Amount in original currency** = `SUM(amount_orig)`: **only enabled when "Currency" is in Group By** (never add yen to dollars)
-  - **Avg FX rate**: **only enabled when grouped by Currency**
-- **Group by** (0–3): Year, Quarter, Month, Revenue Stream, Platform, Project, Production Field, Currency, Event Type, Weekend/Weekday.
-- **Filters**: date range picker; multi-selects populated from the dim tables (stream, platform, project, production field, currency, event type).
-- **Sort by** a chosen measure, ASC/DESC; **Top N** limit.
-- **Output:** result table (IDR formatted), one auto chart (line if grouped by a time field, otherwise bar), CSV download, and an expander **"Lihat SQL yang dijalankan"** showing the generated star-join SQL.
-- UI labels in Bahasa Indonesia (the audience is classmates); code identifiers in English.
-
-**Tab 2: 4 Business Questions (one-click presets)**
-Each preset = a title (the question), a chart, a table, and a short "what this shows" caption. They run on the `mart` views:
-1. *Bagaimana bauran dan tren pendapatan dari waktu ke waktu?* Monthly net revenue by stream (stacked/line).
-2. *Bagaimana perbandingan kinerja proyek dan bidang produksi?* Net revenue, gross, leakage % per project and per production field.
-3. *Berapa pendapatan yang tergerus biaya platform dan refund?* Gross → fees → refunds → reversals → net per platform (waterfall or grouped bar) + leakage %.
-4. *Seberapa besar eksposur terhadap fluktuasi nilai tukar?* Share of net revenue by original currency + monthly rate trend for foreign currencies + IDR value of foreign-currency revenue over time.
-
-**Tab 3: Arsitektur & Validasi**
-Static architecture image (from Phase 6, or a placeholder until then), live row counts per layer, the V1–V14 PASS/FAIL table, and the reject log.
-
-**Done when:** all 3 tabs work on a fresh build, the query builder can reproduce each preset's numbers, and nothing errors for empty filter combinations (show a friendly "no data" message).
-
-### Phase 5b: Wrap-up (21:30–22:30)
-- Write `README.md` (how to run in 3 commands, architecture summary, synthetic-data disclosure, fee assumptions + verify flags).
-- Commit.
-- Write down 3–5 **actual findings** from the presets (numbers) in `report/findings_raw.md` for tomorrow.
-- **Stop by ~23:30.**
-
-**End-of-day 24 Nov definition of done:** a fresh `etl.py` → `validate.py` (all PASS) → `streamlit run` gives a working 3-tab app.
-
----
-
-## 5. Reference specs
-
-### 5.1 Static dimension rows
-- **dim_revenue_stream:** GAME_SALES (Penjualan Gim Video), ASSET_SALES (Penjualan Aset Digital), COMMISSION (Komisi Klien).
-- **dim_platform:** STEAM (Digital Storefront), ITCH (Indie Storefront & Marketplace), VGEN (Creator Marketplace), FIVERR (Freelance Marketplace), PAYPAL (Direct Payment / Direct Commission).
-- **dim_currency:** IDR Rp, USD $, SGD S$, JPY ¥, CNY ¥, EUR €, GBP £ (with names).
-
-### 5.2 `edw.v_fact_enriched`
-A wide view joining the fact to all 5 dims. The query builder selects from this view only.
-
-### 5.3 Mart views
-- `mart.v_revenue_monthly` (year, month, stream, platform, currency; gross, tips, fees, refunds, reversals, net)
-- `mart.v_project_performance` (project, production_field, stream; gross, net, leakage %)
-- `mart.v_fee_refund_leakage` (platform, stream; gross, platform fees, processing fees, refunds, reversals, net, leakage %)
-- `mart.v_fx_exposure` (month, currency; amount_orig sum, net_idr, avg rate, share of total net)
-
----
-
-## 6. WEDNESDAY 25 NOV: Report day
-
-### Phase 6: Diagrams + screenshots (06:30–08:00, before class)
-Write PlantUML sources in `diagrams/`. Render with `plantuml.jar` if Java is installed, otherwise via the PlantUML online server. Sebastian checks each image.
-1. **Overall DW architecture:** Sources (internal / external) → `stg` → ETL → `edw` star schema → `mart` views → Streamlit OLAP front end → user. (Replaces the template's `image4`.)
-2. **ETL flow:** Extract (File System Reader for platform CSV/JSON, API Connector for Frankfurter) → Transform (clean, PII drop, dedup, title mapping, event explosion, FX + fallback) → Load (dims → fact → marts), with the reject branch. (Replaces `image1`.)
-3. **Data "tunnel" flow** (for extra marks per the template): one SALE from each source traced to its fact rows.
-4. **JSON structure diagram** of `vgen_export.json` (replaces `image2`).
-5. **Storage design:** one DuckDB file with `stg` / `edw` / `mart` schemas; notes on constraints and full-refresh strategy. (Replaces `image7`.)
-6. Star schema: **reuse the existing approved image5 / PlantUML**; no change.
-
-Screenshots into `report/screenshots/`: each app tab, the query builder with the SQL expander open, each of the 4 presets, the validation table, a terminal ETL run log.
-
-### Phase 7: Fill the report (12:30–19:00, after classes)
-- Copy `BI-Design-Template.docx` → **`report/UTS_BI_Sebastian_Wasaka_DW.docx`**. Edit only the copy.
-- Draft every section's text in `report/sections_id.md` (Indonesian) first, then paste into the copy. Python-docx editing is optional; manual paste is fine and safer for formatting.
-- **Delete every `<...>` instruction placeholder and every "Example of …" caption, and remove Bang Ham's example images (image1–4, image6 FACT_SALES, image7)** once they're replaced.
-
-**Section-by-section checklist (in docx order):**
-
-| # | Section | Action |
-|---|---|---|
-| 0 | Title page | **Delete line 2** ("THIS IS NOT FOR ACTUAL DATA WAREHOUSE DESIGN DOCUMENT…"). |
-| 0 | Validation page | Prepared by Sebastian Abe Santoso, update date. Leave reviewer/approver as Irham Maulani. |
-| 0 | Revision history | Add a row: `1.1 / Sebastian Abe Santoso / 25 Nov 2026 / <pages> / Implementasi DW, ETL, OLAP front end & query`. |
-| 0 | Table of contents | Regenerate at the end. |
-| 1.1 | Introduction | Keep. **Remove "Stripe"** (Introduction & Definitions). |
-| 1.2 | Reference | Keep. Add DuckDB docs, Streamlit docs, Frankfurter API / ECB reference rates. |
-| 1.3 | Definitions & Terms | **Fix:** `parent_transaction_code` is NOT `<<DD>>` (only `transaction_code` is). Remove the stray line "Implementation. Springer-Verlag Berlin Heidelberg." Add terms: OLAP, Data Mart, Staging Area, FEE_REVERSAL, Data Owner / Steward / Custodian, Data Provider, Full Refresh. |
-| 1.4 | Limitations | Keep #1–#3. Update #4: implemented as `stg` / `edw` / `mart` schemas in one DuckDB file, with INT folded into transform logic and views. **Add #5:** transaction data is synthetic, generated from documented assumptions (FX real if the fetch worked). **Add #6:** single-user local deployment, no authentication or role-based access (future work). |
-| 2.1 | Background | Keep. **Fix the "pipa ETL terotomatisasi" wording** → semi-automated, file-based ETL (consistent with Limitation #1). |
-| 2.2 | Purpose of the Document | Write: a guide for the design, implementation and maintenance of the Wasaka Interactive revenue DW. |
-| 2.3 | Project Scope | **Remove the stray surrogate-key sentence.** In scope: revenue events from 5 platforms, 3 streams, 7 currencies, ETL, star schema, marts, OLAP front end. Out of scope: expenses, payroll, tax, profitability, real-time ingestion, auth. Insert the architecture diagram. |
-| 3.1 | Business Problems & Solution | Table: Problem → Impact → DW Solution → Expected Outcome. Rows: data silos across platforms; gross/net confusion and non-refunded processing fees; month-end guessed FX rates; can't compare where team time earns most (games vs assets vs commissions); messy commission titles. Tie each row to one of the 4 business questions. |
-| 3.2 | Stakeholders & Data Owners | **Replace the generic example table** with the governance matrix (Section 8). Add a short PII policy paragraph. |
-| 3.3 | Budget Plans | **Replace the corporate Rp 4.7–10.85 B table** with a realistic indie budget: software Rp 0 (DuckDB/Python/Streamlit open source); hardware = existing laptop / existing home server (Rp 0 incremental); optional small VPS for remote access (state a monthly estimate and mark it as an estimate); personnel = part-time data engineer hours (state assumptions). Keep it honest and small. |
-| 3.4 | Tools | Table: Python (ETL, generation), pandas, DuckDB (DW + OLAP engine), Streamlit + Plotly (front end), requests + Frankfurter API (FX), PlantUML (diagrams), Git, Windows Task Scheduler (proposed schedule; manual run in this implementation). |
-| 4.1 | Internal Data Sources | Projects registry, title map, commission tracking. Why each is needed. Small sample tables (5 rows each). |
-| 4.2 | External Data Sources | The 5 platform exports + FX API. Sample rows (PII masked) + the VGen JSON diagram. |
-| 5 | ETL Design | ETL diagram. |
-| 5.1 | Extract | How each source is read (File System Reader vs API Connector), into `stg` as-is. Tunnel diagram. |
-| 5.2 | Scheduling | Table per source: Steam monthly report; itch per payout; VGen/Fiverr/PayPal weekly export; FX daily (cached). ETL: proposed daily/weekly via Task Scheduler; manual full refresh in this implementation. |
-| 5.3 | Transform | **Rules table:** date normalization, amount parsing, currency code standardization, PII drop, dedup, title→project mapping + reject, event explosion + sign rule, `transaction_code` / `parent_transaction_code` construction, FX lookup + last-business-day fallback, IDR conversion + rounding, partial-refund cap. |
-| 5.4 | Load | Order: dims → fact → mart views; full-refresh rationale; constraint enforcement (PK/FK/UNIQUE/CHECK). |
-| 6 | DW Architecture | Kimball (bottom-up, process-centric, fast for a small team) vs Inmon (enterprise 3NF first, too heavy for a small studio). Diagram. |
-| 6.x | Data Scheme Code & Design | Keep the PlantUML + image5. **Fix the notes: `original_amount` → `amount_orig`.** Remove image6 (FACT_SALES example) and its caption. |
-| 6.x | Storage Design | Replace image7 with the Wasaka storage diagram. |
-| **NEW 7** | OLAP Implementation | Why DuckDB serves as the OLAP engine (columnar, analytical), `mart` views, the Streamlit front end, query builder design (whitelist + parameters + currency-safe measures). Screenshots. |
-| **NEW 8** | Query Implementation | For each of the 4 business questions: the SQL (from the expander), a result screenshot, a 1–2 sentence reading. Plus 1 query-builder example. |
-| **NEW 9** | Business Findings | 3–5 findings from `findings_raw.md`, each tied to a question. **Phrase as "the DW enables the studio to see…"** (the data is synthetic, so don't claim real-world conclusions). Include the validation results summary. |
-| **NEW 10** | Conclusion | Results, limitations recap, recommendations / future work (incremental loads, auth, real API connectors, expense/profit marts). |
-
-### Phase 8: Presentation prep (19:00–21:00)
-- **Demo script (~15–20 min core, can stretch for Q&A):** problem (2 min) → governance matrix (2) → architecture + ETL (3) → star schema + grain + why `parent_transaction_code` isn't DD (3) → live: run ETL + validation (2) → Tab 2, the 4 questions (4) → Tab 1, a reviewer-requested ad-hoc query live (3) → limitations (1).
-- **Pre-run the app before presenting**, and have screenshots as a backup if the laptop or projector misbehaves.
-- **Anticipated reviewer questions** (prepare a 1–2 sentence answer for each in `report/qa_prep.md`):
-  - *Business:* Why these 3 streams? How does this change a decision tomorrow? Who actually uses it? Why not just a spreadsheet? Is synthetic data valid evidence? What's the cost?
-  - *Technical:* Why event grain and not daily? Why is `parent_transaction_code` not a DD? How do you prevent double-counted refunds while keeping multiple tips? Why DuckDB over PostgreSQL/MySQL? Where's the INT layer? How are weekend FX rates handled? What happens when a commission title doesn't match? Is the load idempotent? How do you stop `SUM(amount_orig)` across currencies? No SCD — why? (Answer: dims are small and stable in scope; SCD Type 2 on project/platform is future work.)
-- Optional: a 6–8 slide deck only if time remains. The report + live app can carry the presentation.
-
-**End-of-day 25 Nov definition of done:** report copy complete (no placeholders, no template examples, no disclaimer line), app demo rehearsed once, Q&A prep written. **BI hard stop. Gimersia starts 26 Nov.**
-
----
-
-## 7. After presenting (whenever the lecturer schedules it)
-1. **Record** the presentation + peer-review session (phone is fine; check storage and battery beforehand; get the reviewers' questions on audio).
-2. Collect the **two peer-review assessments**. *Verify with the lecturer or class whether "Dua penilaian peer-review" means the forms reviewers fill about you, or the reviews you write for others.*
-3. Write **Kesimpulan setelah peer-review** (1–2 pages): each reviewer's main challenges → your response → what you changed or would change.
-4. Upload all 4 to e-learning: Laporan UTS · Kesimpulan pasca peer-review · Bukti video · 2 penilaian peer-review.
-5. Update Notion: mark the BI DW UTS task Done.
-
----
+1. Record the presentation and peer-review Q&A (check audio and storage beforehand).
+2. Collect the two peer-review assessments (exact format TBA).
+3. Write `Kesimpulan setelah peer-review` summarizing reviewer challenges, responses, and follow-up changes.
+4. Upload all four deliverables to e-learning and mark the Notion task Done.
 
 ## 8. Data governance matrix (for report section 3.2)
 
-| Data domain | Data Owner (accountable) | Data Steward (quality & rules) | Data Provider / source system | Custodian (technical) | Consumers | Notes |
+| Data domain | Data Owner | Data Steward | Data Provider / source | Custodian | Consumers | Notes |
 |---|---|---|---|---|---|---|
-| Game sales, refunds, Steam fees | Wasaka Interactive: Studio Lead | Finance & Administration | Valve (Steamworks report export) | IT & Data Engineering | Studio Lead, Finance | Studio owns its sales records; Valve is the provider |
-| itch.io game & asset sales, fees | Studio Lead | Finance & Administration | itch.io (payout export) | IT & Data Engineering | Studio Lead, Finance, Production | Buyer email dropped at staging |
-| VGen assets & commissions, tips, refunds | Studio Lead | Commission & Client Relations (+ Finance for fees) | VGen (JSON export) | IT & Data Engineering | Commission team, Finance | Client username dropped |
-| Fiverr commissions, tips | Studio Lead | Commission & Client Relations | Fiverr (earnings export) | IT & Data Engineering | Commission team, Finance | Buyer username dropped; re-export duplicates removed |
-| PayPal direct commissions, tips, processing fees | Studio Lead | Finance & Administration | PayPal (activity export) | IT & Data Engineering | Finance | PayPal modelled as a direct-commission platform; payer email/name dropped |
-| FX spot rates | Finance & Administration | IT & Data Engineering | ECB via Frankfurter API | IT & Data Engineering | Finance, Studio Lead | Last-business-day fallback for weekends/holidays |
-| Project registry & production fields | Game & Digital Asset Production Division | Production Division | Internal project registry (CSV) | IT & Data Engineering | All | Canonical project codes |
-| Commission title → project map | Commission & Client Relations | Commission & Client Relations | Internal mapping table | IT & Data Engineering | ETL | Unmatched titles quarantined, reviewed by the steward |
-| Revenue taxonomy & sign rules | Finance & Administration | Finance & Administration | Internal accounting rules | IT & Data Engineering | All | Defines event types and signs |
-| DW (`stg` / `edw` / `mart`) & app | Studio Lead | IT & Data Engineering | — | IT & Data Engineering | Studio Lead, Finance, Production, Commission | Single-user local; access control = future work |
+| Steam game sales, refunds, fees | Studio Lead | Finance & Admin | Valve (Steamworks export) | IT & Data Eng | Studio Lead, Finance | Studio owns its sales records; Valve is provider |
+| itch.io game & asset payouts | Studio Lead | Finance & Admin | itch.io export | IT & Data Eng | Studio Lead, Finance, Production | `buyer_email` dropped at staging |
+| VGen assets, commissions, tips, refunds | Studio Lead | Commission & Client Relations (+ Finance) | VGen JSON export | IT & Data Eng | Commission, Finance | `client_username` dropped |
+| Fiverr commissions & tips | Studio Lead | Commission & Client Relations | Fiverr earnings export | IT & Data Eng | Commission, Finance | `buyer_username` dropped; duplicates removed |
+| PayPal direct commissions, tips, fees | Studio Lead | Finance & Admin | PayPal activity export | IT & Data Eng | Finance | Modeled as direct-commission platform; payer PII dropped |
+| Historical FX spot rates | Finance & Admin | IT & Data Eng | ECB via Frankfurter API | IT & Data Eng | Finance, Studio Lead | Prior business day fallback for weekends/holidays |
+| Project registry & production fields | Production Division | Production Division | Internal `projects.csv` | IT & Data Eng | All | Canonical project codes |
+| Commission title mapping | Commission & Client Relations | Commission & Client Relations | Internal `project_title_map.csv` | IT & Data Eng | ETL | Unmatched titles quarantined in `stg.etl_rejects` |
+| Revenue taxonomy & sign rules | Finance & Admin | Finance & Admin | Internal accounting rules | IT & Data Eng | All | Defines event types and signs |
+| DW (`stg`/`edw`/`mart`) & app | Studio Lead | IT & Data Eng | Internal | IT & Data Eng | All divisions | Local single-user deployment; RBAC is future work |
 
-**PII policy:** personal identifiers from platform exports exist only in the transient `stg` layer and are never loaded into `edw` or `mart` (checked by V13).
+PII policy: personal identifiers from platform exports stay inside transient `stg` tables and never enter `edw` or `mart` (verified by V13).
 
----
+## 9. Risks and fallbacks
 
-## 9. Risks & fallbacks
+- If Frankfurter API is unreachable on a future run, `src/fetch_fx.py` falls back to seeded simulated FX and logs the mode in `fx_metadata.json`.
+- If PlantUML rendering is unavailable, draw diagrams in Mermaid or draw.io.
+- If the presentation slot arrives before the report is finalized, demo directly from the working Streamlit app and finish the report afterward.
+- Defer new features (extra dimensions, SCD Type 2, incremental ETL, auth, expense/profit marts) to future work.
 
-| Risk | Fallback |
-|---|---|
-| Frankfurter fetch fails | Seeded simulated FX (Phase 2c); disclose in README and report |
-| Phase 5 runs late | Cut order: CSV download → auto-chart → Weekend/Weekday group-by. Never cut: the 4 presets, the SQL expander, the validation tab |
-| PlantUML rendering unavailable | Draw.io or Mermaid; diagrams only need to be clear |
-| Presentation slot comes before the report is final | Present from the app + architecture diagram; finish the report after (the app being complete is the hard requirement) |
-| Fee rates unverified | Keep them as labelled assumptions in config and report; Sebastian verifies before submission |
-| Scope creep (new features, extra dims, ML) | Refuse. Log it as "future work" in the conclusion |
+## 10. Open items (updated 24 Nov 2026)
 
----
-
-## 10. Open items for Sebastian (status updated 24 Nov 2026)
-1. **RESOLVED:** VGen platform fee verified at **5.0%** (+ ~2.9% + $0.30 processing) via VGen Help Center; PayPal Indonesia commercial fee verified at **3.40% + fixed fee** (domestic) / **4.40% + fixed fee** (international cross-border) via `paypal.com/id` Merchant Fees.
-2. **RESOLVED:** `projects.csv` populated with Sebastian's real Wasaka Games & portfolio projects (*A Match Made in Dungeon*, *R\*bert*, *Personal Space*, *Canting Cloth*, plus derived asset packs and commission services across all 6 production fields).
-3. **TBA:** Confirm what "Dua penilaian peer-review" refers to (Section 7.2).
-4. **TBA:** Exact e-learning upload cutoff.
+1. Resolved: VGen fee verified at 5.0% (+ 2.9% + $0.30 processing); PayPal Indonesia verified at 3.40% domestic / 4.40% cross-border + fixed fee.
+2. Resolved: `projects.csv` populated with Sebastian's portfolio projects across all 6 production fields.
+3. TBA: confirm what "Dua penilaian peer-review" refers to.
+4. TBA: exact e-learning upload cutoff.
